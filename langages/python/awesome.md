@@ -2,7 +2,7 @@
 
 La documentation officielle, votre principale source de connaissance (aussi dispo en français) : <https://docs.python.org/3/>
 
-Parmis la documentation, voici quelques pages que nous jugeons essentiel à lire :
+Parmi la documentation, voici quelques pages que nous jugeons essentielles à lire :
 
 * <https://docs.python.org/3/library/functions.html>
 * <https://docs.python.org/3/library/stdtypes.html>
@@ -28,8 +28,8 @@ Parmis la documentation, voici quelques pages que nous jugeons essentiel à lire
 * Orienté objet : <https://zestedesavoir.com/tutoriels/1253/la-programmation-orientee-objet-en-python/>
 * Classes, dundler, descripteurs, itérateurs : <https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/>
 * Tutoriels sur la bibliothèque standard : <https://pymotw.com/3/>
-* Un livre reprenant des centaines de recette de code pour explorer les possibilités de python et de sa bibliothèque standard : <https://www.oreilly.com/library/view/python-cookbook/0596001673/>
-* Un livre qui rentre en profondeur dans l'écosystème python et qui s'adresse à un publique plus confirmé : <https://www.packtpub.com/product/expert-python-programming-third-edition/9781789808896>
+* Un livre reprenant des centaines de recettes de code pour explorer les possibilités de Python et de sa bibliothèque standard : <https://www.oreilly.com/library/view/python-cookbook/0596001673/>
+* Un livre qui rentre en profondeur dans l'écosystème Python et qui s'adresse à un public plus confirmé : <https://www.packtpub.com/product/expert-python-programming-third-edition/9781789808896>
 
 ## Thèmes
 
@@ -62,7 +62,7 @@ En vrac quelques conférences que nous jugeons particulièrement intéressantes 
 * Choisir son éditeur de texte : <https://docs.drlazor.be/python_ide.md>
 * `pip`, pour installer des bibliothèques externes : <https://pip.pypa.io/en/stable/>
 * `poetry`, pour gérer vos projets : <https://python-poetry.org/>
-* Structurer et partager vos projet : <https://packaging.python.org/tutorials/packaging-projects/>
+* Structurer et partager vos projets : <https://packaging.python.org/tutorials/packaging-projects/>
 
 ## J'en veux plus
 
