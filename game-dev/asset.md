@@ -1,10 +1,9 @@
 # game-dev
 
-# Tag
-[HDRI]: #Tag
-[Texture]: #Tag
-[Modèle]: #Tag
-[Landscape]: #Tag
+[HDRI]: #game-dev
+[Texture]: #game-dev
+[Modèle]: #game-dev
+[Landscape]: #game-dev
 
 ## Asset
 |                  | Lien                           | Meta
