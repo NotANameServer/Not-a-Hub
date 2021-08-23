@@ -1,5 +1,5 @@
 # game-dev
-**Tags:** [HDRI] | [Texture] | [Modèle] | [Landscape]
+**Tags:** [HDRI] | [Landscape] | [Modèle] | [Texture]
 
 ## Asset
 |                  | Lien                           | Meta
