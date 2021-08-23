@@ -14,6 +14,6 @@
 | Quixel mixer     | [Link](https://quixel.com/mixer)             | Permet de fusionner des [Texture]
 
 [HDRI]: #game-dev
-[Texture]: #game-dev
-[Modèle]: #game-dev
 [Landscape]: #game-dev
+[Modèle]: #game-dev
+[Texture]: #game-dev
