@@ -4,7 +4,7 @@
 ## Asset
 |                  | Lien                           | Meta
 | ---------------- | ------------------------------ | ---
-| Polyhaven        | [Link](https://polyhaven.com/) | [HDRI] / [Texture] / [Modèle]
+| Polyhaven        | [Link](https://polyhaven.com/) | [HDRI] / [Modèle] / [Texture]
 
 ## Création d'assets
 |                  | Lien                                         | Meta   
