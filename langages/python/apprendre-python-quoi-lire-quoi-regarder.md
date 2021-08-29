@@ -1,19 +1,19 @@
 # Apprendre Python, quoi lire, quoi regarder
 
-La documentation officielle, votre principale source de connaissance (aussi dispo en français) : <https://docs.python.org/3/>
+La documentation officielle, votre principale source de connaissance (aussi disponible en français) : https://docs.python.org
 
 Parmi la documentation, voici quelques pages que nous jugeons essentielles à lire :
 
-* <https://docs.python.org/3/library/functions.html>
-* <https://docs.python.org/3/library/stdtypes.html>
-* <https://docs.python.org/3/library/string.html>
-* <https://docs.python.org/3/library/exceptions.html>
-* <https://docs.python.org/3/reference/datamodel.html>
+* https://docs.python.org/library/functions.html
+* https://docs.python.org/library/stdtypes.html
+* https://docs.python.org/library/string.html
+* https://docs.python.org/library/exceptions.html
+* https://docs.python.org/reference/datamodel.html
 
 ## Cours vidéos
 
 * En profondeur (conseillé) : <https://www.youtube.com/watch?v=HWxBtxPBCAc&list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC>
-* Expéditif (on a quelques [critiques](https://docs.drlazor.be/python_graven.md)) : <https://www.youtube.com/watch?v=psaDHhZ0cPs&list=PLMS9Cy4Enq5JmIZtKE5OHJCI3jZfpASbR>
+* Expéditif (nous avons quelques [critiques](https://docs.drlazor.be/python_graven.md)) : <https://www.youtube.com/watch?v=psaDHhZ0cPs&list=PLMS9Cy4Enq5JmIZtKE5OHJCI3jZfpASbR>
 
 ## Cours écrits
 
@@ -23,10 +23,10 @@ Parmi la documentation, voici quelques pages que nous jugeons essentielles à li
 
 ## Notions avancées
 
-* La philosophie du langage (must read !): <https://www.python.org/dev/peps/pep-0020/>
+* La philosophie du langage (must read !) : https://www.python.org/dev/peps/pep-0020/
 * Le style de rédaction à privilégier : <https://www.python.org/dev/peps/pep-0008/>
 * Orienté objet : <https://zestedesavoir.com/tutoriels/1253/la-programmation-orientee-objet-en-python/>
-* Classes, dundler, descripteurs, itérateurs : <https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/>
+* Classes, dundler, descripteurs et itérateurs : <https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/>
 * Tutoriels sur la bibliothèque standard : <https://pymotw.com/3/>
 * Un livre reprenant des centaines de recettes de code pour explorer les possibilités de Python et de sa bibliothèque standard : <https://www.oreilly.com/library/view/python-cookbook/0596001673/>
 * Un livre qui rentre en profondeur dans l'écosystème Python et qui s'adresse à un public plus confirmé : <https://www.packtpub.com/product/expert-python-programming-third-edition/9781789808896>
@@ -50,7 +50,7 @@ Deux conférenciers à suivre : Raymond Hettinger et David Beazley
 
 En vrac quelques conférences que nous jugeons particulièrement intéressantes :
 
-* [Transforming Code into Beautiful, Idiomatic Python](https://youtu.be/OSGv2VnC0go) (attention c'est du python2)
+* [Transforming Code into Beautiful, Idiomatic Python](https://youtu.be/OSGv2VnC0go) (attention, c'est du Python 2)
 * [Asynchronous Python for the Complete Beginner](https://www.youtube.com/watch?v=iG6fr81xHKA)
 * [What Does It Take To Be An Expert At Python?](https://youtu.be/7lmCu8wz8ro)
 * [Unicode what is the big deal](https://youtu.be/7m5JA3XaZ4k)

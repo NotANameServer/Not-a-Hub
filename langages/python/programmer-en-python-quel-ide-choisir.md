@@ -6,7 +6,7 @@ Python a un système de module léger : contrairement à Java où une classe = u
 
 Python propose nativement un environnement REPL (Read-Eval-Print-Loop) via le terminal ou IDLE. Il est donc aisé de tester un bout de code, d'accéder à la documentation au moyen de la fonction `help` ou de lister l'ensemble des méthodes/fonctions d'une classe ou d'un module via la fonction `dir`. Personnellement je trouve qu'il est tout aussi rapide d'ouvrir l'interpréteur et de taper `dir(list)` suivi de `help(list.extend)` que d'utiliser la documentation fournie par un IDE ou de laisser l'autocomplétion me faire des suggestions.
 
-Python est dynamiquement typé. Bien qu'il existe des outils comme [mypy](mypy-lang.org) qui peuvent aider à la vérification des types, peu de modules tirent avantage de la bibliothèque `typing` et un IDE se retrouve fort peu utile pour lever des warning en cas d'incohérence de types.
+Python est dynamiquement typé. Bien qu'il existe des outils comme [mypy](http://mypy-lang.org) qui peuvent aider à la vérification des types, peu de modules tirent avantage de la bibliothèque `typing` et un IDE se retrouve fort peu utile pour lever des warning en cas d'incohérence de types.
 
 Tout ceci explique pourquoi un IDE n'est pas *nécessaire* au développement en Python. Un éditeur de texte plus léger reste un choix tout aussi viable.
 
@@ -20,7 +20,7 @@ La liste suivante présente une liste non exhaustive :
 * [Neovim](https://neovim.io/) (pro: très puissant, con: difficile à prendre en main)
 * [Onivim](https://v2.onivim.io/) (pro: interface graphique moderne, con: projet très jeune)
 * [Emacs](https://www.gnu.org/software/emacs/) (pro: très puissant, con: difficile à prendre en main)
-* [Sublime text](https://www.sublimetext.com/3) (pro: léger et rapide, con: pas fort extensible)
+* [Sublime Text](https://www.sublimetext.com) (pro: léger et rapide, con: pas fort extensible)
 * [VS Code](https://code.visualstudio.com/) (pro: complet et extensible, con: lourd)
 * [Atom](https://atom.io/) (pro: moderne et open-source, con: lent au démarrage)
 * [Pycharm](https://www.jetbrains.com/pycharm/) (pro: IDE complet, con: très lourd)

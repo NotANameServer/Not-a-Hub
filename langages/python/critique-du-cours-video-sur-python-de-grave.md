@@ -12,9 +12,9 @@ Contrairement à ce qui est présenté dans la vidéo, un IDE (environnement de 
 
 L'ensemble des vidéos sera capturé dans cet environnement. On peut regretter que le vidéaste ne désactive pas les différents linters et correcteurs orthographiques. Les démonstrations sont sans-cesse interrompues par myriade de pop-up de conseil et les différents mots français sont régulièrement soulignés inutilement par le correcteur orthographique.
 
-Lors de l'installation de Python, l'attention du téléspectateur n'est pas attirée sur l'option "Add python to the PATH", il s'agit d'une case à cocher qui rend accessible les programmes `python`, `py` et `pip` via la ligne de commande. Les débutants ne savent généralement pas comment changer les variables d'environnement sur Windows et se plaignent de ne pas réussir à lancer Python car `'python' n’est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commandes.`.
+Lors de l'installation de Python, l'attention du téléspectateur n'est pas attirée sur l'option "Add Python to PATH", il s'agit d'une case à cocher qui rend accessible les programmes `python`, `py` et `pip` via la ligne de commande. Les débutants ne savent généralement pas comment changer les variables d'environnement sur Windows et se plaignent de ne pas réussir à lancer Python car `'python' n’est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commandes.`.
 
-Le tout premier snippet de code montré à l'écran est le suivant:
+Le tout premier bout de code montré à l'écran est le suivant :
 
 ```python
 if __name__ == "__main__":
@@ -65,7 +65,7 @@ Le `for` traditionnellement utilisé dans les langages comme C, Java (`for (int 
 
 Tout de suite après avoir montré comment définir et appeler des fonctions, l'auteur introduit les variables globales. Les variables globales font partie des techniques appelées de *mémoire partagée*, un ensemble de la mémoire qui est accessible et qui peut être modifié par plusieurs entités à la fois, ici les fonctions. Ces techniques sont connues pour mener à des programmes qui sont difficiles à maintenir, qui présentent plus de bug et qui empêchent l'exécution parallèle. Il est dangereux d'introduire ce mécanisme et on lui préférera systématiquement les fonctions paramétriques.
 
-En programmation orientée-objet, lorsqu'une fonction nécessite un contexte pour fonctionner, on préférera utiliser un objet pour sauvegarder ce contexte et écrire une *méthode*.
+En programmation orientée objet, lorsqu'une fonction nécessite un contexte pour fonctionner, on préférera utiliser un objet pour sauvegarder ce contexte et écrire une *méthode*.
 
 L'auteur se trompe lorsqu'il dit qu'il est nécessaire de marquer les variables globales comme globales pour pouvoir y accéder. Il n'y a aucun problème à accéder en *lecture* (affichage, utilisation) aux variables définies dans le contexte global. Ce mot clé n'est nécessaire que lorsqu'on *modifie* (affectation) les variables globales.
 
@@ -111,15 +111,15 @@ Ces problèmes ne se produisent pas lorsqu'on utilise une stratégie d'implémen
 
 ### Visibilité des attributs et des méthodes
 
-La visibilité en orienté-objet est une notion qui permet de contrôler *qui* a accès (en lecture, en écriture ou en exécution) aux attributs et aux méthodes d'un objet. Cette notion est implémentée dans nombre de langages orientés-objet statiques comme Java, C# et C++. Lorsqu'un attribut est déclaré avec `private` elle n'est accessible que par l'objet courant, il en va de même pour les méthodes. Au contraire lorsqu'un attribut/une méthode est déclarée publique, tout le monde peut y accéder.
+La visibilité en orienté objet est une notion qui permet de contrôler *qui* a accès (en lecture, en écriture ou en exécution) aux attributs et aux méthodes d'un objet. Cette notion est implémentée dans nombre de langages orientés objet statiques comme Java, C# et C++. Lorsqu'un attribut est déclaré avec `private` elle n'est accessible que par l'objet courant, il en va de même pour les méthodes. Au contraire lorsqu'un attribut/une méthode est déclaré public, tout le monde peut y accéder.
 
 Cette notion de visibilité est absente de Python qui préfère *faire confiance aux développeurs* qu'ils n'aillent pas toucher ce qu'ils ne devraient pas. Ainsi la seule notion qui sépare les attributs, propriétés et méthodes publiques de celles considérées comme "privées" est une convention d'écriture. On préfixera ce qui est privé par un underscore. Le développeur est libre de n'en faire qu'à sa tête de tout de même les utiliser même si c'est déconseillé.
 
 Dans l'industrie il n'y a au final pas de problème à ce que le langage ne définisse pas lui-même de niveau de visibilité. Une équipe constituée de développeurs compétents, que ce soit en Python ou dans un autre langage, est capable de faire la part des choses. Il s'avère même parfois de meilleur goût de ne pas respecter cette convention de visibilité et de tout de même utiliser une variable / méthode "privée".
 
-### Accesseurs, mutateur
+### Accesseurs et mutateurs
 
-Dans la même lignée qu'il n'y a pas de notion de visibilité en Python, les pratiques de développement Python conseillent de directement modifier les attributs des objets sans passer par des méthodes de contrôle. Dit autrement, l'utilisation systématique d'accesseurs (*getter*) et de mutateurs (*setters*) est déconseillé.
+Dans la même lignée qu'il n'y a pas de notion de visibilité en Python, les pratiques de développement Python conseillent de directement modifier les attributs des objets sans passer par des méthodes de contrôle. Dit autrement, l'utilisation systématique d'accesseurs (*getters*) et de mutateurs (*setters*) est déconseillé.
 
 Dans l'industrie ceci ne pose en réalité aucun souci, les développeurs qui définissent les interfaces objets sont généralement ceux qui les utiliseront ou qui seront chargés de relire le code des autres développeurs.
 
@@ -141,6 +141,6 @@ Plusieurs arguments penchent en cette faveur :
 
 ## Conclusion
 
-Le cours est gangrené par les habitudes de développeur Java de l'auteur. Certains concepts essentiels dans le développement python sont complètements omis comme les dictionnaires, les sets, les générateurs ou la bibliothèque standard. Certains sont approximatifs comme les conditions ou les boucles. Les derniers introduisent des concepts qui vont à l'encontre des bonnes pratiques de développement en Python comme les fonctions ou les objets.
+Le cours est gangrené par les habitudes de développeur Java de l'auteur. Certains concepts essentiels dans le développement Python sont complètements omis comme les dictionnaires, les sets, les générateurs ou la bibliothèque standard. Certains sont approximatifs comme les conditions ou les boucles. Les derniers introduisent des concepts qui vont à l'encontre des bonnes pratiques de développement en Python comme les fonctions ou les objets.
 
 Graven est certainement un très bon développeur Java !
