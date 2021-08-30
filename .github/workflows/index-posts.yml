@@ -1,0 +1,25 @@
+name: Index posts
+on:
+  push:
+    branches: [master]
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Run indexer
+        run: node indexer.mjs
+      - uses: peter-evans/create-pull-request@v3
+        with:
+          title: Update posts indexes
+          commit-message: Update posts indexes
+          committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          branch: actions/update-indexes
+          body: ''
+          delete-branch: true
