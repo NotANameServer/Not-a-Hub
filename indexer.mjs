@@ -4,7 +4,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // the full path of the parent directory of this file
-const dirpath = fileURLToPath(new URL('.', import.meta.url));
+const dirPath = fileURLToPath(new URL('.', import.meta.url));
 
 /**
  * Get the creation date of a path from git, and fallback to the file
@@ -48,7 +48,7 @@ function makeIndex(base, posts) {
     const postPath = relativePath(base, post.path.slice(0, -3));
     const tags = post.tags.map((tag, i, tags) => {
       // tags are just the names directories, joining them reveals the true path.
-      const path = join(dirpath, tags.slice(0, i + 1).join('/'));
+      const path = join(dirPath, tags.slice(0, i + 1).join('/'));
       return `[<kbd>${tag}</kbd>](${relativePath(base, path)})`;
     }).join(' ');
     groups[dating].push(`* [${post.title}](${postPath}) ${tags}`.trimEnd());
@@ -71,16 +71,16 @@ const postsSectionRegex = /## Articles\n(?:### .+\n(?:\* \[.+\]\(.+\)\n)*(?:\* \
  * If the index file does not exists, it will be created,
  * with only the Articles section.
  */
-function writeIndex(dirpath, posts) {
-  const path = join(dirpath, 'README.md');
+function writeIndex(dirPath, posts) {
+  const path = join(dirPath, 'README.md');
   const postsSection = `## Articles\n${makeIndex(dirpath, posts)}`;
   let content;
 
   try {
     content = readFileSync(path, 'utf8');
   } catch (error) {
-    if (error.code !== 'ENOENT') throw error;
-    content = '';
+    if (error.code === 'ENOENT') content = '';
+    throw error;
   }
 
   // if the file is empty (or doesn't exist),
@@ -106,7 +106,7 @@ function writeIndex(dirpath, posts) {
   writeFileSync(path, content);
 }
 
-const ignoredPaths = [fileURLToPath(new URL('./assets', import.meta.url))];
+const ignoredPaths = [join(dirPath, 'assets')];
 const ignoredNames = ['README.md', 'index.md'];
 /**
  * Recursively scan the given directory and return an array of posts,
@@ -116,30 +116,30 @@ const ignoredNames = ['README.md', 'index.md'];
  * are excluded.
  */
 function* makeIndexes(path, tags = []) {
-  for (const content of readdirSync(path, { withFileTypes: true })) {
-    const contentPath = join(path, content.name);
-    if (content.name.startsWith('.') || ignoredPaths.includes(contentPath) || ignoredNames.includes(content.name)) {
+  for (const file of readdirSync(path, { withFileTypes: true })) {
+    const filePath = join(path, file.name);
+    if (file.name.startsWith('.') || ignoredPaths.includes(filePath) || ignoredNames.includes(file.name)) {
       continue;
     }
 
-    if (content.isDirectory()) {
-      const posts = [...makeIndexes(contentPath, [...tags, content.name])];
+    if (file.isDirectory()) {
+      const posts = [...makeIndexes(filePath, [...tags, file.name])];
       if (posts.length > 0) {
         yield* posts;
-        writeIndex(contentPath, posts);
+        writeIndex(filePath, posts);
       }
-    } else if (content.name.endsWith('.md')) {
-      const file = readFileSync(contentPath, 'utf8');
+    } else if (file.name.endsWith('.md')) {
+      const file = readFileSync(filePath, 'utf8');
       // retrieve the post title
       const titleStart = file.indexOf('# ');
       yield {
         tags,
         title: file.slice(titleStart + 2, file.indexOf('\n', titleStart)),
-        path: contentPath,
-        createdAt: getCreationDate(contentPath),
+        path: filePath,
+        createdAt: getCreationDate(filePath),
       };
     }
   }
 }
 
-writeIndex(dirpath, [...makeIndexes(dirpath)]);
+writeIndex(dirPath, [...makeIndexes(dirPath)]);
