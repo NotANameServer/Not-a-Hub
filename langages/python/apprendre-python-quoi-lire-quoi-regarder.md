@@ -1,14 +1,14 @@
 # Apprendre Python, quoi lire, quoi regarder
 
-La documentation officielle, votre principale source de connaissance (aussi disponible en français) : https://docs.python.org
+La documentation officielle, votre principale source de connaissance (aussi disponible en français) : <https://docs.python.org>
 
 Parmi la documentation, voici quelques pages que nous jugeons essentielles à lire :
 
-* https://docs.python.org/library/functions.html
-* https://docs.python.org/library/stdtypes.html
-* https://docs.python.org/library/string.html
-* https://docs.python.org/library/exceptions.html
-* https://docs.python.org/reference/datamodel.html
+* <https://docs.python.org/library/functions.html>
+* <https://docs.python.org/library/stdtypes.html>
+* <https://docs.python.org/library/string.html>
+* <https://docs.python.org/library/exceptions.html>
+* <https://docs.python.org/reference/datamodel.html>
 
 ## Cours vidéos
 
@@ -23,7 +23,7 @@ Parmi la documentation, voici quelques pages que nous jugeons essentielles à li
 
 ## Notions avancées
 
-* La philosophie du langage (must read !) : https://www.python.org/dev/peps/pep-0020/
+* La philosophie du langage (must read !) : <https://www.python.org/dev/peps/pep-0020/>
 * Le style de rédaction à privilégier : <https://www.python.org/dev/peps/pep-0008/>
 * Orienté objet : <https://zestedesavoir.com/tutoriels/1253/la-programmation-orientee-objet-en-python/>
 * Classes, dundler, descripteurs et itérateurs : <https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/>
