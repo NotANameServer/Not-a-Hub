@@ -2,9 +2,10 @@
 
 Ce document liste differentes ressources utiles au game-dev.
 
-**Tags:** [Animation] | [Audio] | [Background] | [Decals] | [Font] | [HDRI] | [Landscape] | [Modèle] | [PBR] | [Sprite] | [Texture] | [Tileset] | [UI]
+**Tags:** [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
 
 ## Asset
+
 |                                                                                  | Licence                                                                   | Prix              | Meta
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------- | ---------------------
 | [3D Warehouse              ](https://3dwarehouse.sketchup.com)                   | Variées                                                                   | Gratuit           | [Modèle]
@@ -39,7 +40,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [PDSounds                  ](http://pdsounds.org)                                | Public domain                                                             | Gratuit           | [Audio]
 | [Pixabay                   ](https://pixabay.com)                                | Variées                                                                   | Gratuit           | [Texture] - Grande banque d'images
 | [Polyhaven                 ](https://polyhaven.com/)                             | [CC0](https://polyhaven.com/license)                                      | Gratuit           | [HDRI] / [Modèle] / [Texture]
-| [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]                    
+| [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]                 
 | [Subtle Patterns           ](https://www.toptal.com/designers/subtlepatterns/)   | Free avec attribution                                                     | Gratuit           | [Background] / [UI]
 | [ShareCG                   ](https://www.sharecg.com)                            | Variées                                                                   | Gratuit           | [Audio] / [Modèle] / [Texture]
 | [SpriteLib                 ](https://www.widgetworx.com/spritelib/)              | [CPL-1.0](https://opensource.org/licenses/cpl1.0.php)                     | Gratuit           | [Sprite]
@@ -51,12 +52,13 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Untamed.wild-refuge.net   ](http://untamed.wild-refuge.net/rpgxp.php)           | Free                                                                      | Gratuit           | [Sprite] et [Tileset] divers sur le thème du RPG
 
 ## Création d'assets
-|                                                               | Licence          | Prix             | Meta   
-| ------------------------------------------------------------- | ---------------- | ---------------- | ------------------
-| [DrPetter’s sfxr  ](http://www.drpetter.se/project_sfxr.html) | -                | Gratuit          | Generateur d'effets sonores - [Audio]
-| [Quixel mixer     ](https://quixel.com/mixer)                 | -                | Gratuit          | Permet de fusionner des [Texture]
-| [Spacescape       ](http://alexcpeterson.com/spacescape/)     | -                | Gratuit          | Cubemap spatial
-| [World creator    ](https://www.world-creator.com/)           | -                | Payant (3 tiers) | [Landscape]
+
+|                                                               | Licence          | Prix             | Meta                                    |
+|---------------------------------------------------------------|------------------|------------------|-----------------------------------------|
+| [DrPetter’s sfxr  ](http://www.drpetter.se/project_sfxr.html) | -                | Gratuit          | Generateur d'effets sonores - [Audio]   |
+| [Quixel mixer     ](https://quixel.com/mixer)                 | -                | Gratuit          | Permet de fusionner des [Texture]       |
+| [Spacescape       ](http://alexcpeterson.com/spacescape/)     | -                | Gratuit          | Cubemap spatial                         |
+| [World creator    ](https://www.world-creator.com/)           | -                | Payant (3 tiers) | [Landscape]                             |
 
 
 [Animation]: #ressources-pour-game-dev
