@@ -230,7 +230,7 @@ def rewrite_index_file(dir_, articles):
                     title=article.title,
                     uri=article.uri_for_root(f'/{dir_}'.rstrip('/')),
                     tags=' '.join(
-                        f"<kbd>[{tag}]({uri})</kbd>"
+                        f"[<kbd>{tag}</kbd>]({uri})"
                         for tag, uri in article.tags
                     )
                 )
