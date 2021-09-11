@@ -9,9 +9,12 @@ Ce document liste differentes ressources utiles au game-dev.
 |                                                                                  | Licence                                                                   | Prix              | Meta
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------- | ---------------------
 | [3D Warehouse              ](https://3dwarehouse.sketchup.com)                   | Variées                                                                   | Gratuit           | [Modèle]
+| [AmbientCG                 ](https://ambientcg.com)                              | [CC0](https://help.ambientcg.com/01-General/Licensing.html)               | Gratuit           | [HDRI], [Modèle], [PBR], [Texture]
 | [Archive3D                 ](https://archive3d.net)                              | Variées                                                                   | Gratuit           | [Modèle]
+| [Assimp Model Database     ](https://github.com/assimp/assimp-mdb)               | Free                                                                      | Gratuit           | [Modèle]
 | [Blogoscoped.com           ](http://blogoscoped.com/archive/2006-08-08-n51.html) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                 | Gratuit           | Avatars de fantasy - [Sprite]
 | [Blender 3D Models         ](https://www.blender-models.com)                     | Variées                                                                   | Gratuit           | [Modèle] blender divers
+| [CG Book case              ](https://www.cgbookcase.com)                         | CC0                                                                       | Gratuit           | [PBR] / [Texture]
 | [CMU GLMCD                 ](http://mocap.cs.cmu.edu)                            | Free                                                                      | Gratuit           | Base de donnée remplies d'[Animation]
 | [Crateboy                  ](https://crateboy.itch.io/crateboy-2007-2014)        | Creative Commons                                                          | Gratuit           | [Sprite] et [Tileset] divers
 | [Dafont                    ](https://www.dafont.com/)                            | Variées                                                                   | Gratuit ou Payant | [Font]
@@ -23,7 +26,9 @@ Ce document liste differentes ressources utiles au game-dev.
 | [FreeGameArts              ](http://freegamearts.tuxfamily.org)                  | Variées                                                                   | Gratuit           | [Audio] / [Modèle] / [Texture]
 | [Freesound                 ](https://freesound.org)                              | Variées                                                                   | Gratuit           | Enorme bibliothèque [Audio]
 | [Free Music Archive        ](https://freemusicarchive.org)                       | Creative Commons                                                          | Gratuit           | [Audio]
+| [Free To Use Sound         ](https://www.freetousesounds.com/)                   | Variées                                                                   | Gratuit           | [Audio]
 | [GameArt2D                 ](https://www.gameart2d.com/)                         | [CC0 ou Custom](https://www.gameart2d.com/license.html)                   | Gratuit ou Payant | [Sprite] / [Tileset] / [UI]
+| [GameAssets.org            ](https://gameasset.org)                              | Public domain                                                             | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Texture]
 | [Glitch                    ](https://www.glitchthegame.com/)                     | Public domain                                                             | Gratuit           | [Background] / [Sprite] / [Tileset]
 | [Glyphicons                ](https://glyphicons.com)                             | Custom payante                                                            | Payant            | Packs d'icones diverses pour [UI]
 | [Hero Patterns             ](http://www.heropatterns.com)                        | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                 | Gratuit           | [Background] / [UI]
@@ -31,6 +36,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [IconFinder                ](https://www.iconfinder.com)                         | Variées                                                                   | Gratuit ou Payant | [UI]
 | [Image * After             ](http://www.imageafter.com)                          | [Custom](http://www.imageafter.com/terms.php)                             | Gratuit           | [Texture] 
 | [Incompetech               ](https://incompetech.com/music/royalty-free/)        | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                 | Gratuit           | [Audio] 
+| [Itch.io                   ](https://itch.io/game-assets)                        | Variées                                                                   | Gratuit ou Payant | De tout: [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
 | [Kenney                    ](https://kenney.nl)                                  | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)   | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset] / [UI]
 | [LodBook                   ](https://lodbook.com/models/)                        | ?                                                                         | Gratuit           | [Modèle]
 | [Mocapdata                 ](http://mocapdata.com)                               | Variées                                                                   | Gratuit ou Payant | [Animation]
@@ -39,8 +45,12 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Open Music Archive        ](http://www.openmusicarchive.org)                    | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)           | Gratuit           | [Audio]
 | [PDSounds                  ](http://pdsounds.org)                                | Public domain                                                             | Gratuit           | [Audio]
 | [Pixabay                   ](https://pixabay.com)                                | Variées                                                                   | Gratuit           | [Texture] - Grande banque d'images
+| [PM SFX                    ](https://www.pmsfx.com)                              | Variées                                                                   | Gratuit           | [Audio]
 | [Polyhaven                 ](https://polyhaven.com/)                             | [CC0](https://polyhaven.com/license)                                      | Gratuit           | [HDRI] / [Modèle] / [Texture]
 | [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]                 
+| [Renderpeople              ](https://renderpeople.com/free-3d-people/)           | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D de personnées scannées
+| [ScanTheWorld              ](https://www.myminifactory.com/scantheworld/)        | Variées                                                                   | Gratuit           | Scans de [Modèle] 3D 
+| [Sonniss Game Audio GDC    ](https://sonniss.com/gameaudiogdc)                   | Variées                                                                   | Gratuit           | Historique de l'[Audio] de la GDC
 | [Subtle Patterns           ](https://www.toptal.com/designers/subtlepatterns/)   | Free avec attribution                                                     | Gratuit           | [Background] / [UI]
 | [ShareCG                   ](https://www.sharecg.com)                            | Variées                                                                   | Gratuit           | [Audio] / [Modèle] / [Texture]
 | [SpriteLib                 ](https://www.widgetworx.com/spritelib/)              | [CPL-1.0](https://opensource.org/licenses/cpl1.0.php)                     | Gratuit           | [Sprite]
@@ -48,17 +58,22 @@ Ce document liste differentes ressources utiles au game-dev.
 | [The league of movable type](https://www.theleagueofmoveabletype.com)            | [Free](https://www.theleagueofmoveabletype.com/manifesto)                 | Gratuit           | [Font]
 | [TrueBones                 ](https://truebones.com)                              | Commercial                                                                | Payant            | [Animation]
 | [Turbosquid                ](https://www.turbosquid.com)                         | Variées                                                                   | Gratuit ou Payant | [Modèle]
+| [Unity assets store        ](https://assetstore.unity.com)                       | Variées                                                                   | Gratuit ou Payant | De tout: [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
+| [Unreal free assets        ](https://unrealengine.com/marketplace/en-US/free)    | Variées                                                                   | Gratuit           | De tout: [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
 | [Unsplash                  ](https://unsplash.com)                               | Variées                                                                   | Gratuit           | [Texture] - Grande banque d'images
 | [Untamed.wild-refuge.net   ](http://untamed.wild-refuge.net/rpgxp.php)           | Free                                                                      | Gratuit           | [Sprite] et [Tileset] divers sur le thème du RPG
 
 ## Création d'assets
 
-|                                                               | Licence          | Prix             | Meta                                    |
-|---------------------------------------------------------------|------------------|------------------|-----------------------------------------|
-| [DrPetter’s sfxr  ](http://www.drpetter.se/project_sfxr.html) | -                | Gratuit          | Generateur d'effets sonores - [Audio]   |
-| [Quixel mixer     ](https://quixel.com/mixer)                 | -                | Gratuit          | Permet de fusionner des [Texture]       |
-| [Spacescape       ](http://alexcpeterson.com/spacescape/)     | -                | Gratuit          | Cubemap spatial                         |
-| [World creator    ](https://www.world-creator.com/)           | -                | Payant (3 tiers) | [Landscape]                             |
+|                                                               | Licence          | Prix             | Meta   
+|---------------------------------------------------------------|------------------|------------------|---------------------
+| [Asset Forge      ](https://assetforge.io)                    | -                | $19.95 ou $39.95 | Outil de création de [Modèle] très complet
+| [DrPetter’s sfxr  ](http://www.drpetter.se/project_sfxr.html) | -                | Gratuit          | Generateur d'effets sonores - [Audio] 
+| [KenShape         ](https://tools.kenney.nl/kenshape/)        | -                | $3.99            | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle] 
+| [PicoCAD          ](https://johanpeitz.itch.io/picocad)       | -                | Gratuit          | Outil de création de [Modèle] lowpoly
+| [Quixel mixer     ](https://quixel.com/mixer)                 | -                | Gratuit          | Permet de fusionner des [Texture]  
+| [Spacescape       ](http://alexcpeterson.com/spacescape/)     | -                | Gratuit          | Cubemap spatial 
+| [World creator    ](https://www.world-creator.com/)           | -                | Payant (3 tiers) | [Landscape] 
 
 
 [Animation]: #ressources-pour-game-dev
