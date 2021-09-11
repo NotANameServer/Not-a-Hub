@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import List
 
 
-ROOT = Path(__file__).parent.resolve()
+ROOT = Path(__file__).resolve().parent
 GIT_PATH = getenv('GIT_PATH', '/usr/bin/git')
 SKIP_FILES = {'index.md', 'README.md'}
 
