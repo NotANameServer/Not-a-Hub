@@ -15,8 +15,7 @@ explications.
 
 Contrairement à ce qui est présenté dans la vidéo, un IDE (environnement de développement intégré) n'est
 pas *nécessaire* pour développer. Il est d'ailleurs plus commun de croiser des développeurs Python qui utilisent le
-combo éditeur de texte et terminal du fait de la légèreté du langage. [J'ai écrit un billet à ce sujet]
-(https://docs.drlazor.be/python_ide.md).
+combo éditeur de texte et terminal du fait de la légèreté du langage. [J'ai écrit un billet à ce sujet](https://docs.drlazor.be/python_ide.md).
 
 L'ensemble des vidéos sera capturé dans cet environnement. On peut regretter que le vidéaste ne désactive pas les
 différents linters et correcteurs orthographiques. Les démonstrations sont sans-cesse interrompues par myriade de
