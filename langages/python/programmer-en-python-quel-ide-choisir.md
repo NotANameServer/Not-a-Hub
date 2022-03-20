@@ -10,9 +10,9 @@ nécessaires en début de fichier et extensiblement la nécessité d'avoir ces l
 
 Python propose nativement un environnement REPL (Read-Eval-Print-Loop) via le terminal ou IDLE. Il est donc aisé de
 tester un bout de code, d'accéder à la documentation au moyen de la fonction `help` ou de lister l'ensemble des
-méthodes/fonctions d'une classe ou d'un module via la fonction `dir`. Personnellement je trouve qu'il est tout aussi
-rapide d'ouvrir l'interpréteur et de taper `dir(list)` suivi de `help(list.extend)` que d'utiliser la documentation
-fournie par un IDE ou de laisser l'autocomplétion me faire des suggestions.
+méthodes/fonctions d'une classe ou d'un module via la fonction `dir`. Nous trouvons qu'il est tout aussi rapide
+d'ouvrir l'interpréteur et de taper `dir(list)` suivi de `help(list.extend)` que d'utiliser la documentation fournie
+par un IDE ou de laisser l'autocomplétion faire des suggestions.
 
 Python est dynamiquement typé. Bien qu'il existe des outils comme [mypy](http://mypy-lang.org) qui peuvent aider à la
 vérification des types, peu de modules tirent avantage de la bibliothèque `typing` et un IDE se retrouve fort peu utile
