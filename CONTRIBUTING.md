@@ -3,19 +3,28 @@
 Tous les contributeurs sont priés de respecter les règles de NaN qui sont
 disponibles sur notre serveur Discord et sur le repository [https://github.com/NotANameServer/discord/](https://github.com/NotANameServer/discord/).
 
-Les articles doivent être rédigés en français.
+Les articles doivent être rédigés en français, les messages de commit ainsi que l'activité sur GitHub peuvent être fait en français ou en anglais.
 
-## Schéma à suivre:
+## Proposer un article
 
- - Ouvrez une issue pour discuter de l'article que vous souhaiteriez écrire, définir quel en sera le contenu, rassembler des idées.
- - Créez une nouvelle branche dans un fork, et faites vos commits dans cette branche.
- - Rédigez un brouillon de votre coté, puis ouvrez une pull request en draft pour voir ce qui peut être conservé, modifié, ou écarté, pour faire vérifier l'orthographe, etc.
+Ouvrez une issue pour discuter de l'article que vous souhaiteriez écrire, définir quel en sera le contenu et rassembler des idées.
 
-Lorsque tout le monde est d'accord sur le contenu de votre contribution, elle est fusionnée au dépôt, et automatiquement publiée sur le site.
+## Rédiger un article
+
+Créez une nouvelle branche dans un fork (ou directement ici si vous le pouvez) dans laquelle vous rédigerez votre premier brouillon, puis ouvrez une pull request en draft pour voir ce qui peut être conservé, modifié, ou écarté, pour faire vérifier l'orthographe, etc.
+
+Lorsque tout le monde est d'accord sur le contenu de votre contribution, elle est fusionnée au dépôt et automatiquement publiée sur le site.
+
+## Modifier un article
+
+Même protocole que pour la rédaction d'un article, créez une branche (dans un fork ou ici si vous le pouvez), puis soumettez vos modifications dans une pull request.
+
+## Autre chose
+
+Ouvrez une issue.
 
 ## Convention pour les messages de commit
 
-Les messages de commit ainsi que l'activité sur GitHub peuvent être fait en français ou en anglais.
 Chaque message doit commencer par un titre séparé du reste du commit par une ligne vide. Le titre doit de préférence ne pas dépasser 50 caractères et doit commencer par l'un des tags suivant:
  - `add: ` pour l'ajout d'un nouvel article
  - `edit: ` pour la modification du contenu sémantique d'un article
