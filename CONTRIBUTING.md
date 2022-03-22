@@ -1,7 +1,7 @@
 # Comment contribuer
 
 Tous les contributeurs sont priés de respecter les règles de NaN qui sont
-disponibles sur notre serveur Discord.
+disponibles sur notre serveur Discord et sur le repository [https://github.com/NotANameServer/discord/](https://github.com/NotANameServer/discord/).
 
 Les articles doivent être rédigés en français.
 
