@@ -7,7 +7,7 @@ Les articles doivent être rédigés en français, les messages de commit ainsi 
 
 ## Proposer un article
 
-Ouvrez une issue pour discuter de l'article que vous souhaiteriez écrire, définir quel en sera le contenu et rassembler des idées.
+Commencez par ouvrir une issue dans laquelle vous proposez le sujet de votre article. Cette issue servira à discuter du sujet, rassembler les idées et se mettre d'accord sur le contenu. Cette issue servira aussi à rassembler des ressources et à vérifier qu'il n'existe pas déjà des articles/tutoriels francophone de qualité sur le sujet.
 
 ## Rédiger un article
 
