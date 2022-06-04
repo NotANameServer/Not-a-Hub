@@ -23,6 +23,10 @@ Même protocole que pour la rédaction d'un article, créez une branche (dans un
 
 Ouvrez une issue.
 
+## Contribuer au site
+
+Pour les modifications concernant le site en lui-même, vous devez créer un fork afin de pouvoir tester vos modifications. En effet, le [paramètre](https://github.com/NotANameServer/Not-a-Hub/settings/pages) pour selectionner la branche sur laquelle se base le site est global au repo, si vous le modifiez, le changement sera visible à tous, vous devez donc créer un fork et modifier ce paramètre sur votre repo.
+
 ## Convention pour les messages de commit
 
 Chaque message doit commencer par un titre séparé du reste du commit par une ligne vide. Le titre doit de préférence ne pas dépasser 50 caractères et doit commencer par l'un des tags suivant:
