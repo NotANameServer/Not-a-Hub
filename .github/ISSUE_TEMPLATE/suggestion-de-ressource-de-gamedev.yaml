@@ -1,6 +1,7 @@
 name: Suggestion de ressource de gamedev
 description: Ajout d'une ressource a la page "Ressources pour game-dev"
 title: '[GAMEDEV RESOURCES]'
+labels: ["gamedev-resources"]
 body:
   - type: input
     id: nom
