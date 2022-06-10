@@ -1,0 +1,40 @@
+name: Suggestion de ressource de gamedev
+description: Ajout d'une ressource a la page "Ressources pour game-dev"
+title: '[GAMEDEV RESOURCES]'
+body:
+  - type: input
+    id: nom
+    attributes:
+      label: Nom
+    validations:
+      required: true
+  - type: input
+    id: lien
+    attributes:
+      label: Lien
+    validations:
+      required: true
+  - type: input
+    id: licence
+    attributes:
+      label: Licence
+    validations:
+      required: true
+  - type: input
+    id: source-licence
+    attributes:
+      label: URL où se trouve la licence
+  - type: input
+    id: prix
+    attributes:
+      label: Prix
+      description: Indiquer gratuit, ou le prix si payant
+    validations:
+      required: true
+  - type: input
+    id: meta
+    attributes:
+      label: Meta
+      description: >-
+        Metadonnéée(s)/tag(s) à choisir dans: Animation, Audio, Background,
+        Decals, Font, HDRI, Landscape, Modèle, PBR, Sprite, Texture, Tileset, UI
