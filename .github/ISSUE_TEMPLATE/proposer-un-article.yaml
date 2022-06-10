@@ -3,7 +3,6 @@ description: Proposer un nouvel article pour le blog
 title: '[NOUVEL ARTICLE] '
 body:
   - type: textarea
-    id: sujet
     attributes:
       label: Sujet de l'article
       description: Décrivez votre sujet ici afin que l'on puisse en discuter
