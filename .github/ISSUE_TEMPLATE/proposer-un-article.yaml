@@ -1,0 +1,11 @@
+name: Proposer un article
+description: Proposer un nouvel article pour le blog
+title: '[NOUVEL ARTICLE] '
+labels: ["article"]
+body:
+  - type: textarea
+    attributes:
+      label: Sujet de l'article
+      description: Décrivez votre sujet ici afin que l'on puisse en discuter
+    validations:
+      required: true
