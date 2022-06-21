@@ -1,7 +1,7 @@
 Relatif vs Absolu, démystifions les imports python
 ==================================================
 
-Dans cet article nous étudierons les modules en python avec un regard poussé sur la notion de package. Nous étudierons aussi la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux import relatifs.
+Dans cet article, nous étudierons les modules en python avec un regard poussé sur la notion de package. Nous étudierons aussi la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux import relatifs.
 
 Cet article part du principe que vous avez déjà utilisé `import` et que vous avez déjà écrit vos propres modules. Si vous pensez avoir besoin d'une remise à niveau, nous vous conseillons de relire les deux chapitres "Pas à pas vers la modularité" du livre "[Apprenez à programmer en Python][goff11]" de Vincent le Goff.
 
@@ -34,9 +34,9 @@ Au même titre que les deux autres, `__package__` est une variable magique qui c
     >>> urllib.parse.__package__
     'urllib'
 
-Dans le jargon python, un *package* est un dossier qui contient un fichier `__init__.py` et dans lequel se trouvent généralement d'autres modules python (des fichier se finissant en `.py`). Il n'y a qu'assez peu de packages dans la bibliothèque standard de python: `email`, `html`, `http`, `importlib`, `tkinter`, `unittest`, `urllib` et `xml`. Ils sont par contre très communs lorsqu'on regarde du côté des bilbiothèques hébergées sur pypi: `flask`, `numpy`, `matplotlib`, `requests`, `fastapi` et `sqlalchemy`; tous sont des packages où sont regroupés parfois jusqu'à plusieurs centaines de modules python.
+Dans le jargon python, un *package* est un dossier qui contient un fichier `__init__.py` et dans lequel se trouvent généralement d'autres modules python (des fichiers se finissant en `.py`). Il n'y a qu'assez peu de packages dans la bibliothèque standard de python: `email`, `html`, `http`, `importlib`, `tkinter`, `unittest`, `urllib` et `xml`. Ils sont par contre très communs lorsqu'on regarde du côté des bibliothèques hébergées sur pypi: `flask`, `numpy`, `matplotlib`, `requests`, `fastapi` et `sqlalchemy`; tous sont des packages où sont regroupés parfois jusqu'à plusieurs centaines de modules python.
 
-Il est rare de développer un projet qui ne va tenir que dans un seul module python, la plupart du temps un projet est implémenté au travers de plusieurs modules qui vont s'importer mutuellement et qui sont regroupés dans différents dossiers. Tous ces modules regroupés en différents dossiers doivent pouvoir utiliser les fonctions et les classes qui sont définies dans les autres modules, il est donc important de pouvoir importer et de pouvoir être importé facilement. Python propose deux méchanismes pour importer des choses venant d'autres modules : les import relatifs (au package courant) et les import absolus (au `sys.path`).
+Il est rare de développer un projet qui ne va tenir que dans un seul module python, la plupart du temps un projet est implémenté au travers de plusieurs modules qui vont s'importer mutuellement et qui sont regroupés dans différents dossiers. Tous ces modules regroupés en différents dossiers doivent pouvoir utiliser les fonctions et les classes qui sont définies dans les autres modules, il est donc important de pouvoir importer et de pouvoir être importé facilement. Python propose deux méchanismes pour importer des choses venant d'autres modules : les imports relatifs (au package courant) et les imports absolus (au `sys.path`).
 
 Import relatif vs import absolu
 -------------------------------
@@ -102,7 +102,7 @@ Dans ce second exemple, nous profitons du fait qu'il est possible d'exécuter un
     /home/julien/monpkg/__init__.py __name__='monpkg' __package__='monpkg'
     /home/julien/monpkg/__main__.py __name__='monpkg.__main__' __package__='monpkg'
 
-Dans ce troisième exemple, nous ne lançons plus le programme directement via la ligne de commande, à la place nous invoquons l'interpréteur pour qu'il joue l'instruction `import monpkg.__main__`. L'idée ici est de contourner les bizzareries de la ligne de commande pour à la place `import` notre package. Nous constatons que grâce à cette petite astuce, cette fois-ci, le package est bien correctement chargé : les variables `__package__` contiennent ce qu'on s'attend à voir et les fichier `__init__.py` a été chargé à la volée. Le seul bémol est que le `__name__` du fichier `__main__.py` atteste `monpkg.__main__` et non pas simplement `__main__`. Ce bémol s'explique par le fait que ce qui s'appelle `__main__` dans ce contexte est ce qui a été exécuté en premier lieu : l'instruction contenue dans le `-c` de la ligne de commande.
+Dans ce troisième exemple, nous ne lançons plus le programme directement via la ligne de commande, à la place nous invoquons l'interpréteur pour qu'il joue l'instruction `import monpkg.__main__`. L'idée ici est de contourner les bizzareries de la ligne de commande pour à la place `import` notre package. Nous constatons que grâce à cette petite astuce, cette fois-ci, le package est bien correctement chargé : les variables `__package__` contiennent ce qu'on s'attend à voir et le fichier `__init__.py` a été chargé à la volée. Le seul bémol est que le `__name__` du fichier `__main__.py` atteste `monpkg.__main__` et non pas simplement `__main__`. Ce bémol s'explique par le fait que ce qui s'appelle `__main__` dans ce contexte est ce qui a été exécuté en premier lieu : l'instruction contenue dans le `-c` de la ligne de commande.
 
 Il est tout à fait possible de décider d'ignorer que le fichier `__main__.py` n'est pas le véritable `__main__` du programme. L'essentiel est que la variable `__package__` soit correctement remplie et avec les bonnes informations, cet objectif est atteint.
 
@@ -121,7 +121,7 @@ Dans ce quatrième et dernier exemple, nous lançons le programme au moment de l
 Conclusion
 ----------
 
-La notion de *package* est une notion qui est mal comprise de la part des développeurs python, autant novices qu'avancés. Cette notion est cependant primordiale pour correctement comprendre comment fonctionnent les imports relatifs et donc comment structurer et exécuter ses projets.
+La notion de *package* est mal comprise par les développeurs python, autant novices qu'avancés. Cette notion est cependant primordiale pour correctement comprendre comment fonctionnent les imports relatifs et donc comment structurer et exécuter ses projets.
 
 Nous pouvons regretter que le chapitre qui aborde les modules dans [le tutoriel officielle][pydoc/tuto/module] de python soit approximatif. Nous pouvons aussi regretter que faute de resources complètes et fiables à ce propos, les différents cours tant francophones qu'anglophones tombent aussi dans le travers de n'apporter que de piètre explications sur la manière de structurer un projet python.
 
