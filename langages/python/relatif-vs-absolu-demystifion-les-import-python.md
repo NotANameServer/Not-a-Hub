@@ -1,14 +1,14 @@
 Relatif vs Absolu, démystifions les imports python
 ==================================================
 
-Dans cet article nous étudions les modules en python avec un regard poussé sur la notion de package. Nous étudions la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux import relatifs.
+Dans cet article nous étudierons les modules en python avec un regard poussé sur la notion de package. Nous étudierons aussi la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux import relatifs.
 
 Cet article part du principe que vous avez déjà utilisé `import` et que vous avez déjà écrit vos propres modules. Si vous pensez avoir besoin d'une remise à niveau, nous vous conseillons de relire les deux chapitres "Pas à pas vers la modularité" du livre "[Apprenez à programmer en Python][goff11]" de Vincent le Goff.
 
 Package
 -------
 
-Vous connaissez certainement les deux variables magiques `__file__` et `__name__`, ces deux variables sont définis automatiquement par python pour chaque module, la première contient le chemin complet où se trouve le fichier sur le disque et la seconde contient le nom du module courant relatif à la racine du projet.
+Vous connaissez certainement les deux variables magiques `__file__` et `__name__`, ces deux variables sont définies automatiquement par python pour chaque module, la première contient le chemin complet où se trouve le fichier sur le disque et la seconde contient le nom du module courant, relatif à la racine du projet.
 
     >>> import random
     >>> random.__name__
@@ -34,18 +34,18 @@ Au même titre que les deux autres, `__package__` est une variable magique qui c
     >>> urllib.parse.__package__
     'urllib'
 
-Dans le jargon python, un *package* est un dossier qui contient un fichier `__init__.py` et dans lequel se trouvent généralement d'autres modules python (des fichier se finissant en `.py`). Il n'y a qu'assez peu de packages dans la bibliothèque standard de python: `email`, `html`, `http`, `importlib`, `tkinter`, `unittest`, `urllib` et `xml`. Ils sont par contre très commun lorsqu'un regarde du côté des bilbiothèques hébergées sur pypi: `flask`, `numpy`, `matplotlib`, `requests`, `fastapi` et `sqlalchemy`; tous sont des packages où sont regroupés parfois jusqu'à plusieurs centaines de modules python.
+Dans le jargon python, un *package* est un dossier qui contient un fichier `__init__.py` et dans lequel se trouvent généralement d'autres modules python (des fichier se finissant en `.py`). Il n'y a qu'assez peu de packages dans la bibliothèque standard de python: `email`, `html`, `http`, `importlib`, `tkinter`, `unittest`, `urllib` et `xml`. Ils sont par contre très communs lorsqu'on regarde du côté des bilbiothèques hébergées sur pypi: `flask`, `numpy`, `matplotlib`, `requests`, `fastapi` et `sqlalchemy`; tous sont des packages où sont regroupés parfois jusqu'à plusieurs centaines de modules python.
 
-Il est rare de développer un projet qui ne va tenir que dans un seul module python, la plupart du temps un projet est implémenté au travers de plusieurs modules qui vont s'importer mutuellement et qui sont regroupés dans différents dossiers. Tous ces modules regroupés en différents dossiers doivent pouvoir utiliser les fonctions et les classes qui sont définis dans les autres modules, il est donc important de pouvoir importer et de pouvoir être importé facilement. Python propose deux méchanismes pour importer des choses venant d'autres modules: les import relatifs (au package courant) et les import absolus (au `sys.path`).
+Il est rare de développer un projet qui ne va tenir que dans un seul module python, la plupart du temps un projet est implémenté au travers de plusieurs modules qui vont s'importer mutuellement et qui sont regroupés dans différents dossiers. Tous ces modules regroupés en différents dossiers doivent pouvoir utiliser les fonctions et les classes qui sont définies dans les autres modules, il est donc important de pouvoir importer et de pouvoir être importé facilement. Python propose deux méchanismes pour importer des choses venant d'autres modules: les import relatifs (au package courant) et les import absolus (au `sys.path`).
 
 Import relatif vs import absolu
 -------------------------------
 
 Lorsque l'instruction `import` est évaluée, python va analyser la ligne pour déterminer où il doit aller trouver l'élément à importer. Lorsque le nom du module à importer commence par un point, python charge ce module depuis le package courant, on parle d'un import relatif. Lorsque le nom du module à importer ne commence pas par un point on parle alors d'un import absolu.
 
-Il y a des situations où l'on n'a pas d'autre choix que d'utiliser un import absolu, par exemple lorsque ce qu'on importe ne se trouve pas dans le package courant ni dans le package parent. Par exemple, tous les modules de la bibliothèque standard ainsi que tous les modules qui ont été installé via pip ne peuvent être importés qu'avec un import absolu. Il n'y a pas d'autre moyen d'importer le module `random` que de taper `import random`.
+Il y a des situations où l'on n'a pas d'autre choix que d'utiliser un import absolu, par exemple lorsque ce qu'on importe ne se trouve pas dans le package courant ni dans le package parent. Par exemple, tous les modules de la bibliothèque standard ainsi que tous les modules qui ont été installés via pip ne peuvent être importés qu'avec un import absolu. Il n'y a pas d'autre moyen d'importer le module `random` que de taper `import random`.
 
-Lorsqu'on est dans son propre logiciel, qu'on veut importer un fichier qui se trouve dans le même dossier, alors la question se pose. Mieux vaut-il préférer un import relatif ou bien un import absolu ? Il n'y a en fait pas de réponse définive à cette question, certains priviligeront des imports absolus, d'autres des imports relatifs, d'autres un judicieux mélange des deux en fonction des situations.
+Lorsqu'on est dans son propre logiciel, qu'on veut importer un fichier qui se trouve dans le même dossier, alors la question se pose. Mieux vaut-il préférer un import relatif ou bien un import absolu ? En fait, il n'y a pas de réponse définive à cette question, certains priviligeront des imports absolus, d'autres des imports relatifs, d'autres un judicieux mélange des deux en fonction des situations.
 
 Pour reprendre l'exemple fourni dans le tutoriel officiel sur les modules:
 
@@ -76,7 +76,7 @@ Le truc pourri en python par rapport aux packages est qu'un module python se tro
     ~ $ cat monpkg/__main__.py
     print(__file__, f'{__name__=}', f'{__package__=}')
 
-Il s'agit d'un package minimaliste, seulement deux fichiers: `__init__.py` et `__main__.py`, tous les deux exécutent la même instruction: afficher leur propre file, name et package. Petit rappel: lorsqu'un package est importé pour la première fois, son fichier `__init__.py` est exécuté. Deuxième petit rappel: lorsqu'un package ou un dossier est exécuté, son fichier `__main__.py` est exécuté.
+Il s'agit d'un package minimaliste, seulement deux fichiers : `__init__.py` et `__main__.py`, tous les deux exécutent la même instruction: afficher leur propre file, name et package. Petit rappel : lorsqu'un package est importé pour la première fois, son fichier `__init__.py` est exécuté. Deuxième petit rappel : lorsqu'un package ou un dossier est exécuté, son fichier `__main__.py` est exécuté.
 
 Étudions maintenant 4 exécutions de ce même programme.
 
@@ -114,14 +114,14 @@ Notez qu'au lieu de faire `-c 'import monpkg.__main__` on aurait pu écrire un p
     /home/julien/monpkg/__init__.py __name__='monpkg' __package__='monpkg'
     /home/julien/monpkg/__main__.py __name__='__main__' __package__='monpkg'
 
-Dans ce quatrième et dernier exemple, nous lançons le programme au moment de l'option `-m` de la ligne de commande. Cette option est succintement décrite comme "run library module as a script" dans le manuel de python. La réalité est beaucoup plus intéressante que ne le laisse entendre la toute petite phrase du manuel, on constate qu'en utilisant cette option le package est enfin chargé de la manière esqonté: le package est chargé, les variables `__name__` et `__package__` sont justes et nous n'avons pas eu recours à un quelconque artifice (un module en plus dont le seul but était d'`import` notre main).
+Dans ce quatrième et dernier exemple, nous lançons le programme au moment de l'option `-m` de la ligne de commande. Cette option est succintement décrite comme "run library module as a script" dans le manuel de python. La réalité est beaucoup plus intéressante que ne le laisse entendre la toute petite phrase du manuel, on constate qu'en utilisant cette option le package est enfin chargé de la manière escompté : le package est chargé, les variables `__name__` et `__package__` sont justes et nous n'avons pas eu recours à un quelconque artifice (un module en plus dont le seul but était d'`import` notre main).
 
 **Nous vous recommandons de systématiquement lancer vos projets avec l'option `-m` !**
 
 Conclusion
 ----------
 
-La notion de *package* est une notion qui est mal comprise de la part des développeurs python, autant novices qu'avancés. Cette notion est cependant priomordiale pour correctement comprendre comment fonctionnent les imports relatifs et donc comment structurer et exécuter ses projets.
+La notion de *package* est une notion qui est mal comprise de la part des développeurs python, autant novices qu'avancés. Cette notion est cependant primordiale pour correctement comprendre comment fonctionnent les imports relatifs et donc comment structurer et exécuter ses projets.
 
 Nous pouvons regretter que le chapitre qui aborde les modules dans [le tutoriel officielle][pydoc/tuto/module] de python soit approximatif. Nous pouvons aussi regretter que faute de resources complètes et fiables à ce propos, les différents cours tant francophones qu'anglophones tombent aussi dans le travers de n'apporter que de piètre explications sur la manière de structurer un projet python.
 
