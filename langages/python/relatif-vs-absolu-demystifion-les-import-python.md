@@ -1,14 +1,14 @@
 Relatif vs Absolu, démystifions les imports python
 ==================================================
 
-Dans cet article, nous étudierons les modules en python avec un regard poussé sur la notion de package. Nous étudierons aussi la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux import relatifs.
+Dans cet article, nous allons étudier la notion de package. De sa définition jusqu'à son utilisation, nous tâcherons de montrer comment réaliser une arborescence cohérente prévenant ainsi les erreurs.
 
-Cet article part du principe que vous avez déjà utilisé `import` et que vous avez déjà écrit vos propres modules. Si vous pensez avoir besoin d'une remise à niveau, nous vous conseillons de relire les deux chapitres "Pas à pas vers la modularité" du livre "[Apprenez à programmer en Python][goff11]" de Vincent le Goff.
+Cet article suppose que vous êtes familiers avec les imports et la manipulation de modules. Si vous pensez avoir besoin d'une remise à niveau, nous vous conseillons de lire ou de relire "Pas à pas vers la modularité" du livre "[Apprenez à programmer en Python][goff11]" de Vincent le Goff.
 
 Package
 -------
 
-Vous connaissez certainement les deux variables magiques `__file__` et `__name__`, ces deux variables sont définies automatiquement par python pour chaque module, la première contient le chemin complet où se trouve le fichier sur le disque et la seconde contient le nom du module courant, relatif à la racine du projet.
+Si vous lisez ceci, vous connaissez certainement `__file__` et `__name__`, ces deux variables magiques sont définies automatiquement pour chaque module. Pour rappel, `__file__` contient le chemin d'accès absolu du fichier, alors que `__name__` contient le nom du module courant relatif à la racine du projet.
 
     >>> import random
     >>> random.__name__
@@ -22,9 +22,9 @@ Vous connaissez certainement les deux variables magiques `__file__` et `__name__
     >>> urllib.parse.__file__
     '/usr/lib/python3.9/urllib/parse.py
 
-Mais vous êtes vous déjà intéressé à la variable `__package__` ?
+Mais vous êtes-vous déjà intéressé à `__package__` ?
 
-Au même titre que les deux autres, `__package__` est une variable magique qui contient non pas le nom du module courant mais bien le nom du *package* dans lequel le module se trouve.
+Au même titre que `__file__` et `__name__`, `__package__` est une variable magique. Elle contient le nom du *package* dans lequel se trouve le module.
 
     >>> import random
     >>> random.__package__
@@ -34,20 +34,24 @@ Au même titre que les deux autres, `__package__` est une variable magique qui c
     >>> urllib.parse.__package__
     'urllib'
 
-Dans le jargon python, un *package* est un dossier qui contient un fichier `__init__.py` et dans lequel se trouvent généralement d'autres modules python (des fichiers se finissant en `.py`). Il n'y a qu'assez peu de packages dans la bibliothèque standard de python: `email`, `html`, `http`, `importlib`, `tkinter`, `unittest`, `urllib` et `xml`. Ils sont par contre très communs lorsqu'on regarde du côté des bibliothèques hébergées sur pypi: `flask`, `numpy`, `matplotlib`, `requests`, `fastapi` et `sqlalchemy`; tous sont des packages où sont regroupés parfois jusqu'à plusieurs centaines de modules python.
+Formellement, un *package* est un dossier contenant un fichier `__init__.py`. Si la simple présence de ce fichier suffit à définir un dossier en tant que package, on y retrouve habituellement des modules, des dossiers, mais aussi des packages. En effet, un package peut contenir des packages ! On parle alors de sub packages.
 
-Il est rare de développer un projet qui ne va tenir que dans un seul module python, la plupart du temps un projet est implémenté au travers de plusieurs modules qui vont s'importer mutuellement et qui sont regroupés dans différents dossiers. Tous ces modules regroupés en différents dossiers doivent pouvoir utiliser les fonctions et les classes qui sont définies dans les autres modules, il est donc important de pouvoir importer et de pouvoir être importé facilement. Python propose deux méchanismes pour importer des choses venant d'autres modules : les imports relatifs (au package courant) et les imports absolus (au `sys.path`).
+Il est rare de développer un projet dans un seul et unique module. En règle général, un projet est fragmenté en modules, packages, dossier. Sans tenir compte de son emplacement, un module doit pouvoir faire appel aux fonctionnalités défini dans des modules distincts. Afin d'y parvenir, nous devons utiliser les imports. Python en propose deux variations : les import relatifs (au package courant) et les import absolus (au `sys.path`).
 
 Import relatif vs import absolu
 -------------------------------
 
-Lorsque l'instruction `import` est évaluée, python va analyser la ligne pour déterminer où il doit aller trouver l'élément à importer. Lorsque le nom du module à importer commence par un point, python charge ce module depuis le package courant, on parle d'un import relatif. Lorsque le nom du module à importer ne commence pas par un point on parle alors d'un import absolu.
+Lorsque l'instruction `import` est évaluée, python analyse l'entièreté de la ligne afin de déterminer où trouver l'élément à importer. Si l'import commence par un point, python charge l'élément depuis le package courant, on parle d'un import relatif. Inversement, si l'import ne commence pas par un point, on parle d'un import absolu.
 
-Il y a des situations où l'on n'a pas d'autre choix que d'utiliser un import absolu, par exemple lorsque ce qu'on importe ne se trouve pas dans le package courant ni dans le package parent. Par exemple, tous les modules de la bibliothèque standard ainsi que tous les modules qui ont été installés via pip ne peuvent être importés qu'avec un import absolu. Il n'y a pas d'autre moyen d'importer le module `random` que de taper `import random`.
+L'import absolu s’avère intéressant lorsque l'élément importé ne se trouve ni dans le package courant ni dans le package parent. C'est le cas pour l'ensemble des modules de la bibliothèque standard ainsi que pour ceux installés avec pip.
 
-Lorsqu'on est dans son propre logiciel, qu'on veut importer un fichier qui se trouve dans le même dossier, alors la question se pose. Mieux vaut-il préférer un import relatif ou bien un import absolu ? En fait, il n'y a pas de réponse définitive à cette question, certains priviligeront des imports absolus, d'autres des imports relatifs, d'autres un judicieux mélange des deux en fonction des situations.
+Il n'y a pas d'autre moyen d'importer `random` qu'avec `import random`.
 
-Pour reprendre l'exemple fourni dans le tutoriel officiel sur les modules:
+Lorsque les deux imports sont possibles, mieux vaut-il préférer un import relatif ou un import absolu ? En fait, il n'y a pas de réponse définitive à cette question. Certains privilégieront les imports absolus, quand d’autre se tourneront vers les imports relatifs. Enfin, en fonction des situations, une judicieuse combinaison d’imports absolus et relatifs peut s’avérer plus intéressante.
+
+Illustrons ces propos par un exemple :
+
+On retrouve dans le tutoriel officiel sur les modules la structure suivante :
 
     sound/                          Top-level package
           __init__.py               Initialize the sound package
@@ -60,41 +64,40 @@ Pour reprendre l'exemple fourni dans le tutoriel officiel sur les modules:
                   equalizer.py
                   ...
 
-Dans le module `sound.filters.equalizer` il est possible d'importer `wavread` soit avec un import absolu en repartant du top-level package: `from sound.formats import wavread`, soit avec un import relatif: `from ..formats import wavread`.
+Admettons que l’on se situe dans equalizer.py et que l’on souhaite importer wavread.py. Nous pouvons utiliser un import absolu, dans ce cas, on part du top-level package pour atteindre le module cible. On a alors : `from sound.formats import wavread`. L’autre possibilité est d’utiliser un import relatif, se traduisant comme suit : `from ..formats import wavread`. Comme nous pouvons le remarquer, une manière d’importer ne prévaut pas sur une autre, cela relève davantage de la préférence du développeur.
 
 To be or not to be?
 -------------------
 
-Le truc pourri en python par rapport aux packages est qu'un module python se trouvant dans un dossier n'aura pas forcément ce dossier comme package, même si le dossier en question possède un fichier `__init__.py`. En réalité, tout dépend de comment a été chargé le module en question. Nous avons vu plus haut que les imports relatifs reposent sur le package du module courant et que ce nom de package était repris dans la variable magique `__package__` qui est propre à chaque module.
+Si on ne cesse de faire l'éloge de Python (à juste titre), il comporte aussi son lot de fragilités, l’une d’elle étant liée aux packages. En effet, un module python qui se trouve dans un package ne sera pas forcément affilié à celui-ci ! En réalité, cela va dépendre de la manière dont a été chargé le module en question. Pour illustrer ce propos, nous allons étudier quatre exemples durant lesquels l’utilité de `__package__` sera pleinement révélé !
 
-Étudions à présent le programme suivant:
+Supposons que l’on dispose d’un package structuré ainsi :
 
     ~ $ ls monpkg/
-    __init__.py  __main__.py
+    __init__.py __main__.py
     ~ $ cat monpkg/__init__.py
     print(__file__, f'{__name__=}', f'{__package__=}')
     ~ $ cat monpkg/__main__.py
     print(__file__, f'{__name__=}', f'{__package__=}')
 
-Il s'agit d'un package minimaliste, seulement deux fichiers : `__init__.py` et `__main__.py`, tous les deux exécutent la même instruction: afficher leur propre file, name et package. Petit rappel : lorsqu'un package est importé pour la première fois, son fichier `__init__.py` est exécuté. Deuxième petit rappel : lorsqu'un package ou un dossier est exécuté, son fichier `__main__.py` est exécuté.
-
-Étudions maintenant 4 exécutions de ce même programme.
+Il s'agit d'un package minimaliste composé uniquement de deux fichiers : `__init__.py` et `__main__.py`. Tous deux exécutent la même instruction : afficher leur propre file, name et package. Pour rappel, lorsqu'un package est importé son fichier `__main__.py` est exécuté. De plus, s'il s'agit de la première fois, son fichier `__init__.py` est aussi exécuté.
 
 ### Exécuter le fichier main.py
+
+Le fichier `__main__.py` est directement exécuté via la ligne de commande.
 
     ~ $ python3 monpkg/__main__.py
     /home/julien/monpkg/__main__.py __name__='__main__' __package__=None
 
-Dans ce premier exemple, le fichier `__main__.py` est directement exécuté via la ligne de commande. On constate avec étonnement que la variable magique `__package__` dénote l'absence de package courant. On constate également que le fichier `__init__.py` n'a pas été automatiquement joué, ceci vient confirmer que le module a été chargé *sans être lié au package monpkg*.
-
-Vous cherchiez une explication sur pourquoi dans vos propres projets vous aviez des erreurs du type "attempted relative import with no known parent package", ne cherchez plus. Parce que `__main__.py` a été directement exécuté, python a décidé qu'il n'y avait pas de package et comme il n'y a pas de package il n'est pas possible de faire d'import relatif. Oui python est pourri à cet égard.
+En premier lieu, il est à noter que__init__.py n’a pas été joué automatiquement. Plus intéressant encore, `__package__` contient « None », cela nous indique que le fichier __main__.py est affilié à aucun package. En fait, il s’agit d’une cause bien connue de l'erreur "attempted relative import with no known parent package". `__main__.py` étant directement exécuté, Python l’interprète comme un simple module, de ce fait, il n'est donc pas possible de réaliser un import relatif ... (ceux-ci étant propre aux packages)
 
 ### Exécuter le dossier monpkg
 
     ~ $ python3 monpkg
     /home/julien/monpkg/__main__.py __name__='__main__' __package__=''
 
-Dans ce second exemple, nous profitons du fait qu'il est possible d'exécuter un dossier via la ligne de commande. L'idée ici est de ne plus exécuter un fichier précis (ce qui mènerait à ce que ce fichier ne soit pas lié au package) mais bien d'exécuter le package directement. Malheureusement, on constate à nouveau que si le fichier `__main__.py` a été automatiquement joué, ce fichier n'est toujours pas lié au package et que le fichier `__init__.py` n'a pas non plus été chargé et exécuté. On constate à nouveau que python est pourri à cet égard.
+Voyons ce qu’il en est lorsque nous essayons d'exécuter le package directement.
+Si `__init__.py` n’a pas été joué, `__main__.py` a quant à lui bien été exécuté ! Cependant, on remarque que ce dernier n'est toujours pas lié au package. En effet, `__package__` est à nouveau vide…
 
 ### Importer main.py depuis l'extérieur
 
@@ -102,11 +105,13 @@ Dans ce second exemple, nous profitons du fait qu'il est possible d'exécuter un
     /home/julien/monpkg/__init__.py __name__='monpkg' __package__='monpkg'
     /home/julien/monpkg/__main__.py __name__='monpkg.__main__' __package__='monpkg'
 
-Dans ce troisième exemple, nous ne lançons plus le programme directement via la ligne de commande, à la place nous invoquons l'interpréteur pour qu'il joue l'instruction `import monpkg.__main__`. L'idée ici est de contourner les bizzareries de la ligne de commande pour à la place `import` notre package. Nous constatons que grâce à cette petite astuce, cette fois-ci, le package est bien correctement chargé : les variables `__package__` contiennent ce qu'on s'attend à voir et le fichier `__init__.py` a été chargé à la volée. Le seul bémol est que le `__name__` du fichier `__main__.py` atteste `monpkg.__main__` et non pas simplement `__main__`. Ce bémol s'explique par le fait que ce qui s'appelle `__main__` dans ce contexte est ce qui a été exécuté en premier lieu : l'instruction contenue dans le `-c` de la ligne de commande.
+Cette fois-ci, nous avons choisi d’utiliser l'interpréteur en lui demandant de jouer `import monpkg.__main__`.
 
-Il est tout à fait possible de décider d'ignorer que le fichier `__main__.py` n'est pas le véritable `__main__` du programme. L'essentiel est que la variable `__package__` soit correctement remplie et avec les bonnes informations, cet objectif est atteint.
+En réalisant un `import`, nous évitons les comportements induits par la ligne de commande. Avec cette manipulation, le package est correctement chargé. `__package__` contient `monpkg` et le fichier `__init__.py` a été chargé à la volée. Seule ombre au tableau, `__name__` du fichier `__main__.py` contient `monpkg.__main__` et non pas `__main__`. Ce comportement s'explique par le fait que `__main__` , dans ce contexte, renvoie à ce qui a exécuté en premier lieu : `import monpkg.__main__`.
 
-Notez qu'au lieu de faire `-c 'import monpkg.__main__` on aurait pu écrire un programme (exemple `run.py`) qui se serait trouvé au même niveau que le package (donc en *dehors* du pacakge, à *côté* de celui-ci) et dont la seule instruction aurait été la fameuse `import monpkg.__main__`. On aurait alors exécuté `python3 run.py` à la place de `python3 -c 'import monpkg.__main__`.
+Il est toutefois important de noter qu’il s’agit d’un défaut qui n’en a que le nom. En effet, le but premier étant que `__package__` soit correctement rempli.
+
+À titre informatif, nous aurions obtenu le même comportement si nous avions exécuté un programme (nommé habituellement `run.py`). En effet, ce dernier se serait situé au même niveau que le package (donc en *dehors* du package, à *côté* de celui-ci) et aurait pour seule instruction `import monpkg.__main__`. Enfin, on aurait remplacé `python3 -c 'import monpkg.__main__` par `python3 run.py`.
 
 ### Exécuter le package avec -m
 
@@ -114,20 +119,16 @@ Notez qu'au lieu de faire `-c 'import monpkg.__main__` on aurait pu écrire un p
     /home/julien/monpkg/__init__.py __name__='monpkg' __package__='monpkg'
     /home/julien/monpkg/__main__.py __name__='__main__' __package__='monpkg'
 
-Dans ce quatrième et dernier exemple, nous lançons le programme au moment de l'option `-m` de la ligne de commande. Cette option est succintement décrite comme "run library module as a script" dans le manuel de python. La réalité est beaucoup plus intéressante que ne le laisse entendre la toute petite phrase du manuel, on constate qu'en utilisant cette option le package est enfin chargé de la manière escompté : le package est chargé, les variables `__name__` et `__package__` sont justes et nous n'avons pas eu recours à un quelconque artifice (un module en plus dont le seul but était d'`import` notre main).
-
-**Nous vous recommandons de systématiquement lancer vos projets avec l'option `-m` !**
+Dans ce dernier exemple, nous exécutons `monpkg` avec l'option `-m` de la ligne de commande. Dans le manuel Python, elle est décrite de la manière suivante : "run library module as a script". En réalité, cette phrase ne saurait suffire à traduire le potentiel de cette option. En effet, avec cette dernière, le package est enfin chargé de la manière escomptée. `__init__.py` et `__main__.py` sont automatiquement exécuté et pour chacun d’eux, `__name__` et `__package__` contiennent les valeurs attendues. Plus encore, nous n'avons eu recours à aucun artifice (un module supplémentaire dont le seul but étant l'`import` de notre main).
 
 Conclusion
 ----------
 
-La notion de *package* est mal comprise par les développeurs python, autant novices qu'avancés. Cette notion est cependant primordiale pour correctement comprendre comment fonctionnent les imports relatifs et donc comment structurer et exécuter ses projets.
+Bien que nécessaire à la compréhension des imports, des structures et de la bonne exécution d’un projet, la notion de *package* reste mal comprise des développeurs python.
 
-Nous pouvons regretter que le chapitre qui aborde les modules dans [le tutoriel officielle][pydoc/tuto/module] de python soit approximatif. Nous pouvons aussi regretter que faute de resources complètes et fiables à ce propos, les différents cours tant francophones qu'anglophones tombent aussi dans le travers de n'apporter que de piètre explications sur la manière de structurer un projet python.
+Nous pouvons regretter que le chapitre traitant des modules dans [le tutoriel officielle][pydoc/tuto/module] de python soit approximatif. Faute de ressources complètes et fiables à ce propos, les différents cours tant francophones qu'anglophones ne font guère mieux.
 
-Cet article est venu combler ces lacunes. Il a montré le rôle essentiel qu'a la variable magique `__package__` et que le contenu de cette variable dépend de la manière dont est exécuté un projet python. Il a aussi démontré que l'option en ligne de commande `-m` était la meilleure solution pour lancer un projet python.
-
-
+Cet article a pour objectif de venir combler ces lacunes. Il a montré le rôle essentiel de la variable magique `__package__`, tout en soulignant l’importance de la manière dont est exécuté un projet. Finalement, au travers de l'ensemble des cas pratiques, cet article a démontré que l'option en ligne de commande `-m` était la meilleure solution pour lancer un projet.
 
 [pydoc/tuto/module]: https://docs.python.org/3/tutorial/modules.html
 [goff11]: https://user.oc-static.com/ftp/livre/python/apprenez_a_programmer_en_python.pdf
