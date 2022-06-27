@@ -92,7 +92,7 @@ def extract_title(path):
             if current_line.startswith('# '):
                 return current_line.strip(f'# {linesep}')
             # Setext title style
-            if next_line and all(char == '=' for char in next_line):
+            if next_line and all(char == '=' for char in next_line.rstrip()):
                 return current_line.strip()
 
     return None
