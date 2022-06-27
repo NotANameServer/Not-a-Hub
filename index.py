@@ -15,13 +15,14 @@ from contextlib import suppress
 from datetime import datetime
 from functools import partial
 from operator import attrgetter
-from os import getenv
+from os import getenv, linesep, sep
+from shutil import which
 from pathlib import Path
 from typing import List
 
 
 ROOT = Path(__file__).resolve().parent
-GIT_PATH = getenv('GIT_PATH', '/usr/bin/git')
+GIT_PATH = getenv('GIT_PATH', which('git'))
 SKIP_FILES = {'index.md', 'README.md'}
 
 
@@ -51,7 +52,7 @@ class Article:
     def uris(self):
         # [/srv/git/Not-a-hub/langages/cpp/foo.md]
         # => ["/langages/cpp/foo.md"]]
-        return [str(path)[len(str(ROOT)):] for path in self.paths]
+        return [str(path)[len(str(ROOT)):].replace(sep, '/') for path in self.paths]
 
     @property
     def tags(self):
@@ -81,7 +82,7 @@ def extract_title(path):
     """ Extract the first top level title of a markdown document """
     assert path.suffix == '.md'
 
-    with open(path) as fd:
+    with open(path, encoding='utf-8') as fd:
         # lookahead the next line of every line during iteration
         it1, it2 = itertools.tee(fd)
         with suppress(StopIteration):
@@ -89,7 +90,7 @@ def extract_title(path):
         for current_line, next_line in itertools.zip_longest(it1, it2):
             # ATX title style
             if current_line.startswith('# '):
-                return current_line.strip('# \n')
+                return current_line.strip(f'# {linesep}')
             # Setext title style
             if next_line and all(char == '=' for char in next_line):
                 return current_line.strip()
@@ -214,14 +215,14 @@ def rewrite_index_file(dir_, articles):
         index_pos = 0
         while True:
             line = index_file.readline()
-            if line in (b'', b'## Index\n'):
+            if line in (b'', b'## Index' + linesep.encode()):
                 break
             index_pos += len(line)
         index_file.seek(index_pos)
         index_file.truncate()
 
     # Write the index
-    with open(index_path, 'a') as index_file:
+    with open(index_path, 'a', encoding='utf-8') as index_file:
         index_file.write("## Index\n")
         for year, articles in articles_per_year:
             index_file.write(f"\n### {year}\n\n")
