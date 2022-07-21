@@ -1,0 +1,44 @@
+## CAML
+===============
+
+A good start to learn fonctionnal languages is ocaml or caml, that means Categorical Abstract Machine Language), 
+
+It's a simple language and very near mathematics that was create by Inria, an object implementation was added to it since 1996.
+
+We found ocaml in many domains due to it simplicity and it power. 
+
+Let's pop in an exemple with a simple editor [ocaml online](https://try.ocamlpro.com/)
+
+I love take the Fibonacci sequence. 
+
+| U0 = 1
+| u1 = 1
+| Un+2 = Un+1 + Un
+
+let's crack it :
+
+    let rec fibo n = mathc n with  (* with do not have for or while loop ;) *)
+        0 -> 0 (* first case of stop is if n is egal to 0 *)
+      | 1 -> 1 
+      | n -> (fibo(n-1)) + (fibo(n-2));; (* here we call back the funciton*)
+
+And here is all the beauty we do not need to know how it's work if it's work for the next step.
+
+## Ocaml
+An ocaml exemple
+
+For documents like check, where digits need to be written in full words and in number in ocaml we can implements a simple converter like this one :
+
+    let full_words = 
+      let digit = [|"zero"; "one"; "two"; "three"; "foor"; "five"; "six"; "seven"; "eight"; "nine" |] in
+      let rec words w n = 
+        if n = 0 then (
+          match w with 
+              [] -> [digit.(0) 
+            | _ -> w
+           )
+        else words (digit.(n mod 10) :: w) (n / 10) in
+        fun n -> String.concat "-" (words [] n);;
+
+
+
