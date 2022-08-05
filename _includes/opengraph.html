@@ -2,5 +2,5 @@
 <meta property="og:site_name"   content="{{ site.title }}">
 <meta property="og:title"       content="{{ page.title }}">
 <meta property="og:url"         content="{{ site.url }}">
-<meta property="og:description" content="{{ page.description }}">
+<meta property="og:description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}">
 <meta property="og:image"       content="{{ '/assets/images/icons/logo_moche_128.png' | relative_url }}">
