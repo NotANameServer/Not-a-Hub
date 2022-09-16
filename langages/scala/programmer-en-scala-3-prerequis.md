@@ -1,4 +1,4 @@
-# Programmer en Scala 3: Les prérequis
+# Programmer en Scala 3 : Les prérequis
 
 ## Qu'est-ce que Scala ?
 

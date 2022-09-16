@@ -40,7 +40,7 @@ println(2)
 
 affiche chaque valeur sur une ligne différente :
 
-> 1
+> 1\
 > 2
 
 
