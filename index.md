@@ -2,9 +2,10 @@
 
 ### 2022
 
-* [Programmer en Scala 3 : Booléens et conditions](/langages/scala/programmer-en-scala-3-booleens-et-conditions.md) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
+* [Les idées reçues sur C](/langages/c/debunk-c.md) [<kbd>c</kbd>](/langages/c) [<kbd>langages</kbd>](/langages)
 * [Programmer en Scala 3 : Types et Variables](/langages/scala/programmer-en-scala-3-types-et-variables.md) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 * [Programmer en Scala 3 : Les prérequis](/langages/scala/programmer-en-scala-3-prerequis.md) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
+* [Programmer en Scala 3 : Booléens et conditions](/langages/scala/programmer-en-scala-3-booleens-et-conditions.md) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 * [Relatif vs Absolu, démystifions les imports python](/langages/python/relatif-vs-absolu-demystifions-les-imports-python.md) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Programmer en Python, quel IDE choisir](/langages/python/programmer-en-python-quel-ide-choisir.md) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 
