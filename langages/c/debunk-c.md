@@ -5,10 +5,9 @@ et éprouvé pendant des années. Cependant, rien de tout cela n'est parfait, et
 même parfois bien en dessous de ce que l'on pourrait attendre aujourd'hui. Pour
 autant énormément de fausses croyances circulent sur le langage, croyances qui
 sont parfois utilisées pour justifier le fait de débuter par C. Pour essayer
-d'y voir un peu plus clair dans tout ça, cet article propose de passer en revue
-quelques une de ces idées reçues. Le but est de donner une vision globale de
-tout cela, aussi j'essaierai au maximum de **ne pas** rentrer trop dans les
-détails.
+d'y voir un peu plus clair, cet article propose de passer en revue quelques une
+de ces idées reçues. Le but est de donner une vision globale à propos de ces
+idées, aussi j'essaierai au maximum de **ne pas** rentrer trop dans les détails.
 
 ## Le C est proche de la machine
 
@@ -40,7 +39,7 @@ restera toujours le cas. Un certain nombre de ces "manières d'écrire" sont par
 ailleurs renseignées dans les heuristiques des compilateurs pour les aider à
 optimiser.
 
-Quel est maintenant le rapport avec C ? Et, bien tristement, il y en a assez peu.
+Quel est maintenant le rapport avec C ? Il y en a assez peu et *c'est voulu*.
 En effet, bien que C soit très utilisé pour écrire des systèmes d'exploitation,
 **rien** dans la définition du langage (la norme C) ne parle de tout cela. Par
 exemple, dans [la norme C11](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1548.pdf),
@@ -110,6 +109,7 @@ matériel. Mais l'implémentation peut aussi faire l'inverse : exploiter le
 comportement voulu par la machine abstraite pour demander à la machine réelle
 des choses que nous n'avions pas prévues. Prenons le programme suivant :
 
+[`ub-overflow.c`](./debunk-c/ub-overflow.c)
 ```c
 #include <limits.h>
 #include <stdio.h>
@@ -175,11 +175,15 @@ C est le père de tous les langages de programmation. Et donc si on connaît ce
 langage, apprendre ses descendants (tous les langages), c'est facile. Non ?
 
 Commençons par une mauvaise métaphore (il n'y a pas de raison que je n'ai pas le
-droit de faire aussi des affirmations fumeuses) : nous n'avons pas eu besoin
-d'apprendre toutes les variantes du latin, puis du vieux français pour ensuite
-apprendre le français d'aujourd'hui. Pourquoi en serait-il différent pour un
-langage de programmation ? L'argument est peut-être faible, mais pas plus que
-l'argument de base.
+droit de faire aussi des affirmations fumeuses) : il est peu probable que
+démarrer par l'apprentissage du latin, puis du vieux français pour ensuite
+apprendre le français d'aujourd'hui soit le plus efficace si l'objectif à la
+base est d'apprendre le français. Pourquoi en serait-il différent pour un
+langage de programmation ? Évidemment le parallèle entre langues naturelles et
+langage de programmation n'est pas si direct, cependant il est déjà bien de
+questionner l'affirmation en question : au nom de quoi apprendre un langage qui
+*serait* à la base d'un autre permettrait d'apprendre plus efficacement ce
+dernier ?
 
 ### Le C est le père de tous les langages de programmation
 
@@ -240,15 +244,15 @@ un autre langage.
 
 ## C est un très bon langage pour apprendre la programmation
 
-Le précédent point nous amène au fait que C serait un très bon langage pour
-apprendre la programmation. C'est de loin la question la plus complexe. La
-raison pour cela est que d'un côté, nous avons des langages qui sont conçus pour
-apprendre, mais ne sont pas utilisés pour l'industrie (ce qui est normal), et
-inversement des langages qui sont utilisés dans l'industrie, mais qui, à raison,
-ne sont pas conçus pour apprendre. Il n'y a pas de langage parfait pour
-apprendre donc je ne vais clairement pas donner une réponse définitive. Mais
-je vais lister ce qui, selon moi, fait de C un mauvais candidat pour un
-*premier pas* dans la programmation.
+Le précédent point nous amène à l'affirmation selon laquelle C serait un très
+bon langage pour apprendre la programmation. C'est de loin la question la plus
+complexe. La raison pour cela est que d'un côté, nous avons des langages qui
+sont conçus pour apprendre, mais ne sont pas utilisés pour l'industrie (ce qui
+est normal), et inversement des langages qui sont utilisés dans l'industrie,
+mais qui, à raison, ne sont pas conçus pour apprendre. Il n'y a pas de langage
+parfait pour apprendre donc je ne vais clairement pas donner une réponse
+définitive. Mais je vais lister ce qui, selon moi, fait de C un mauvais candidat
+pour un *premier pas* dans la programmation.
 
 Demandons-nous d'abord ce qui importe pour qu'un langage soit un bon candidat
 pour débuter. À nouveau, il n'y a pas de réponse définitive à cette question.
@@ -282,8 +286,10 @@ structures *n'est pas* simple. C'est un premier point, mais dans le cadre d'un
 cours pour débutant, ce n'est pas le plus important.
 
 Même les éléments les plus basiques du langage C ne sont pas simples à utiliser.
-Une fonctionnalité aussi basique que la saisie d'une valeur entière n'est pas si
+Une fonctionnalité aussi basique que la saisie de valeur entière n'est pas si
 simple :
+
+[`input.c`](./debunk-c/input.c)
 ```c
 #include <stdio.h>
 
@@ -300,6 +306,7 @@ int main(void){
 
 Naturellement, les cours ont tendance à simplifier tout cela en :
 
+[`input-wrong.c`](./debunk-c/input-wrong.c)
 ```c
 #include <stdio.h>
 
@@ -311,9 +318,14 @@ int main(void){
 ```
 
 Mais selon l'implémentation, cela pourrait avoir des comportements très étranges
-en cas d'erreur de saisie, qu'un débutant pourrait avoir grand-peine à
-comprendre. Au contact de débutants, on constate d'ailleurs que la manipulation
-des flux pose énormément de problèmes. Notamment pour savoir quand le flux est
+en cas d'erreur de saisie. Par exemple avec la saisie d'une chaîne à la place de
+l'entier voulu, on peut obtenir une valeur absurde, mais sur certains vieux
+compilateurs, on peut aussi déclencher des comportements vraiment plus étranges
+(et les décrire demanderait de trop rentrer dans des détails peu intéressants).
+Un débutant pourrait avoir grand-peine à comprendre ce type d'erreurs qui sont
+simplement dues au fait qu'une saisie peut échouer et que l'on doit le vérifier.
+Au contact de débutants, on constate d'ailleurs que la manipulation des flux
+pose énormément de problèmes. Notamment pour savoir à quel moment le flux est
 dans quel état. Et les cours sont généralement très évasifs à ce sujet parce que
 ... ce *n'est pas* simple. Les débutants se cassent donc les dents très souvent
 sur ce problème au cours de leur apprentissage alors que ce problème n'a
@@ -329,7 +341,7 @@ compris. La distinction est ici difficile à faire pour le débutant parce que l
 conversions implicites de l'un à l'autre sont systématiques dans beaucoup de
 cas, c'est une spécificité pénible du C qui n'a aucun intérêt pédagogique.
 
-Un autre exemple est la gestion des erreurs, qui est traitée de manière très
+La gestion des erreurs est, elle aussi, traitée de manière très
 lapidaire dans la majorité des cours de C. Avec comme conséquence que les
 débutants écrivent du code qui ne contient presque aucun traitement des erreurs.
 Sujet qui, par ailleurs, est très important en programmation. La raison de cela
@@ -511,7 +523,8 @@ du coût de développement qui est déjà très élevé.
 ## C est populaire, c'est parce qu'il est très bien
 
 Nous l'avons vu, C a une très longue histoire et il a été utilisé tôt sur des
-projets qui ont perduré jusqu'à aujourd'hui. Il a également fait très tôt partie du paysage dans l'enseignement. Il y a donc une très forte raison
+projets qui ont perduré jusqu'à aujourd'hui. Il a également fait très tôt
+partie du paysage dans l'enseignement. Il y a donc une très forte raison
 *historique* dans l'usage de C. À l'époque de sa création, les langages de
 programmation *general-purpose* utilisés à grande échelle ne sont pas légions.
 On voit bien comment l'inertie peut se mettre en place :
@@ -673,10 +686,12 @@ sont *perdues*. C'est pour cela que l'on peut fortement pester contre les
 enseignements qui commencent avec ce langage, détecter toutes les erreurs bêtes
 d'un programme écrit en C, c'est *dur*. Et les enseignants ne peuvent pas
 regarder en détails les programmes des étudiants avec un niveau d'attention
-suffisant pour tout remarquer. C'est plus facile quand on a la certitude qu'un
-cas de test bien senti fera toujours péter un code buggé. Donc *pas* en C.
+suffisant pour tout remarquer (ou alors je veux bien que vous m'expliquiez votre
+secret pour avoir autant de temps). C'est plus facile quand on a la certitude
+qu'un cas de test bien senti fera toujours péter un code buggé. Donc *pas* en C.
 
-Démarrer par C alors que déjà, il va falloir apprendre à écrire des algorithmes,
+Démarrer par C, alors que déjà il va falloir apprendre à écrire des algorithmes,
 ça s'appelle quand même "charger la mule". Mais si vous avez déjà un peu
 d'expérience en programmation, pourquoi pas ? Ça vous fera une expérience avec
-un langage défini de manière bizarroïde par des années d'évolution.
+un langage défini de manière bizarroïde par des années d'évolution ou plein
+d'acteurs ont essayé de tirer la couette vers eux pour une raison ou une autre.
