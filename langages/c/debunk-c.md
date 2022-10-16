@@ -282,7 +282,7 @@ structures *n'est pas* simple. C'est un premier point, mais dans le cadre d'un
 cours pour débutant, ce n'est pas le plus important.
 
 Même les éléments les plus basiques du langage C ne sont pas simples à utiliser.
-Des fonctionnalités aussi basiques que la saisie de valeur entière n'est pas si
+Une fonctionnalité aussi basique que la saisie d'une valeur entière n'est pas si
 simple :
 ```c
 #include <stdio.h>
@@ -472,7 +472,7 @@ exercer ce contrôle.
 Sur des problèmes très simples tels que ceux présents dans les micro-benchmarks,
 il est vrai que C tient généralement le haut du classement, talonné de très près
 par C++ et Rust (avec des différences de 5% dans les pires cas). Pour un exemple
-de ce type de comparaison, il y a par exemple [cet article](https://haslab.github.io/SAFER/scp21.pdf).
+de ce type de comparaison, il y a [cet article](https://haslab.github.io/SAFER/scp21.pdf).
 Seulement, le travail d'un développeur n'est pas d'écrire des programmes de
 micro-benchmark. Sur des logiciels plus complexes, ces différences tendent
 progressivement à s'effacer. Cela dépend des moyens disponibles pour travailler
@@ -486,7 +486,7 @@ doit l'être. Les premières phases d'optimisation interviennent généralement 
 le plan algorithmique. Ce type d'optimisation n'est pas spécifique au langage C,
 il est possible d'en faire autant dans presque tous les langages. En revanche,
 ce sont des nouveaux développements qui vont avoir les mêmes limitations que le
-reste du développement en C en termes de coût.
+reste du développement en C en termes de coûts.
 
 Une fois ces optimisations réalisées, à condition que les performances soient
 encore insuffisantes, alors seulement, nous allons nous attarder sur les
@@ -511,8 +511,7 @@ du coût de développement qui est déjà très élevé.
 ## C est populaire, c'est parce qu'il est très bien
 
 Nous l'avons vu, C a une très longue histoire et il a été utilisé tôt sur des
-projets qui ont perduré jusqu'à aujourd'hui. Il a également fait très tôt
-fait partie du paysage dans l'enseignement. Il y a donc une très forte raison
+projets qui ont perduré jusqu'à aujourd'hui. Il a également fait très tôt partie du paysage dans l'enseignement. Il y a donc une très forte raison
 *historique* dans l'usage de C. À l'époque de sa création, les langages de
 programmation *general-purpose* utilisés à grande échelle ne sont pas légions.
 On voit bien comment l'inertie peut se mettre en place :
@@ -549,11 +548,11 @@ fait cette popularité.
 
 À l'inverse, une raison plutôt rassurante de cette popularité est le capital
 technique accumulé au fil des années. D'abord par la quantité de développeurs
-experts du langage. Mais également sur le plan de l'outillage. Tout d'abord sur
+experts du langage, mais également sur le plan de l'outillage. Tout d'abord sur
 le sujet de la compilation, les compilateurs
 ([Clang](https://fr.wikipedia.org/wiki/Clang),
 [GCC](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection),
-[MSVC](https://fr.wikipedia.org/wiki/Visual_C%2B%2B) pour ne citer que les plus
+[MSVC](https://fr.wikipedia.org/wiki/Visual_C++) pour ne citer que les plus
 gros) ont plusieurs dizaines d'années de travail de maturation. Ce sont des
 logiciels bien testés et éprouvés avec globalement peu de problèmes sur du code
 courant. On peut également citer
@@ -571,13 +570,13 @@ des outils de debug (comme [GDB](https://fr.wikipedia.org/wiki/GNU_Debugger),
 (comme [CppUnit](https://en.wikipedia.org/wiki/CppUnit),
 [GoogleTest](https://en.wikipedia.org/wiki/Google_Test), ...), jusqu'aux outils
 de vérification formelle de code
-(comme [Astrée](https://en.wikipedia.org/wiki/Astr%C3%A9e_(static_analysis)),
+(comme [Astrée](https://en.wikipedia.org/wiki/Astrée_(static_analysis)),
 [Frama-C](https://en.wikipedia.org/wiki/Frama-C),
 [Verifast](https://github.com/verifast/verifast), ...). Ces outils sont
 aujourd'hui nombreux à avoir une très bonne maturité, sont bien compris du
 monde industriel et avec une bonne méthode d'utilisation permettent (au prix
 d'un très fort investissement en temps) d'améliorer significativement la qualité
-des logiciels développés en C. Seulement, on est en droit de se demander la part
+des logiciels développés en C. Seulement, on est en droit de se demander quelle est la part
 de ce travail qui est gratuite (ou presque) lorsque l'on travaille dans d'autres
 langages.
 
