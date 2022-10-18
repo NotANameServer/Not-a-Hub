@@ -5,7 +5,7 @@ et éprouvé pendant des années. Cependant, rien de tout cela n'est parfait, et
 même parfois bien en dessous de ce que l'on pourrait attendre aujourd'hui. Pour
 autant énormément de fausses croyances circulent sur le langage, croyances qui
 sont parfois utilisées pour justifier le fait de débuter par C. Pour essayer
-d'y voir un peu plus clair, cet article propose de passer en revue quelques une
+d'y voir un peu plus clair, cet article propose de passer en revue quelques-unes
 de ces idées reçues. Le but est de donner une vision globale à propos de ces
 idées, aussi j'essaierai au maximum de **ne pas** rentrer trop dans les détails.
 
@@ -31,7 +31,7 @@ est aujourd'hui un objet d'ingénierie complexe qui fait intervenir de nombreux
 sous-composants. Même le système d'exploitation n'a finalement que peu de
 contrôle sur tout ce qui se passe au niveau du processeur. En particulier, le
 contrôle des caches du processeur, des unités de calculs, etc, n'est pas
-directement accessible. Le peu de contrôle que l'on peut obtenir a ce sujet
+directement accessible. Le peu de contrôle que l'on peut obtenir à ce sujet
 n'est que très indirect : c'est en observant la réaction du système à certaines
 manières de programmer que l'on déduit comment on *devrait (semble-t-il)* écrire
 le programme pour être efficace. Mais nous n'avons aucune garantie que cela
@@ -67,7 +67,7 @@ Certaines variantes (donc embarquant aussi la définition du système cible et u
 modèle de compilateur) l'ont peut-être été historiquement, mais ce n'est plus le
 cas pour les systèmes modernes. On peut même se demander si la notion de langage
 (*general purpose*) de bas niveau a encore un sens aujourd'hui. Pour plus de
-détails sur ce sujet, je vous conseille
+détails à ce sujet, je vous conseille
 [cet article](https://queue.acm.org/detail.cfm?id=3212479).
 
 ### En apprenant C, j'apprends la programmation bas niveau
