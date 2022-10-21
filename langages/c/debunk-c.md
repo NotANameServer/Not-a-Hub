@@ -355,7 +355,9 @@ produire du code contenant des bugs. Que l'on soit bien d'accord, il est tout
 est une part importante de notre métier. Cependant, en C, une catégorie de bugs
 est particulièrement importante : ce sont les comportements indéterminés. La
 norme C liste **presque 200 cas** de mauvaises utilisations du langage pouvant
-amener à ce type de comportements (cf. Annexe J dans la norme C11 par exemple).
+amener à ce type de comportements (cf. Annexe J.2 dans
+[la norme C11](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1548.pdf)
+par exemple).
 Et la vaste majorité de ces utilisations ne sont pas des cas tordus qui
 n'arrivent jamais, ce sont des exemples extrêmement communs. La présence d'un
 tel comportement dans le code induit que le programme va avoir un comportement
