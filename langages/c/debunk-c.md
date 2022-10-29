@@ -9,6 +9,27 @@ d'y voir un peu plus clair, cet article propose de passer en revue quelques-unes
 de ces idées reçues. Le but est de donner une vision globale à propos de ces
 idées, aussi j'essaierai au maximum de **ne pas** rentrer trop dans les détails.
 
+Liens rapides vers les différentes idées reçues abordées :
+
+- [Le C est proche de la machine](#le-c-est-proche-de-la-machine)
+    - [Si je comprends C, je comprends la machine](#en-apprenant-c-japprends-la-programmation-bas-niveau)
+    - [Si je comprends la machine, je comprends C](#en-comprenant-la-machine-je-comprends-ce-qui-se-passe-en-c)
+- [Si j'apprends C, c'est facile d'apprendre les autres langages](#si-je-comprends-c-je-comprendrai-tous-les-autres-langages)
+    - [C est le père de tous les langages](#le-c-est-le-père-de-tous-les-langages-de-programmation)
+    - [Il y a des langages tremplins](#et-pour-ce-qui-est-de-comprendre-ses-descendants-)
+- [C est un bon langage pour débutant](#c-est-un-très-bon-langage-pour-apprendre-la-programmation)
+    - [Coder en C, c'est simple](#le-langage-c-est-simple-donc-il-est-simple-de-lutiliser)
+    - [C enseigne la discipline](#le-c-apprend-la-discipline)
+- [Avec C, je contrôle tout](#avec-c-on-contrôle-tout)
+    - [Le C, c'est bien pour la sécurité](#le-c-cest-bien-pour-faire-du-code-sécurisé)
+    - [Le C, c'est performant](#le-c-donne-du-code-performant)
+- [C est populaire, c'est parce qu'il est bien](#c-est-populaire-cest-parce-quil-est-très-bien)
+    - [Dette et capital technique](#dette-et-capital-technique)
+    - [Le C est utilisé partout](#c-est-très-demandé-jaurai-plein-de-travail)
+    - [Point sur les secteurs critiques](#la-popularité-de-c-dans-des-secteurs-critiques)
+- [Est-ce que je devrais apprendre C ?](#mais-alors--il-ne-faudrait-surtout-pas-apprendre-c-)
+
+
 ## Le C est proche de la machine
 
 Cette idée reçue est très probablement la plus répandue de toutes. Ce qu'elle
@@ -539,6 +560,8 @@ Au-delà de cela, on peut différencier deux aspects liés à cette histoire :
 - la dette technique,
 - le capital technique.
 
+### Dette et capital technique
+
 La dette technique est un élément important de la popularité de C. Il n'y a
 généralement pas beaucoup de raisons qui peuvent pousser à réécrire
 intégralement un logiciel depuis un langage vers un autre. Ce type de
@@ -695,5 +718,5 @@ qu'un cas de test bien senti fera toujours péter un code buggé. Donc *pas* en 
 Démarrer par C, alors que déjà il va falloir apprendre à écrire des algorithmes,
 ça s'appelle quand même "charger la mule". Mais si vous avez déjà un peu
 d'expérience en programmation, pourquoi pas ? Ça vous fera une expérience avec
-un langage défini de manière bizarroïde par des années d'évolution ou plein
+un langage défini de manière bizarroïde par des années d'évolution où plein
 d'acteurs ont essayé de tirer la couette vers eux pour une raison ou une autre.
