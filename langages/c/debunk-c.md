@@ -201,7 +201,7 @@ démarrer par l'apprentissage du latin, puis du vieux français pour ensuite
 apprendre le français d'aujourd'hui soit le plus efficace si l'objectif à la
 base est d'apprendre le français. Pourquoi en serait-il différent pour un
 langage de programmation ? Évidemment le parallèle entre langues naturelles et
-langage de programmation n'est pas si direct, cependant il est déjà bien de
+langages de programmation n'est pas si direct, cependant il est déjà bien de
 questionner l'affirmation en question : au nom de quoi apprendre un langage qui
 *serait* à la base d'un autre permettrait d'apprendre plus efficacement ce
 dernier ?
@@ -217,7 +217,7 @@ d'autres langages ont été créés, et ceux-ci ont eu une très forte influence
 *aussi* sur les langages de programmation utilisés aujourd'hui. On notera
 [Lisp](https://fr.wikipedia.org/wiki/Lisp_(langage)) dont certains dialectes
 comme [Common Lisp](https://fr.wikipedia.org/wiki/Common_Lisp) ou
-[Closure](https://fr.wikipedia.org/wiki/Clojure) sont encore en usage, mais qui
+[Clojure](https://fr.wikipedia.org/wiki/Clojure) sont encore en usage, mais qui
 a également influencé [Haskell](https://fr.wikipedia.org/wiki/Haskell), qui
 n'est pas influencé par C. Ou encore [Simula](https://fr.wikipedia.org/wiki/Simula)
 qui a influencé [Smalltalk](https://fr.wikipedia.org/wiki/Smalltalk), ce dernier
@@ -230,7 +230,7 @@ Les familles Lisp et ML ont aujourd'hui un impact fort sur les langages de
 programmation plus *mainstream* qui embarquent de plus en plus de fonctionnalités
 qui viennent de là. Finalement, même sur les langages qui sont directement
 influencés par C, les ressemblances se limitent surtout à des éléments de
-syntaxes et la sémantique de ce sous-ensemble de syntaxes. Et de manière très
+syntaxe et la sémantique de ce sous-ensemble de syntaxe. Et de manière très
 générale, l'ensemble des langages de programmation présents aujourd'hui sont
 beaucoup plus influencés par les usages industriels que l'on en a fait et par la
 recherche sur le sujet.
@@ -344,7 +344,7 @@ l'entier voulu, on peut obtenir une valeur absurde, mais sur certains vieux
 compilateurs, on peut aussi déclencher des comportements vraiment plus étranges
 (et les décrire demanderait de trop rentrer dans des détails peu intéressants).
 Un débutant pourrait avoir grand-peine à comprendre ce type d'erreurs qui sont
-simplement dues au fait qu'une saisie peut échouer et que l'on doit le vérifier.
+simplement dues au fait qu'une saisie peut échouer et que l'on doit la vérifier.
 Au contact de débutants, on constate d'ailleurs que la manipulation des flux
 pose énormément de problèmes. Notamment pour savoir à quel moment le flux est
 dans quel état. Et les cours sont généralement très évasifs à ce sujet parce que
@@ -402,7 +402,7 @@ débutant à ajouter une foultitude d'options à ses outils, d'ajouter de nombre
 outils à son environnement de travail, de lui apprendre immédiatement à écrire
 plein de tests, donc de lui apprendre immédiatement des méthodologies pour bien
 tester ... Si l'on ne fait pas cela, il est **certain** que le débutant écrira
-des codes qui contiennent des nombreuses erreurs qu'il ne pourra jamais corriger
+des codes qui contiennent de nombreuses erreurs qu'il ne pourra jamais corriger
 alors que c'est une phase extrêmement importante de son apprentissage. Or,
 rappelons qu'on parle d'une personne qui n'a *jamais* programmé, une personne
 qui ne connaît aucun de ces outils, et pour qui écrire une boucle demande un
