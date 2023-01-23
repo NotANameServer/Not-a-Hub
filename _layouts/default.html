@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
+<head>
+	<meta charset="UTF-8">
+	<title>{{ page.title }} | {{ site.title }}</title>
 
-    {% include opengraph.html %}
+	{% include opengraph.html %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#157878">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="icon" type="image/png" href="{{ '/assets/images/icons/logo_moche_32.png' | relative_url }}"/>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+	<link rel="icon" type="image/png" href="{{ '/assets/images/icons/logo_moche_32.png' | relative_url }}"/>
+	<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 	<link rel="stylesheet" href="{{ '/assets/css/extra.css' | relative_url }}">
-  </head>
-  <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
+</head>
+<body>
+	<a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ site.title }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ '/' | relative_url }}" class="btn">Aller à l'index</a>
-        <a href="{{ site.github.repository_url }}" class="btn">Voir sur GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-    </header>
+	<header class="page-header" role="banner">
+		<h1 class="project-name">{{ site.title }}</h1>
+		<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+		{% if site.github.is_project_page %}
+		<a href="{{ '/' | relative_url }}" class="btn">Aller à l'index</a>
+		<a href="{{ site.github.repository_url }}" class="btn">Voir sur GitHub</a>
+		{% endif %}
+		{% if site.show_downloads %}
+		<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+		<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+		{% endif %}
+	</header>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
+	<main id="content" class="main-content" role="main">
+		{{ content }}
 
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> est maintenu par <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">Ce site a été généré avec <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-    </main>
-  </body>
+		<footer class="site-footer">
+			{% if site.github.is_project_page %}
+			<span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> est maintenu par <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+			{% endif %}
+			<span class="site-footer-credits">Ce site a été généré avec <a href="https://pages.github.com">GitHub Pages</a>.</span>
+		</footer>
+	</main>
+</body>
 </html>
