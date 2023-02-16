@@ -1,0 +1,17 @@
+name: Commenter un article
+description: Rapporter un problème ou poser une question sur un article
+title: '[Commentaire] '
+labels: ['article']
+body:
+  - type: input
+    id: url-article
+    attributes:
+      label: URL de l'article concerné
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: À propos de cet article
+      description: Écrivez ici votre question, les problèmes que vous avez relevé ou les améliorations que vous souhaiteriez apporter à cet article
+    validations:
+      required: true
