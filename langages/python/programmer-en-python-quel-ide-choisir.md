@@ -39,4 +39,4 @@ La liste suivante présente une liste non exhaustive :
 
 ## Qu'est-ce qu'utilise la populace ?
 
-![IDEs chart](/assets/images/py-ide-langchart.png)
+![IDEs chart]({{ site.baseurl }}/assets/images/py-ide-langchart.png)
