@@ -8,7 +8,7 @@ Un programme informatique manipule souvent un grand nombre d'informations. Preno
 
 Ces données sont stockées dans la mémoire de l'ordinateur (ou de la console de jeux) à une certaine adresse. Chaque case mémoire possède une adresse qui permet de lire et d'écrire la valeur qui y est stockée, un peu comme un grand tableau.
 
-![adresses mémoires](/assets/images/memory-scheme.png)
+![adresses mémoires]({{ site.baseurl }}/assets/images/memory-scheme.png)
 
 *Remarque : notez que la première adresse est l'adresse 0, et non l'adresse 1 ! C'est courant en informatique de compter à partir de zéro. Puisque c'est le premier chiffre, ne pas l'utiliser pour numéroter reviendrait à "perdre" un numéro.*
 
@@ -16,7 +16,7 @@ Dans des temps reculés, il fallait retenir à quelle adresse était stockée ch
 
 C'est pour résoudre ce problème que les variables ont été créées. L'idée est d'utiliser des noms compréhensibles par les humains, et de laisser la machine s'occuper des adresses automatiquement. C'est un peu comme si on mettait une étiquette sur les adresses des cases mémoires. On appelle le nom qu'on utilise (l'étiquette choisie) et la valeur qui lui est associée (stockée dans la case mémoire) une **variable**.
 
-![variables](/assets/images/variable-scheme.png)
+![variables]({{ site.baseurl }}/assets/images/variable-scheme.png)
 
 Et voilà ! Pas besoin de retenir les adresses mémoires, il suffit de retenir le nom de la variable !
 
@@ -79,7 +79,7 @@ Ajoutons les types sur notre schéma. On voit que chaque variable a finalement u
 - `x` a pour type `Int`, pour adresse `0` et pour valeur `1`.
 - `nombrePieces` a pour type `Int`, pour adresse `756` et pour valeur `102`.
 
-![variables typées](/assets/images/variable-type-scala-scheme.png)
+![variables typées]({{ site.baseurl }}/assets/images/variable-type-scala-scheme.png)
 
 ### Opérations
 
