@@ -10,16 +10,16 @@
 	<meta name="theme-color" content="#157878">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<link rel="icon" type="image/png" href="{{ '/assets/images/icons/logo_moche_32.png' | relative_url }}"/>
-	<link rel="stylesheet" href="{{ '/assets/css/normalize_custom.css' | relative_url }}">
-	<link rel="stylesheet" href="{{ '/assets/css/extra.css' | relative_url }}">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/icons/logo_moche_32.png"/>
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/normalize_custom.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/extra.css">
 </head>
 <body>
 	<header class="page-header" role="banner">
 		<h1 class="project-name">{{ site.title }}</h1>
 		<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 		{% if site.github.is_project_page %}
-		<a href="{{ '/' | relative_url }}" class="btn">Aller à l'index</a>
+		<a href="{{ site.baseurl }}/" class="btn">Aller à l'index</a>
 		<a href="{{ site.github.repository_url }}" class="btn">Voir sur GitHub</a>
 		{% endif %}
 	</header>
