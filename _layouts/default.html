@@ -15,8 +15,6 @@
 	<link rel="stylesheet" href="{{ '/assets/css/extra.css' | relative_url }}">
 </head>
 <body>
-	<a id="skip-to-content" href="#content">Skip to the content.</a>
-
 	<header class="page-header" role="banner">
 		<h1 class="project-name">{{ site.title }}</h1>
 		<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
@@ -24,19 +22,15 @@
 		<a href="{{ '/' | relative_url }}" class="btn">Aller à l'index</a>
 		<a href="{{ site.github.repository_url }}" class="btn">Voir sur GitHub</a>
 		{% endif %}
-		{% if site.show_downloads %}
-		<a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-		<a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-		{% endif %}
 	</header>
-
 	<main id="content" class="main-content" role="main">
 		{{ content }}
-
 		<footer class="site-footer">
-			{% if site.github.is_project_page %}
+		{% if page.name == "index.md" %}
 			<span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> est maintenu par <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-			{% endif %}
+		{% else %}
+			<span class="site-footer-owner">Vous pouvez contribuer à cet article ou rapporter un problème depuis <a href="{{ site.github.repository_url }}/issues/new/choose">Github</a>.</span>
+		{% endif %}
 			<span class="site-footer-credits">Ce site a été généré avec <a href="https://pages.github.com">GitHub Pages</a>.</span>
 		</footer>
 	</main>
