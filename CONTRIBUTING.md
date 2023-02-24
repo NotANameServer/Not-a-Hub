@@ -1,39 +1,29 @@
 # Comment contribuer
 
-Tous les contributeurs sont priés de respecter les règles de NaN qui sont
-disponibles sur notre serveur Discord et sur le repository [https://github.com/NotANameServer/discord/](https://github.com/NotANameServer/discord/).
+Tous les contributeurs sont priés de respecter les règles de NaN qui sont disponibles sur notre serveur Discord et sur le repository [https://github.com/NotANameServer/discord/](https://github.com/NotANameServer/discord/). Les articles doivent être rédigés en français, les messages de commit ainsi que l'activité sur GitHub peuvent être fait en français ou en anglais. Il est préférable de commencer par ouvrir une issue pour ouvrir une discussion avant d'ouvrir une pull-request pour proposer les changements.
 
-Les articles doivent être rédigés en français, les messages de commit ainsi que l'activité sur GitHub peuvent être fait en français ou en anglais.
+Nous distingons la rédaction des articles (`add`/`edit`/`fix`) des contributions au site-même (`meta`). Il vous est possible de tester vos modifications soit en local en [installant jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) et quelques [dépendances](https://github.com/NotANameServer/Not-a-Hub/blob/master/Gemfile) supplémentaires sur votre propre machine. Il vous est aussi possible de fork ce repository et de changer un paramettre (repo > settings > pages > branch) pour laisser github s'occuper du rendu de votre branche.
 
-## Proposer un article
+## Contribuer aux articles
 
-Commencez par ouvrir une issue dans laquelle vous proposez le sujet de votre article. Cette issue servira à discuter du sujet, rassembler les idées et se mettre d'accord sur le contenu. Cette issue servira aussi à rassembler des ressources et à vérifier qu'il n'existe pas déjà des articles/tutoriels francophone de qualité sur le sujet.
-
-## Rédiger un article
-
-Créez une nouvelle branche dans un fork (ou directement ici si vous le pouvez) dans laquelle vous rédigerez votre premier brouillon, puis ouvrez une pull request en draft pour voir ce qui peut être conservé, modifié, ou écarté, pour faire vérifier l'orthographe, etc.
-
-Lorsque tout le monde est d'accord sur le contenu de votre contribution, elle est fusionnée au dépôt et automatiquement publiée sur le site.
-
-## Modifier un article
-
-Même protocole que pour la rédaction d'un article, créez une branche (dans un fork ou ici si vous le pouvez), puis soumettez vos modifications dans une pull request.
-
-## Autre chose
-
-Ouvrez une issue.
+Nous avons créé toute une série de templates dans les issues pour vous guider. Vous pouvez [proposer un nouvel article](https://github.com/NotANameServer/Not-a-Hub/issues/new?assignees=&labels=article&template=proposer-un-article.yaml&title=%5BNOUVEL+ARTICLE%5D+) afin d'ouvrir une discussion sur ce que devrait contenir cet article avant de proposer un premier brouillon via une pull-request. Vous pouvez également [commenter un article existant](https://github.com/NotANameServer/Not-a-Hub/issues/new?assignees=&labels=article&template=commenter-un-article.yaml&title=%5BCommentaire%5D+) pour rapporter une erreur ou simplement ouvrir une discussion ou poser une question sur cet article.
 
 ## Contribuer au site
 
-Pour les modifications concernant le site en lui-même, vous devez créer un fork afin de pouvoir tester vos modifications. En effet, le [paramètre](https://github.com/NotANameServer/Not-a-Hub/settings/pages) pour selectionner la branche sur laquelle se base le site est global au repo, si vous le modifiez, le changement sera visible à tous, vous devez donc créer un fork et modifier ce paramètre sur votre repo.
+Nous vous recommandons de commencer par ouvrir une nouvelle issue "vierge" (sans passer par les templates) pour ouvrir la discussion quant à ce que vous voudriez changer. Vous pouvez ensuite proposer vos changements via une pull-request.
 
 ## Convention pour les messages de commit
 
 Chaque message doit commencer par un titre séparé du reste du commit par une ligne vide. Le titre doit de préférence ne pas dépasser 50 caractères et doit commencer par l'un des tags suivant:
+
  - `add: ` pour l'ajout d'un nouvel article
  - `edit: ` pour la modification du contenu sémantique d'un article
  - `fix: ` pour une correction orthographique ou grammaticale
- - `meta: ` pour tout ce qui ne touche pas un article
+ - `meta: ` pour les contributions au site même
+
+Faites l'effort de rédiger un message de commit, notez à minimal un paragraphe qui explique *pourquoi* ces changements sont bienvenues et référencez aussi la/les issues auxquelles votre commit est lié.
+
+## Mettre à jour l'index du site
 
 Lorsque vous ajoutez un article ou renommez un article sur disque, pensez à exécuter l'indexeur automatique: `python3 index.py` à la racine du repo.
 
