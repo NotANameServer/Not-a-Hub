@@ -134,6 +134,8 @@ def discover_articles(root):
 
     articles = {}
     for path in root.glob('**/*.md'):
+        if '_site' in path.parts:  # jekyll generated files
+            continue
         if path.name in SKIP_FILES:
             continue
 
