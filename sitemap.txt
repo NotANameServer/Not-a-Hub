@@ -1,0 +1,10 @@
+https://hub.notaname.fr/game-dev/ressources
+https://hub.notaname.fr/langages/c/debunk-c
+https://hub.notaname.fr/langages/python/apprendre-python-quoi-lire-quoi-regarder
+https://hub.notaname.fr/langages/python/critique-du-cours-video-sur-python-de-graven
+https://hub.notaname.fr/langages/python/programmer-en-python-quel-ide-choisir
+https://hub.notaname.fr/langages/python/relatif-vs-absolu-demystifions-les-imports-python
+https://hub.notaname.fr/langages/scala/programmer-en-scala-3-booleens-et-conditions
+https://hub.notaname.fr/langages/scala/programmer-en-scala-3-prerequis
+https://hub.notaname.fr/langages/scala/programmer-en-scala-3-types-et-variables
+https://hub.notaname.fr/langages/scala/scala-comme-premier-langage

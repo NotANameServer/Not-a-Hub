@@ -10,6 +10,7 @@ that title is missing).
 import dataclasses
 import itertools
 import subprocess as sp
+import urllib.parse
 from collections import defaultdict
 from contextlib import suppress
 from datetime import datetime
@@ -24,6 +25,7 @@ from typing import List
 ROOT = Path(__file__).resolve().parent
 GIT_PATH = getenv('GIT_PATH', which('git'))
 SKIP_FILES = {'index.md', 'README.md', 'CONTRIBUTING.md'}
+DOMAIN = 'https://hub.notaname.fr/'
 
 
 def Tree():
@@ -151,6 +153,15 @@ def discover_articles(root):
     return list(articles.values())
 
 
+def update_sitemap(articles):
+    with open(ROOT / 'sitemap.txt', 'w') as sitemap_file:
+        sitemap_file.write(''.join(sorted([
+            urllib.parse.urljoin(DOMAIN, uri) + '\n'
+            for article in articles
+            for uri in article.uris
+        ])))
+
+
 def create_index(articles):
     """
     Populate an index, a filesystem-like structure where directories are
@@ -247,6 +258,7 @@ def rewrite_index_file(dir_, articles):
 def main():
     """ Rewrite all index files """
     articles = discover_articles(ROOT)
+    update_sitemap(articles)
     index = create_index(articles)
     walk('', index, rewrite=True)
 
