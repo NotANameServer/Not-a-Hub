@@ -24,6 +24,7 @@ from typing import List
 ROOT = Path(__file__).resolve().parent
 GIT_PATH = getenv('GIT_PATH', which('git'))
 SKIP_FILES = {'index.md', 'README.md', 'CONTRIBUTING.md'}
+SKIP_DIRECTORY = ROOT / '_site'
 
 
 def Tree():
@@ -129,8 +130,29 @@ def extract_git_metadata(path):
     return write_date, create_date, authors
 
 
-def discover_articles(root):
+def discover_articles(root, directories):
     """ Discover all articles under ``root``. """
+
+    articles = {}
+    rejected_files = []
+    for i in directories.glob('**/*.md'):
+        rejected_files.append(i)
+    for path in root.glob('**/*.md'):
+        
+        if path.name in SKIP_FILES or path in rejected_files:
+            continue
+
+        if path.name not in articles:
+            title = extract_title(path) or path.name
+            write_date, create_date, authors = extract_git_metadata(path)
+            articles[path.name] = Article(title, write_date, create_date, authors)
+        articles[path.name].paths.append(path)
+
+    return list(articles.values())
+
+
+def get_url(root):
+    """Make urls with files"""
 
     articles = {}
     for path in root.glob('**/*.md'):
@@ -238,11 +260,21 @@ def rewrite_index_file(dir_, articles):
                 for article in articles
             ))
 
+def add_to_sitemap(urls):
+    with open('sitemap.txt', 'r+') as file:
+        lines = file.read()
+        for i in urls:
+            for y in i.uris:
+                add = 'https://hub.notaname.fr' + y.replace('.md', '') + '\n'
+                if add not in lines:
+                    file.write(add)
+    
 
 def main():
     """ Rewrite all index files """
-    articles = discover_articles(ROOT)
+    articles = discover_articles(ROOT, SKIP_DIRECTORY)
     index = create_index(articles)
+    add_to_sitemap(articles)
     walk('', index, rewrite=True)
 
 
