@@ -51,8 +51,11 @@ class Article:
     @property
     def uris(self):
         # [/srv/git/Not-a-hub/langages/cpp/foo.md]
-        # => ["/langages/cpp/foo.md"]]
-        return [str(path)[len(str(ROOT)):].replace(sep, '/') for path in self.paths]
+        # => ["/langages/cpp/foo"]]
+        return [
+            str(path)[len(str(ROOT)):].replace(sep, '/').removesuffix('.md')
+            for path in self.paths
+        ]
 
     @property
     def tags(self):

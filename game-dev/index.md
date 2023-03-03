@@ -2,4 +2,4 @@
 
 ### 2021
 
-* [Ressources pour game-dev](/game-dev/ressources.md) [<kbd>game-dev</kbd>](/game-dev)
+* [Ressources pour game-dev](/game-dev/ressources) [<kbd>game-dev</kbd>](/game-dev)
