@@ -6,4 +6,4 @@ Blog technique de la communauté NaN, disponible à cette adresse:
 
 ## Comment contribuer ?
 
-Vous pouvez vous referrer au [Guide de contribution](https://github.com/NotANameServer/Not-a-Hub/blob/master/CONTRIBUTING.md).
+Vous pouvez vous réferrer au [Guide de contribution](https://github.com/NotANameServer/Not-a-Hub/blob/master/CONTRIBUTING.md).
