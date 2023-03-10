@@ -27,7 +27,6 @@ GIT_PATH = getenv('GIT_PATH', which('git'))
 SKIP_FILES = {'index.md', 'README.md', 'CONTRIBUTING.md'}
 DOMAIN = 'https://hub.notaname.fr/'
 
-
 def Tree():
     return defaultdict(Tree)
 
@@ -109,20 +108,26 @@ def extract_git_metadata(path):
     authors of a file using it's git metadata
     """
 
+    if path.stem == 'critique-du-cours-video-sur-python-de-graven':
+        # Special case as the bellow commands fail on this specifc case
+        return (
+            datetime(2022, 8, 30, 0, 12, 10),
+            datetime(2022, 8, 30, 0, 12, 10),
+            ["Julien Castiaux"]
+        )
+
     # Get newest commit date as timestamp
-    cmd = [GIT_PATH, 'log', '--follow', '-1', r'--pretty=format:%at', str(path)]
+    cmd = [GIT_PATH, 'log', '--grep', '^add', '--grep', '^edit', '-1', r'--pretty=format:%at', str(path)]
     proc = sp.run(cmd, capture_output=True, check=True)
     write_date = datetime.fromtimestamp(int(proc.stdout.strip()))
 
     # Get oldest commit date as timestamp
-    # command does not work
-    #cmd = [GIT_PATH, 'log', '--follow', '--reversed', '-1', r'--pretty=format:%at', str(path)]
-    #proc = sp.run(cmd, capture_output=True, check=True)
-    #create_date = datetime.fromtimestamp(int(proc.stdout.strip()))
-    create_date = write_date
+    cmd = [GIT_PATH, 'log', '--grep', '^add:', '-1', r'--pretty=format:%at', str(path)]
+    proc = sp.run(cmd, capture_output=True, check=True)
+    create_date = datetime.fromtimestamp(int(proc.stdout.strip()))
 
     # Get the authors from all the "add" and "edit" type commits
-    cmd = [GIT_PATH, 'log', '--follow', '--grep', r'^\(add\|edit\):', '--pretty=full', str(path)]
+    cmd = [GIT_PATH, 'log', '--grep', '^add', '--grep', '^edit', '--pretty=full', str(path)]
     proc = sp.run(cmd, capture_output=True, check=True)
     authors = {  # extract "John" from "Author: John <john@example.com>"
         line.partition(b': ')[2].partition(b' <')[0].strip()
