@@ -2,7 +2,7 @@
 
 Ce document liste differentes ressources utiles au game-dev.
 
-**Tags:** [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
+**Tags:** [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [Traduction], [UI]
 
 ## Asset
 
@@ -20,6 +20,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Blender 3D Models         ](https://www.blender-models.com)                     | Variées                                                                   | Gratuit           | [Modèle] blender divers
 | [CG Book case              ](https://www.cgbookcase.com)                         | CC0                                                                       | Gratuit           | [PBR] / [Texture]
 | [CMU GLMCD                 ](http://mocap.cs.cmu.edu)                            | Free                                                                      | Gratuit           | Base de donnée remplies d'[Animation]
+| [Common game localizations ](https://docs.google.com/spreadsheets/d/135HgMYcRDt6vnJN0d-xFMEZUeWjVbc61ETf8uVwHERE/edit?usp=sharing) | ?                       | Gratuit           | [Traduction]
 | [Crateboy                  ](https://crateboy.itch.io/crateboy-2007-2014)        | Creative Commons                                                          | Gratuit           | [Sprite] et [Tileset] divers
 | [Dafont                    ](https://www.dafont.com/)                            | Variées                                                                   | Gratuit ou Payant | [Font]
 | [Dexsoft                   ](https://www.dexsoft-games.com)                      | Commercial                                                                | Payant            | [Animation] / [Modèle] / [Texture] 
@@ -34,6 +35,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Game-Icons                ](https://game-icons.net)                             | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                 | Gratuit           | [UI]
 | [GameArt2D                 ](https://www.gameart2d.com/)                         | [CC0 ou Custom](https://www.gameart2d.com/license.html)                   | Gratuit ou Payant | [Sprite] / [Tileset] / [UI]
 | [GameAssets.org            ](https://gameasset.org)                              | Public domain                                                             | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Texture]
+| [Game common words translation sheet](https://docs.google.com/spreadsheets/d/17f0dQawb-s_Fd7DHgmVvJoEGDMH_yoSd8EYigrb0zmM/edit?usp=sharing) | ?              | Gratuit           | [Traduction]
 | [Glitch                    ](https://www.glitchthegame.com/)                     | Public domain                                                             | Gratuit           | [Background] / [Sprite] / [Tileset]
 | [Glyphicons                ](https://glyphicons.com)                             | Custom payante                                                            | Payant            | Packs d'icones diverses pour [UI]
 | [Hero Patterns             ](http://www.heropatterns.com)                        | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                 | Gratuit           | [Background] / [UI]
@@ -53,17 +55,20 @@ Ce document liste differentes ressources utiles au game-dev.
 | [PDSounds                  ](http://pdsounds.org)                                | Public domain                                                             | Gratuit           | [Audio]
 | [Pixabay                   ](https://pixabay.com)                                | Variées                                                                   | Gratuit           | [Texture] - Grande banque d'images
 | [PM SFX                    ](https://www.pmsfx.com)                              | Variées                                                                   | Gratuit           | [Audio]
+| [PolyglotGamedev           ](https://docs.google.com/spreadsheets/d/17f0dQawb-s_Fd7DHgmVvJoEGDMH_yoSd8EYigrb0zmM/edit?usp=sharing) | CC0                     | Gratuit           | [Traduction]
 | [Polyhaven                 ](https://polyhaven.com/)                             | [CC0](https://polyhaven.com/license)                                      | Gratuit           | [HDRI] / [Modèle] / [Texture]
 | [Quaternius                ](https://quaternius.com/index.html)                  | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D / [Animation]
 | [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]                 
 | [Renderpeople              ](https://renderpeople.com/free-3d-people/)           | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D de personnées scannées
 | [ScanTheWorld              ](https://www.myminifactory.com/scantheworld/)        | Variées                                                                   | Gratuit           | Scans de [Modèle] 3D 
 | [Sketchfab                 ](https://sketchfab.com) 							   | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D
+| [Smithsonian Open Access   ](https://www.si.edu/openaccess)                      | [CCO](https://www.si.edu/openaccess/faq)                                  | Gratuit           | [Modèle] 3D / [Texture]
 | [Sonniss Game Audio GDC    ](https://sonniss.com/gameaudiogdc)                   | Variées                                                                   | Gratuit           | Historique de l'[Audio] de la GDC
 | [Subtle Patterns           ](https://www.toptal.com/designers/subtlepatterns/)   | Free avec attribution                                                     | Gratuit           | [Background] / [UI]
 | [ShareCG                   ](https://www.sharecg.com)                            | Variées                                                                   | Gratuit           | [Audio] / [Modèle] / [Texture]
 | [SpriteLib                 ](https://www.widgetworx.com/spritelib/)              | [CPL-1.0](https://opensource.org/licenses/cpl1.0.php)                     | Gratuit           | [Sprite]
 | [Textures.com              ](https://www.textures.com/)                          | [Licence](https://www.textures.com/support/faq-license)                   | Gratuit ou Payant | [Decals] / [HDRI] / [Modèle] / [PBR] / [Texture]
+| [The base mesh             ](https://thebasemesh.com/model-library)              | [CC0](https://thebasemesh.com/faqs)                                       | Gratuit           | [Modèle]
 | [The league of movable type](https://www.theleagueofmoveabletype.com)            | [Free](https://www.theleagueofmoveabletype.com/manifesto)                 | Gratuit           | [Font]
 | [TrueBones                 ](https://truebones.com)                              | Commercial                                                                | Payant            | [Animation]
 | [Turbosquid                ](https://www.turbosquid.com)                         | Variées                                                                   | Gratuit ou Payant | [Modèle]
@@ -83,6 +88,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [InterfaceInGame    ](https://interfaceingame.com)                          | -                | Gratuit          | Analyse/Inspiration d'[UI] de jeux connus
 | [KenShape           ](https://tools.kenney.nl/kenshape/)                    | -                | $3.99            | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle] 
 | [MocapX             ](https://www.mocapx.com)                               | -                | $0-299           | Outil de motion capture utilisable avec Maya et un telephone - [Animation]
+| [Nukeygara          ](https://www.nukeygara.com)                            | -                | Essai gratuit ou Payant | Logiciel d'animation 3D fait spécifiquement pour le jeux vidéo
 | [Paletton           ](https://paletton.com/)                                | -                | Gratuit          | Generateurs de palettes de couleurs
 | [PicoCAD            ](https://johanpeitz.itch.io/picocad)                   | -                | Gratuit          | Outil de création de [Modèle] lowpoly
 | [Quixel mixer       ](https://quixel.com/mixer)                             | -                | Gratuit          | Permet de fusionner des [Texture]  
@@ -104,4 +110,5 @@ Ce document liste differentes ressources utiles au game-dev.
 [Sprite]: #ressources-pour-game-dev
 [Texture]: #ressources-pour-game-dev
 [Tileset]: #ressources-pour-game-dev
+[Traduction]: #ressources-pour-game-dev
 [UI]: #ressources-pour-game-dev
