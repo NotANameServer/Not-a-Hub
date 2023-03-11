@@ -150,8 +150,11 @@ def discover_articles(root):
             continue
 
         if path.name not in articles:
-            title = extract_title(path) or path.name
-            write_date, create_date, authors = extract_git_metadata(path)
+            try:
+                title = extract_title(path) or path.name
+                write_date, create_date, authors = extract_git_metadata(path)
+            except Exception as exc:
+                raise RuntimeError(f"Couldn't extract metadata for {path.name}") from exc
             articles[path.name] = Article(title, write_date, create_date, authors)
         articles[path.name].paths.append(path)
 
