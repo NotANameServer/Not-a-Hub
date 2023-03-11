@@ -79,23 +79,23 @@ Ce document liste differentes ressources utiles au game-dev.
 
 ## Création d'assets
 
-|                                                                             | Licence          | Prix             | Meta   
-|-----------------------------------------------------------------------------|------------------|------------------|---------------------
-| [Asset Forge        ](https://assetforge.io)                                | -                | $19.95 ou $39.95 | Outil de création de [Modèle] très complet
-| [Coolors            ](https://coolors.co)                                   | -                | Gratuit          | Generateurs de palettes de couleurs
-| [Colormind          ](http://colormind.io)                                  | -                | Gratuit          | Generateurs de palettes de couleurs
-| [DrPetter’s sfxr    ](http://www.drpetter.se/project_sfxr.html)             | -                | Gratuit          | Generateur d'effets sonores - [Audio] 
-| [InterfaceInGame    ](https://interfaceingame.com)                          | -                | Gratuit          | Analyse/Inspiration d'[UI] de jeux connus
-| [KenShape           ](https://tools.kenney.nl/kenshape/)                    | -                | $3.99            | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle] 
-| [MocapX             ](https://www.mocapx.com)                               | -                | $0-299           | Outil de motion capture utilisable avec Maya et un telephone - [Animation]
+|                                                                             | Licence          | Prix                    | Meta   
+|-----------------------------------------------------------------------------|------------------|-------------------------|---------------------
+| [Asset Forge        ](https://assetforge.io)                                | -                | $19.95 ou $39.95        | Outil de création de [Modèle] très complet
+| [Coolors            ](https://coolors.co)                                   | -                | Gratuit                 | Generateurs de palettes de couleurs
+| [Colormind          ](http://colormind.io)                                  | -                | Gratuit                 | Generateurs de palettes de couleurs
+| [DrPetter’s sfxr    ](http://www.drpetter.se/project_sfxr.html)             | -                | Gratuit                 | Generateur d'effets sonores - [Audio] 
+| [InterfaceInGame    ](https://interfaceingame.com)                          | -                | Gratuit                 | Analyse/Inspiration d'[UI] de jeux connus
+| [KenShape           ](https://tools.kenney.nl/kenshape/)                    | -                | $3.99                   | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle] 
+| [MocapX             ](https://www.mocapx.com)                               | -                | $0-299                  | Outil de motion capture utilisable avec Maya et un telephone - [Animation]
 | [Nukeygara          ](https://www.nukeygara.com)                            | -                | Essai gratuit ou Payant | Logiciel d'animation 3D fait spécifiquement pour le jeux vidéo
-| [Paletton           ](https://paletton.com/)                                | -                | Gratuit          | Generateurs de palettes de couleurs
-| [PicoCAD            ](https://johanpeitz.itch.io/picocad)                   | -                | Gratuit          | Outil de création de [Modèle] lowpoly
-| [Quixel mixer       ](https://quixel.com/mixer)                             | -                | Gratuit          | Permet de fusionner des [Texture]  
-| [Spacescape         ](http://alexcpeterson.com/spacescape/)                 | -                | Gratuit          | Cubemap spatial 
-| [Unreal MetaHuman   ](https://www.unrealengine.com/en-US/metahuman-creator) | -                | Gratuit          | Outil de création de visages réalistes - [Animation] / [Modèle]
-| [VideoGameInterfaces](https://videogameinterfaces.com)                      | -                | Gratuit          | Analyse/Inspiration d'[UI] de jeux connus
-| [World creator      ](https://www.world-creator.com/)                       | -                | Payant (3 tiers) | [Landscape] 
+| [Paletton           ](https://paletton.com/)                                | -                | Gratuit                 | Generateurs de palettes de couleurs
+| [PicoCAD            ](https://johanpeitz.itch.io/picocad)                   | -                | Gratuit                 | Outil de création de [Modèle] lowpoly
+| [Quixel mixer       ](https://quixel.com/mixer)                             | -                | Gratuit                 | Permet de fusionner des [Texture]  
+| [Spacescape         ](http://alexcpeterson.com/spacescape/)                 | -                | Gratuit                 | Cubemap spatial 
+| [Unreal MetaHuman   ](https://www.unrealengine.com/en-US/metahuman-creator) | -                | Gratuit                 | Outil de création de visages réalistes - [Animation] / [Modèle]
+| [VideoGameInterfaces](https://videogameinterfaces.com)                      | -                | Gratuit                 | Analyse/Inspiration d'[UI] de jeux connus
+| [World creator      ](https://www.world-creator.com/)                       | -                | Payant (3 tiers)        | [Landscape] 
 
 
 [Animation]: #ressources-pour-game-dev
