@@ -2,6 +2,7 @@
 
 ### 2023
 
+* [Les messages de commit dans git](/architecture/les-messages-de-commit-dans-git) [<kbd>architecture</kbd>](/architecture)
 * [Scala comme premier langage de programmation](/langages/scala/scala-comme-premier-langage) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 
 ### 2022
