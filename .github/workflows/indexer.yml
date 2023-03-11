@@ -1,0 +1,12 @@
+name: Indexer
+
+on:
+  page_build
+jobs:
+  index-articles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run the indexer
+        run: python3 index.py
