@@ -30,6 +30,12 @@ body
 	color: #5E7382;
 }
 
+.main-content blockquote
+{
+	color: #67787E;
+	border-left: 0.3rem solid #7198BC;
+}
+
 .site-footer-credits
 {
 	color: #67777E;
