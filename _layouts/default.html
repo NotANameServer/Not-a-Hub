@@ -6,6 +6,19 @@
 
 	{% include opengraph.html %}
 
+	{% if page.url == "/" %}
+		<script type="application/ld+json">
+		{
+		  "@context" : "https://schema.org",
+		  "@type" : "WebSite",
+		  "name" : "Not a Hub",
+		  "alternateName" : "Not-a-Hub",
+		  "url" : "{{site.url}}"
+		}
+		</script>
+	
+	{% endif %}
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#157878">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
