@@ -2,6 +2,7 @@
 
 ### 2023
 
+* [Comment structurer un projet Python](/langages/python/comment-structurer-un-projet-python) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Scala comme premier langage de programmation](/langages/scala/scala-comme-premier-langage) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 
 ### 2022

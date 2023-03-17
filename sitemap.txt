@@ -2,6 +2,7 @@ https://hub.notaname.fr/architecture/les-messages-de-commit-dans-git
 https://hub.notaname.fr/game-dev/ressources
 https://hub.notaname.fr/langages/c/debunk-c
 https://hub.notaname.fr/langages/python/apprendre-python-quoi-lire-quoi-regarder
+https://hub.notaname.fr/langages/python/comment-structurer-un-projet-python
 https://hub.notaname.fr/langages/python/critique-du-cours-video-sur-python-de-graven
 https://hub.notaname.fr/langages/python/programmer-en-python-quel-ide-choisir
 https://hub.notaname.fr/langages/python/relatif-vs-absolu-demystifions-les-imports-python

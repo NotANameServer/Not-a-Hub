@@ -1,5 +1,9 @@
 ## Index
 
+### 2023
+
+* [Comment structurer un projet Python](/langages/python/comment-structurer-un-projet-python) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
+
 ### 2022
 
 * [Critique du cours vidéo sur Python de Graven](/langages/python/critique-du-cours-video-sur-python-de-graven) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
