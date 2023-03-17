@@ -2,6 +2,7 @@
 
 ### 2023
 
+* [Comment structurer un projet Python](/langages/python/comment-structurer-un-projet-python) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Les messages de commit dans git](/architecture/les-messages-de-commit-dans-git) [<kbd>architecture</kbd>](/architecture)
 * [Scala comme premier langage de programmation](/langages/scala/scala-comme-premier-langage) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 
