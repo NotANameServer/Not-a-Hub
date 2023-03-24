@@ -109,7 +109,7 @@ D'autres exemples de régularité :
 
 ### Typage statique et erreurs claires
 
-Nous l'avons dit dans la section précédente : contrairement à Python, Scala est statiquement typé. Cela veut dire que le type de chaque fonction, variable et opération est connue à la compilation (avant exécution du programme). La cohérence entre ces types peut donc être vérifiée pour détecter les erreurs.
+Nous l'avons dit dans la section précédente : contrairement à Python, Scala est statiquement typé. Cela veut dire que le type de chaque fonction, variable et opération est connu à la compilation (avant exécution du programme). La cohérence entre ces types peut donc être vérifiée pour détecter les erreurs.
 
 Prenons ce code en Python :
 ```python
@@ -236,7 +236,7 @@ do_something(l)
 do_another_thing(l)
 ```
 
-*Est-ce qu'à la fin de ce programme `l` a changé ? Si oui où ça ? Est-ce que l'ordre à de l'importance ?* Ces problèmes sont prévenus par l'immuabilité :
+*Est-ce qu'à la fin de ce programme `l` a changé ? Si oui où ça ? Est-ce que l'ordre a de l'importance ?* Ces problèmes sont prévenus par l'immuabilité :
 
 ```scala
 val list = List(1, 2, 3)
