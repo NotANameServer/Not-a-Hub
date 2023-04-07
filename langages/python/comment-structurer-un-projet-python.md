@@ -143,6 +143,7 @@ from tartes.tarte_cerise import TarteCerise
 
 tarte = TarteCerise()
 print(tarte)
+```
 
 ```py
 # tarte.py
@@ -170,7 +171,7 @@ Vous devez certainement lancer votre programme soit en faisant `python3 tartempi
 
 Si la structure de votre projet actuel ne ressemble pas à celle décrite ici ou bien si vous n'êtes pas sûr alors venez nous demander de l'aide sur Discord. Faites bien attention à nous expliquer comment vos fichiers sont structurés, comment vous faites vos imports et surtout comment vous lancez votre programme.
 
-### Structure du le nouveau projet
+### Structure du nouveau projet
 
 Après adaptation, la structure de votre projet devrait plutôt ressembler à ceci:
 
@@ -188,7 +189,7 @@ Après adaptation, la structure de votre projet devrait plutôt ressembler à ce
 
 Le fichier `tartempions.py` est devenu le fichier `__main__.py` qui se trouve à l'intérieur du module `tartempion`. Le module `tartes` a été déplacé à l'intérieur du module `tartempion`. Deux nouveaux fichiers (vide) `__init__.py` ont été rajouté, l'un dans le dossier `tartempion` et l'autre dans le dossier `tartes`.
 
-Niveau imports dans vos fichiers, vous devez corriger toutes vos lignes où vous avez importé des modules de votre projet à l'aide d'un import absolu. Un import est absolu lorsque ce qu'il ne commence par par un point. 
+Niveau imports dans vos fichiers, vous devez corriger toutes vos lignes où vous avez importé des modules de votre projet à l'aide d'un import absolu. Un import est absolu lorsqu'il ne commence par par un point.
 
 Exemple d'imports absolus (ne commencent pas par un point):
 
@@ -517,9 +518,9 @@ Il est rare de voir des questions de ce genre pour d'autres IDE, nous n'avons do
 
 ## Références
 
-[^1]: entwanne “Un Zeste de Python.” dans : Zeste de Savoir [En ligne]. [s.l.]&nbsp;: Zeste de Savoir, 2022. Disponible sur : <https://zestedesavoir.com/tutoriels/2514/un-zeste-de-python/> (consulté le 19 Mars 2023) 
+[^1]: entwanne “Un Zeste de Python.” dans : Zeste de Savoir [En ligne]. [s.l.]&nbsp;: Zeste de Savoir, 2022. Disponible sur : <https://zestedesavoir.com/tutoriels/2514/un-zeste-de-python/> (consulté le 19 Mars 2023)
 [^2]: Swinnen G. “Apprendre à programmer avec Python 3: Avec 60 pages d'exercices corrigés!” 3e ed. Paris, France : Eyrolles, 2012.
-[^3]: Champagne J. “Python - cours ✔.” dans : YouTube [En ligne]. [s.l.]&nbsp;: YouTube, 2017. Disponible sur : <https://www.youtube.com/playlist?list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC> (consulté le 19 Mars 2023) 
+[^3]: Champagne J. “Python - cours ✔.” dans : YouTube [En ligne]. [s.l.]&nbsp;: YouTube, 2017. Disponible sur : <https://www.youtube.com/playlist?list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC> (consulté le 19 Mars 2023)
 [^4]: Reitz K., Schlusser T. “The hitchhiker's guide to python: Best practices for development.” Sebastopol, CA : O'Reilly Media, Inc., 2016.
 [^5]: Stratis K. “Python application layouts: A reference.” dans : Real Python [En ligne]. [s.l.]&nbsp;: Real Python, 2023. Disponible sur : <https://realpython.com/python-application-layouts/> (consulté le 19 Mars 2023)
 [^6]: Le J. P. “Guide to python project structure and packaging.” dans : Medium [En ligne]. [s.l.]&nbsp;: MLearning.ai, 2023. Disponible sur : <https://medium.com/mlearning-ai/a-practical-guide-to-python-project-structure-and-packaging-90c7f7a04f95> (consulté le 19 Mars 2023)
