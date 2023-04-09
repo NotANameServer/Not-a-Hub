@@ -15,11 +15,11 @@
 
 La plupart des cours que nous recommandons[^1] [^2] [^3] pour apprendre Python se concentrent sur l'enseignement de la programmation *au travers* de Python et se réservent bien d'enseigner comment *structurer et déployer* une application ou une bibliothèque écrite en Python.
 
-Il existe en ligne une pléthore de tutoriels[^4] [^5] [^6] sur comment structurer son projet et comment le déployer. Cependant l'éco-système de Python a tellement évolué depuis 2018 sur tout ce qui est relatif au *packaging* qu'il a rendu bon nombre de ces tutoriels caduc[^7] [^8].
+Il existe en ligne une pléthore de tutoriels[^4] [^5] [^6] sur comment structurer son projet et comment le déployer. Cependant l'éco-système de Python a tellement évolué depuis 2018 sur tout ce qui est relatif au *packaging* qu'il a rendu bon nombre de ces tutoriels caduques[^7] [^8].
 
-Cet article a donc pour objectif de guider les lecteurs vers une structure de projet adaptée aux usages de 2023. Parmi les usages communs, nous avons retenu pour cet article: comment [tester son application] et comment [partager son programme avec autrui].
+Cet article a donc pour objectif de guider les lecteurs vers une structure de projet adaptée aux usages de 2023. Parmi les usages communs, nous avons retenu pour cet article : comment [tester son application] et comment [partager son programme avec autrui].
 
-Cet article s'appuie sur les recommandations de la [PyPA] (*Python Packaging Autority*) qui est en charge de *spécifier*, *maintenir* et *documenter* toute une série de pratiques et d'outils relatifs au partage des applications et des bibliothèques développées en Python. À défaut de recommandations de la PyPA, nous utilisons les pratiques et les outils les plus répandus. Tous les partis pris part ce document sont discutés dans le [dernier chapitre].
+Cet article s'appuie sur les recommandations de la [PyPA] (*Python Packaging Autority*) qui est en charge de *spécifier*, *maintenir* et *documenter* toute une série de pratiques et d'outils relatifs au partage des applications et des bibliothèques développées en Python. À défaut de recommandations de la PyPA, nous utiliserons les pratiques et les outils les plus répandus. Tous les partis pris par ce document sont discutés dans le [dernier chapitre].
 
 [tester son application]: #ajout-de-tests-automatiques
 [partager son programme avec autrui]: #création-dune-archive-installable
@@ -46,22 +46,22 @@ Le fichier `LICENSE.txt` est un fichier à vocation légale, il explique qui a l
 
     Copyright (c) votre nom et prénom
 
-Si vous souhaitez rendre votre projet open-source, avec plus ou moins de conditions, vous pouvez copier/coller le texte d'une licence existante. Vous trouverez une liste de licence communes sur le site <https://choosealicense.com/>.
+Si vous souhaitez rendre votre projet open-source, avec plus ou moins de conditions, vous pouvez copier/coller le texte d'une licence existante. Vous trouverez une liste de licences communes sur le site <https://choosealicense.com/>.
 
-Votre projet devrait ressembler à ceci:
+Votre projet devrait ressembler à ceci :
 
     tartempion/
       LICENSE.txt
       README.md
 
-En étant dans le dossier de votre projet, donc en étant à l'intérieur du dossier `tartempion`, créez un second dossier du même nom, c'est à dire créez à nouveau un dossier `tartempion`. Créez ensuite dans ce nouveau dossier, les deux fichiers suivants:
+En étant dans le dossier de votre projet, donc en étant à l'intérieur du dossier `tartempion`, créez un second dossier du même nom, c'est à dire créez à nouveau un dossier `tartempion`. Créez ensuite dans ce nouveau dossier, les deux fichiers suivants :
 
 * `__init__.py`
 * `__main__.py`
 
 Ce second dossier contiendra votre programme, c'est-à-dire tous vos fichiers python (à l'exception des tests automatiques). Pour différencier les deux dossiers, nous appellerons le premier dossier (celui qui contient le fichier `README.md`) la *racine du projet* (*project root*).
 
-Le fichier `__init__.py` fait en sorte que le dossier soit reconnu comme un module par python et sera automatiquement exécuté à chaque fois que le projet sera importé et/ou exécuté.
+Le fichier `__init__.py` fait en sorte que le dossier soit reconnu comme un *package* par python, c'est-à-dire comme un dossier contenant des fichiers python (appellés *modules*). Il sera automatiquement exécuté à chaque fois que le projet sera importé et/ou exécuté.
 
 Le fichier `__main__.py` est le point d'entrée de votre application, il contient le code qui sera exécuté (après `__init__.py`) lorsque vous lancerez votre programme. Ce fichier n'est pas nécessaire si vous comptez développer une bibliothèque de fonctions et non pas un programme exécutable.
 
@@ -76,21 +76,21 @@ Au terme de cette étape, votre projet devrait ressembler à ceci:
 
 ### Lancement du projet
 
-Pour vérifier que cette structure minimale fonctionne correctement, vous pouvez écrire ceci dans le fichier `__init__.py`:
+Pour vérifier que cette structure minimale fonctionne correctement, vous pouvez écrire ceci dans le fichier `__init__.py` :
 
     print("Dans __init__.py")
     print("  file:", __file__)
     print("  name:", __name__)
     print("  package:", __package__)
 
-et ceci dans le fichier `__main__.py`:
+et ceci dans le fichier `__main__.py` :
 
     print("Dans __main__.py")
     print("  file:", __file__)
     print("  name:", __name__)
     print("  package:", __package__)
 
-Ouvrez alors un terminal à la *racine du projet* (le premier dossier `tartempion`) et exécutez la commande suivante pour constater qu'il est possible d'*importer* votre projet comme une *bibliothèque de fonctions* (sur windows, remplacez `python3` par `py`):
+Ouvrez alors un terminal à la *racine du projet* (le premier dossier `tartempion`) et exécutez la commande suivante pour constater qu'il est possible d'*importer* votre projet comme une *bibliothèque de fonctions* (sur windows, remplacez `python3` par `py`) :
 
     python3 -c "import tartempion"
 
@@ -101,11 +101,11 @@ La commande va ouvrir un interpréteur python, exécuter l'instruction `import t
       name: tartempion
       package: tartempion
 
-Exécutez ensuite la commande suivante pour constater qu'il est possible d'*exécuter* votre projet comme un *programme* (sur windows, remplacez `python3` par `py`):
+Exécutez ensuite la commande suivante pour constater qu'il est possible d'*exécuter* votre projet comme un *programme* (sur windows, remplacez `python3` par `py`) :
 
     python3 -m tartempion
 
-La commande va charger le module dans un interpréteur python et l'exécuter. Le résultat de cette commande devrait être:
+La commande va charger le module dans un interpréteur python et l'exécuter. Le résultat de cette commande devrait être :
 
     Dans __init__.py
       file: __init__.py
@@ -122,11 +122,11 @@ Une fois que vous avez vérifié que votre programme fonctionne bien, vous pouve
 
 *Vous avez besoin de cette étape si vous avez déjà commencé à faire un programme mais qu'il n'était pas correctement structuré.*
 
-Vous avez deux dossier, un dossier mal structuré qui contient votre ancien programme et un dossier bien structuré (mais presque vide) que vous avez créé en suivant les instructions précédentes. Nous allons appeler ici ces dossiers `old_tartempion` et `new_tartempion`.
+Vous avez deux dossiers, un dossier mal structuré qui contient votre ancien programme et un dossier bien structuré (mais presque vide) que vous avez créé en suivant les instructions précédentes. Nous appellerons ici ces dossiers `old_tartempion` et `new_tartempion`.
 
 ### Structure de l'ancien projet
 
-Votre dossier `old_tartempion` doit certainement avoir une structure similaire à la structure suivante:
+Votre dossier `old_tartempion` doit certainement avoir une structure similaire à la structure suivante :
 
     old_tartempion/
       tartempion.py
@@ -135,7 +135,7 @@ Votre dossier `old_tartempion` doit certainement avoir une structure similaire �
         tarte_cerise.py
         tarte_pomme.py
 
-Du point de vu des imports, le contenu de vos fichiers doit certainement ressembler à quelque chose dans le genre de:
+Du point de vue des imports, le contenu de vos fichiers doit certainement ressembler à quelque chose dans le genre de :
 
 ```py
 # tartempion.py
@@ -187,11 +187,11 @@ Après adaptation, la structure de votre projet devrait plutôt ressembler à ce
       LICENSE.txt
       README.md
 
-Le fichier `tartempions.py` est devenu le fichier `__main__.py` qui se trouve à l'intérieur du module `tartempion`. Le module `tartes` a été déplacé à l'intérieur du module `tartempion`. Deux nouveaux fichiers (vide) `__init__.py` ont été rajouté, l'un dans le dossier `tartempion` et l'autre dans le dossier `tartes`.
+Le fichier `tartempions.py` est devenu le fichier `__main__.py` qui se trouve à l'intérieur du *package* `tartempion`. Le *package* `tartes` a été déplacé à l'intérieur du *package* `tartempion`. Deux nouveaux fichiers (vides) `__init__.py` ont été rajoutés, l'un dans le dossier `tartempion` et l'autre dans le dossier `tartes`.
 
-Niveau imports dans vos fichiers, vous devez corriger toutes vos lignes où vous avez importé des modules de votre projet à l'aide d'un import absolu. Un import est absolu lorsqu'il ne commence par par un point.
+Niveau imports dans vos fichiers, vous devez corriger toutes vos lignes où vous avez importé des modules de votre projet à l'aide d'un import absolu. Un import est absolu lorsqu'il ne commence pas par un point.
 
-Exemple d'imports absolus (ne commencent pas par un point):
+Exemple d'imports absolus (ne commencent pas par un point) :
 
 ```py
 import tartes
@@ -200,7 +200,7 @@ import tartes.tarte_cerise
 from tartes.tarte_cerise import TarteCerise
 ```
 
-Exemple d'imports relatifs (commencent par un point):
+Exemple d'imports relatifs (commencent par un point) :
 
 ```py
 from . import tarte
@@ -214,7 +214,7 @@ En reprenant la structure de `old_tartempion` en exemple ici, le seul import que
 ```py
 # tartempion.py
 from .tartes.tarte_cerise import TarteCerise
-#    ^ya un point en plus ici
+#    ^ ya un point en plus ici
 
 tarte = TarteCerise()
 print(tarte)
@@ -226,17 +226,17 @@ Si vous aviez l'habitude d'exécuter votre code depuis votre IDE, les étapes po
 
 ## Isolation dans un environnement virtuel
 
-*Vous avez besoin de cette étape si vous voulez installer avec pip des applications, des outils ou bibliothèques supplémentaires comme pylint, requests ou pygame.*
+*Vous avez besoin de cette étape si vous voulez installer avec pip des applications, des outils ou bibliothèques supplémentaires comme `pylint`, `requests` ou `pygame`.*
 
 ### Introduction
 
-Ouvrez un terminal et entrez la commande `python3 -m pip list` (sur windows, remplacez `python3` par `py`). Le résultat de cette commande devrait lister tous les bibliothèques supplémentaires qui sont installées pour Python sur votre machine.
+Ouvrez un terminal et entrez la commande `python3 -m pip list` (sur windows, remplacez `python3` par `py`). Le résultat de cette commande devrait lister toutes les bibliothèques supplémentaires qui sont installées pour Python sur votre machine.
 
 Si vous êtes sur Linux ou MacOS, cette liste devrait déjà être bien remplie comme les deux systèmes utilisent Python en interne pour toute une série de routines systèmes. Si vous êtes sur Windows, cette liste devrait être vide ou presque.
 
-Vous pouvez répéter la commande avec l'option `--user` pour lister les bibliothèques qui sont installées pour votre utilisateur propre, la liste devrait être (beaucoup) plus courte.
+Vous pouvez répéter la commande avec l'option `--user` pour lister les bibliothèques qui sont installées pour l'utilisateur actuel, la liste devrait être (beaucoup) plus courte.
 
-Les paquets qui sont installés au niveau du système sont les paquets que le système gère lui-même, par exemple avec `apt` sur Ubuntu, vous ne devriez jamais y toucher vous-même, ni installer de nouvelles bibliothèques, ni en supprimer. Les paquets installées au niveau de votre utilisateur propre sont des outils dont vous avez besoin dans votre vie de tous les jours, par exemple pour faire du scripting.
+Les paquets qui sont installés au niveau du système sont les paquets que le système gère lui-même, par exemple avec `apt` sur Ubuntu, vous ne devriez jamais y toucher vous-même, ni installer de nouvelles bibliothèques, ni en supprimer. Les paquets installées pour l'utilisateur actuel sont des outils dont vous avez besoin dans votre vie de tous les jours, par exemple pour faire du scripting.
 
 Lorsque vous développez un nouveau projet, il est important d'isoler les bibliothèques utilisées pour ce projet du reste des bibliothèques de votre système. Vous ne voudriez pas écraser une bibliothèque utilisée par votre système par une version trop récente/ancienne dans votre projet et ainsi compromettre le bon fonctionnement de votre système.
 
@@ -248,7 +248,7 @@ Ouvrez un terminal à la racine de votre projet et entrez la commande `python3 -
 
 Une fois l'environnement créé, vous pouvez vérifier qu'il fonctionne bien en ouvrant l'interpréteur Python lié à ce nouvel environnement. Sur MacOS/Linux, vous pouvez exécuter la commande `./.venv/bin/python` dans votre terminal, sur Windows vous pouvez faire `.\.venv\Scripts\python`, dans les deux cas l'exécution de cette commande devrait ouvrir l'interpréteur que vous pouvez fermer en appelant la fonction `exit()`.
 
-Vous pouvez aussi lister les modules supplémentaires qui sont installés dans cet environnement virtuel en faisant `./.venv/bin/pip list` (`.\.venv\Scripts\` sur Windows), vous devriez constater que seul `pip` (et peut-être aussi `setuptools`) est installé malgré la possible présence de nombreux autres paquets installés sur votre système.
+Vous pouvez aussi lister les modules supplémentaires qui sont installés dans cet environnement virtuel en faisant `./.venv/bin/pip list` (`.\.venv\Scripts\` sur Windows), vous devriez constater que seul `pip` (et peut-être aussi `setuptools`) est installé, malgré la possible présence de nombreux autres paquets installés sur votre système.
 
 ### Utiliser un environnement virtuel
 
@@ -265,16 +265,16 @@ Pour installer une bibliothèque, vous pouvez alors juste faire `./.venv/bin/pip
 
 ### Configurer son terminal pour ne pas devoir tout le temps écrire `./.venv/bin`
 
-Vous constatez donc qu'il est nécessaire de toujours donner le chemin vers le python et le pip qui se trouvent dans votre environnement virtuel. Lorsque vous comptez travailler toute la journée sur un même projet, devoir répéter ces instructions peut être fastidieux. Les développeurs de Python ont prévu le coup, il est possible de reconfigurer son terminal pour remplacer `python` et `pip` de sorte à utiliser ceux de l'environnement virtuel plutôt que ceux du système. Précision importante, ce changement n'aura d'impact qu'à l'intérieur du terminal actuellement ouvert, le reste du système continuera bien d'utiliser le `python` et le `pip` installés au niveau du système (ceci inclus donc aussi les IDE).
+Vous constatez donc qu'il est nécessaire de toujours donner le chemin vers le python et le pip qui se trouvent dans votre environnement virtuel. Lorsque vous comptez travailler toute la journée sur un même projet, devoir répéter ces instructions peut être fastidieux. Les développeurs de Python ont prévu le coup, il est possible de reconfigurer son terminal pour remplacer `python` et `pip` de sorte à utiliser ceux de l'environnement virtuel plutôt que ceux du système. Précision importante, ce changement n'aura d'impact qu'à l'intérieur du terminal actuellement ouvert, le reste du système continuera bien d'utiliser le `python` et le `pip` installés au niveau du système (ceci inclut donc aussi les IDE).
 
-Pour reconfigurer son terminal, ou comme nous disons dans le jargon *activer son environnement virtuel* vous pouvez *sourcer* le script `activate` qui se trouve à côté de `python` et `pip` dans le dossier `bin` de votre environnement virtuel: `source ./.venv/bin/activate` (sur Windows, pas besoin de `source`, appelez `.\.venv\Scripts\activate` directement à la place).
+Pour reconfigurer son terminal, ou comme nous disons dans le jargon *activer son environnement virtuel*, vous pouvez *sourcer* le script `activate` qui se trouve à côté de `python` et `pip` dans le dossier `bin` de votre environnement virtuel: `source ./.venv/bin/activate` (sur Windows, pas besoin de `source`, appelez `.\.venv\Scripts\activate` directement à la place).
 
-Pour vérifier que la reconfiguration (l'activation) s'est bien déroulé, vous pouvez exécuter la commande `pip --version` (sans donner le chemin complet) et vérifier que le `pip` utilisé est celui de votre environnement virtuel.
+Pour vérifier que la reconfiguration (l'activation) s'est bien déroulée, vous pouvez exécuter la commande `pip --version` (sans donner le chemin complet) et vérifier que le `pip` utilisé est celui de votre environnement virtuel.
 
     $ pip --version
     pip 22.0.2 from /tmp/.venv/lib/python3.10/site-packages/pip (python 3.10)
 
-Pour faire la reconfiguration inverse, réutiliser les python et pip du système, ou comme nous disons dans le jargon *désactiver son environnement virtuel*, vous pouvez simplement exécuter la commande `deactivate`.
+Pour faire la reconfiguration inverse, réutiliser les `python` et `pip` du système, ou comme nous disons dans le jargon *désactiver son environnement virtuel*, vous pouvez simplement exécuter la commande `deactivate`.
 
 [venv]: https://docs.python.org/3/library/venv.html
 
@@ -282,7 +282,7 @@ Pour faire la reconfiguration inverse, réutiliser les python et pip du système
 
 *Vous avez besoin de cette étape lorsque vous comptez vérifier le fonctionnement de votre application à l'aide de tests automatiques.*
 
-Ouvrez un terminal à la racine de votre projet et créez un nouveau dossier `tests`, dans ce dossier créez deux fichiers: `__init__.py` et `test_tartempion.py`. La structure de votre projet devrait donc ressembler à ceci:
+Ouvrez un terminal à la racine de votre projet et créez un nouveau dossier `tests`, dans ce dossier créez deux fichiers: `__init__.py` et `test_tartempion.py`. La structure de votre projet devrait donc ressembler à ceci :
 
     tartempion/
       tartempion/
@@ -294,7 +294,7 @@ Ouvrez un terminal à la racine de votre projet et créez un nouveau dossier `te
       LICENSE.txt
       README.md
 
-Vous pouvez laisser le fichier `__init__.py` vide, il sert uniquement à indiquer que le dossier est un package pour python. À l'intérieur du fichier `test_tartempion.py` vous pouvez écrire ceci:
+Vous pouvez laisser le fichier `__init__.py` vide, il sert uniquement à indiquer que le dossier est un *package* pour python. À l'intérieur du fichier `test_tartempion.py` vous pouvez écrire ceci :
 
     import unittest
     import tartempion
@@ -311,7 +311,7 @@ Une fois le test écrit, assurez vous de vous positionner à la racine de votre 
 
     OK
 
-Chaque `.` sur la première ligne représente un test qui est passé, les tests échoués apparaissent avec un `!`. Vous pouvez aussi utiliser l'option `-v` si vous voulez plutôt énumérer le nom de tests un à un:
+Chaque `.` sur la première ligne représente un test qui est passé, les tests échoués apparaissent avec un `!`. Vous pouvez aussi utiliser l'option `-v` si vous voulez plutôt énumérer le nom de tests un à un :
 
     test_tartempion (tests.test_tartempion.TestTartempion) ... ok
 
@@ -338,7 +338,7 @@ Assurez-vous ensuite que ces libs sont également installées au niveau de votre
 
 ### Déclaration du projet
 
-Une fois les dépendances installées, vous pouvez définir les méta-données relatives à votre projet dans un nouveau fichier `pyproject.toml` que vous créez à la racine de votre projet. Nous vous proposons le fichier suivant à titre d'exemple:
+Une fois les dépendances installées, vous pouvez définir les méta-données relatives à votre projet dans un nouveau fichier `pyproject.toml` que vous créez à la racine de votre projet. Nous vous proposons le fichier suivant, à titre d'exemple :
 
     [project]
     name = "tartempion_NaN"
@@ -362,7 +362,7 @@ Une fois les dépendances installées, vous pouvez définir les méta-données r
 
 Le fichier utilise un format relativement nouveau, le [TOML], il s'agit d'un format de fichier adapté aux fichiers de configuration.
 
-La première partie du fichier, `[project]`, défini l'ensemble des méta-données relatives à votre projet. Il existe en tout plus d'une vingtaine de méta-données différentes, nous avons décidé de ne garder que les plus essentielles d'entre elles ici. La liste complète est défini dans la PEP [621]. Pensez à changer les valeurs pour le nom, la description et les auteurs. Pensez aussi à déclarer vos dépendances, si vous en avez, pour qu'elles soient automatiquement installées avec votre projet.
+La première partie du fichier, `[project]`, défini l'ensemble des méta-données relatives à votre projet. Il existe en tout plus d'une vingtaine de méta-données différentes, nous avons décidé de ne garder que les plus essentielles d'entre elles ici. La liste complète est définie dans la PEP [621]. Pensez à changer les valeurs pour le nom, la description et les auteurs. Pensez aussi à déclarer vos dépendances, si vous en avez, pour qu'elles soient automatiquement installées avec votre projet.
 
 **Important**, le champ `name` dans ce fichier n'est pas obligatoirement le même que le nom de votre dossier. Il est d'ailleurs conseillé d'ajouter votre pseudo ou un autre élément unique à la fin pour vous assurer qu'il sera unique sur internet. Dans cet exemple nous avons ajouté `_NaN` pour "Not a Name", ce blog.
 
@@ -386,7 +386,7 @@ Une fois le fichier `pyproject.toml` complété, vous pouvez utiliser [build] po
     * Building wheel...
     Successfully built tartempion-0.0.1.tar.gz and tartempion-0.0.1-py3-none-any.whl
 
-Le programme aura créé plusieurs fichiers et dossiers à la racine de votre projet, parmi ces dossiers un dossier `dist/` qui contient les deux archives créées: `tartempion-0.0.1.tar.gz` (`.zip` sur Windows) et `tartempion-0.0.1-py3-none-any.whl`.
+Le programme aura créé plusieurs fichiers et dossiers à la racine de votre projet, parmi ces dossiers un dossier `dist/` qui contient les deux archives créées : `tartempion-0.0.1.tar.gz` (`.zip` sur Windows) et `tartempion-0.0.1-py3-none-any.whl`.
 
 La première archive au format `.tar.gz` ou `.zip` est une *distribution source*, elle est principalement à destination des développeurs. La seconde archive au format `.whl` est une *distribution wheel* (sur roulette), elle est principalement à destination des utilisateurs.
 
@@ -451,7 +451,7 @@ Un autre avantage de la structure à plat est de pouvoir lancer le programme et 
 
 ### Format du README
 
-Il existe plusieurs formats de fichier assez répandus pour la rédaction des fichiers README. Les plus communs sont le format texte, le format Markdown et le format reStructuredText. Sur <pypi.org>, le format utilisé par défaut est reStructuredText, cependant lorsqu'un projet est créé depuis [Github], le fichier README sera au format Markdown.
+Il existe plusieurs formats de fichiers assez répandus pour la rédaction des fichiers README. Les plus communs sont le format texte, le format Markdown et le format reStructuredText. Sur <pypi.org>, le format utilisé par défaut est reStructuredText, cependant lorsqu'un projet est créé depuis [Github], le fichier README sera au format Markdown.
 
 Il y a une grosse tendance à favoriser le Markdown pour l'écriture des fichiers README et cette tendance n'est pas spécifique à Python. Puisque le Markdown est également supporté sur <pypi.org> (via la directive `long_description_content_type=text/markdown`) et que le Markdown est généralement considéré comme plus simple à utiliser que le reStructuredText, nous avons choisi le format Markdown pour le README.
 
@@ -506,7 +506,7 @@ Nous avons utilisé setuptools dans cet article car il est compatible avec les P
 
 Parmi tous les éditeurs de texte et IDE disponibles pour Python, nous avons décidé de n'en documenter que deux, [VSCode] et [PyCharm]. Cette décision repose sur l'expérience des auteurs quant à la fréquence des questions relatives à l'utilisation combinées des environnements virtuels et des éditeurs de texte/IDE, expérience qui a été confirmée par plusieurs sondages.
 
-Les débutants qui utilisent [VSCode] et [PyCharm] utilisent souvent le bouton "run" de leur IDE pour exécuter leur programme tandis que les débutants qui utilisent d'autres éditeurs (comme [Sublime Text]) semblent préférer passer par un terminal. Ceci s'ajoute au fait que les utilisateurs débutants de VSCode et PyCharm utilisent souvent un linter intégré à leur IDE contrairement aux utilisateurs débutants qui utilisent d'autre éditeurs.
+Les débutants qui utilisent [VSCode] et [PyCharm] utilisent souvent le bouton "run" de leur IDE pour exécuter leur programme tandis que les débutants qui utilisent d'autres éditeurs (comme [Sublime Text]) semblent préférer passer par un terminal. Ceci s'ajoute au fait que les utilisateurs débutants de VSCode et PyCharm utilisent souvent un linter intégré à leur IDE contrairement aux utilisateurs débutants qui utilisent d'autres éditeurs.
 
 Ces deux aspects, le bouton "run" et le linter, font qu'il est crucial de correctement configurer ces IDE pour qu'ils utilisent le bon environnement virtuel. Ne pas configurer d'environnement virtuel est une source commune d'erreur chez les débutants qui se plaignent soit qu'ils n'arrivent pas à installer de bibliothèques soit que leur IDE ne reconnaît pas la bibliothèque qu'ils viennent d'installer. Les deux affirmations sont en fait la conséquence du même problème, la bibliothèque n'a pas été installée dans le même environnement virtuel que celui utilisé dans l'IDE.
 
