@@ -78,17 +78,21 @@ Au terme de cette étape, votre projet devrait ressembler à ceci:
 
 Pour vérifier que cette structure minimale fonctionne correctement, vous pouvez écrire ceci dans le fichier `__init__.py` :
 
-    print("Dans __init__.py")
-    print("  file:", __file__)
-    print("  name:", __name__)
-    print("  package:", __package__)
+```py
+print("Dans __init__.py")
+print("  file:", __file__)
+print("  name:", __name__)
+print("  package:", __package__)
+```
 
 et ceci dans le fichier `__main__.py` :
 
-    print("Dans __main__.py")
-    print("  file:", __file__)
-    print("  name:", __name__)
-    print("  package:", __package__)
+```py
+print("Dans __main__.py")
+print("  file:", __file__)
+print("  name:", __name__)
+print("  package:", __package__)
+```
 
 Ouvrez alors un terminal à la *racine du projet* (le premier dossier `tartempion`) et exécutez la commande suivante pour constater qu'il est possible d'*importer* votre projet comme une *bibliothèque de fonctions* (sur windows, remplacez `python3` par `py`) :
 
@@ -114,7 +118,7 @@ La commande va charger le module dans un interpréteur python et l'exécuter. Le
     Dans __main__.py
       file: __main__.py
       name: __main__
-      package: tartempion    
+      package: tartempion
 
 Une fois que vous avez vérifié que votre programme fonctionne bien, vous pouvez vider les deux fichiers, c'est-à-dire retirer tous les `print`. Ne supprimez pas les fichiers.
 
@@ -166,7 +170,7 @@ from .tarte import Tarte
 class TartePomme(Tarte):
     ...
 ```
-    
+
 Vous devez certainement lancer votre programme soit en faisant `python3 tartempion.py` depuis votre terminal soit en cliquant sur le bouton "run" tout en étant sur le fichier `tartempion.py` dans votre IDE.
 
 Si la structure de votre projet actuel ne ressemble pas à celle décrite ici ou bien si vous n'êtes pas sûr alors venez nous demander de l'aide sur Discord. Faites bien attention à nous expliquer comment vos fichiers sont structurés, comment vous faites vos imports et surtout comment vous lancez votre programme.
@@ -296,12 +300,14 @@ Ouvrez un terminal à la racine de votre projet et créez un nouveau dossier `te
 
 Vous pouvez laisser le fichier `__init__.py` vide, il sert uniquement à indiquer que le dossier est un *package* pour python. À l'intérieur du fichier `test_tartempion.py` vous pouvez écrire ceci :
 
-    import unittest
-    import tartempion
+```py
+import unittest
+import tartempion
 
-    class TartempionTest(unittest.TestCase):
-        def test_tartempion_loaded(self):
-            self.assertTrue(tartempion)
+class TartempionTest(unittest.TestCase):
+    def test_tartempion_loaded(self):
+        self.assertTrue(tartempion)
+```
 
 Une fois le test écrit, assurez vous de vous positionner à la racine de votre projet dans votre terminal. Vous pouvez ensuite lancer les tests avec la commande `python3 -m unittest` (utilisez `py -m unittest` sur Windows, pensez à passer par votre environnement virtuel si vous en avez un). Vous devriez avoir un résultat comme suit:
 
@@ -340,25 +346,27 @@ Assurez-vous ensuite que ces libs sont également installées au niveau de votre
 
 Une fois les dépendances installées, vous pouvez définir les méta-données relatives à votre projet dans un nouveau fichier `pyproject.toml` que vous créez à la racine de votre projet. Nous vous proposons le fichier suivant, à titre d'exemple :
 
-    [project]
-    name = "tartempion_NaN"
-    version = "0.0.1"
-    description = "Une courte description sur une ligne"
-    readme = "README.md"
-    license = { file = "LICENSE.txt" }
-    authors = [
-        { name = "Bob", email = "bob@example.com" },
-    ]
+```toml
+[project]
+name = "tartempion_NaN"
+version = "0.0.1"
+description = "Une courte description sur une ligne"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [
+    { name = "Bob", email = "bob@example.com" },
+]
 
-    # Exemple de dépendances
-    dependencies = [
-        "pygame",
-        "requests",
-    ]
+# Exemple de dépendances
+dependencies = [
+    "pygame",
+    "requests",
+]
 
-    [build-system]
-    requires = ["setuptools>=61.0", "wheel"]
-    build-backend = "setuptools.build_meta"
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+```
 
 Le fichier utilise un format relativement nouveau, le [TOML], il s'agit d'un format de fichier adapté aux fichiers de configuration.
 
