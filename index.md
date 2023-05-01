@@ -2,6 +2,7 @@
 
 ### 2023
 
+* [Programmer en Scala 3 : Mutabilité et boucles](/langages/scala/programmer-en-scala-3-mutabilite-et-boucles) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 * [Comment structurer un projet Python](/langages/python/comment-structurer-un-projet-python) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Les messages de commit dans git](/architecture/les-messages-de-commit-dans-git) [<kbd>architecture</kbd>](/architecture)
 * [Scala comme premier langage de programmation](/langages/scala/scala-comme-premier-langage) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
@@ -18,5 +19,5 @@
 ### 2021
 
 * [Ressources pour game-dev](/game-dev/ressources) [<kbd>game-dev</kbd>](/game-dev)
-* [Programmer en Python, quel IDE choisir](/langages/python/programmer-en-python-quel-ide-choisir) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Apprendre Python, quoi lire, quoi regarder](/langages/python/apprendre-python-quoi-lire-quoi-regarder) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
+* [Programmer en Python, quel IDE choisir](/langages/python/programmer-en-python-quel-ide-choisir) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
