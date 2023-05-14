@@ -53,3 +53,5 @@ Nous avons vu dans ce chapitre les différents prérequis pour programmer en Sca
 Voici quelques liens utiles:
 - [Site officiel du langage](https://scala-lang.org/)
 - [Site de Scala CLI](https://scala-cli.virtuslab.org/)
+
+*Suite : [Types et variables](./programmer-en-scala-3-types-et-variables)*

@@ -1,5 +1,7 @@
 # Programmer en Scala 3 : Types et Variables
 
+*Précédemment : [Prérequis](./programmer-en-scala-3-prerequis)*
+
 ## Les variables
 
 ### Introduction
@@ -149,3 +151,5 @@ Dans le cas présent, cela est dû au fait qu'un nombre décimal n'est pas forc�
 Nous avons vu comment stocker des données en utilisant les variables. Nous avons également parlé de la notion de type lié aux valeurs manipulées, importante en Scala.
 
 Nous aborderons dans le cours suivant les conditions.
+
+*Suite : [Booléens et conditions](./programmer-en-scala-3-booleens-et-conditions)*
