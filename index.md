@@ -19,5 +19,5 @@
 ### 2021
 
 * [Ressources pour game-dev](/game-dev/ressources) [<kbd>game-dev</kbd>](/game-dev)
-* [Apprendre Python, quoi lire, quoi regarder](/langages/python/apprendre-python-quoi-lire-quoi-regarder) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Programmer en Python, quel IDE choisir](/langages/python/programmer-en-python-quel-ide-choisir) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
+* [Apprendre Python, quoi lire, quoi regarder](/langages/python/apprendre-python-quoi-lire-quoi-regarder) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
