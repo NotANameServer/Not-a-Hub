@@ -1,5 +1,7 @@
 # Programmer en Scala 3 : Mutabilité et boucles
 
+*Précédemment : [Booléens et conditions](./programmer-en-scala-3-booleens-et-conditions)*
+
 ## La mutabilité
 
 Nous avons vu précédemment un moyen de stocker des valeurs sous un nom grâce aux variables. Cependant, nous n'avons jusqu'à présent qu'utilisé des variables dites "immuables", que l'on ne peut modifier. Vous avez peut-être tenté de faire la chose suivante :

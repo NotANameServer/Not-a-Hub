@@ -1,5 +1,7 @@
 # Programmer en Scala 3 : Booléens et conditions
 
+*Précédemment : [Types et variables](./programmer-en-scala-3-types-et-variables)*
+
 ## Les booléens
 
 Nous avons vu précédemment comment stocker des valeurs et les manipuler en utilisant des opérations.
@@ -274,3 +276,5 @@ Nous avons aujourd'hui vu comment exécuter des actions suivant une condition en
 faire plus que de simples opérations mathématiques.
 
 Nous aborderons dans le prochain chapitre les boucles qui nous permettront de répéter des actions.
+
+*Suite : [Mutabilité et boucles](./programmer-en-scala-3-mutabilite-et-boucles)*
