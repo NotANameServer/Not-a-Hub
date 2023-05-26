@@ -74,6 +74,8 @@ Au terme de cette étape, votre projet devrait ressembler à ceci:
       LICENSE.txt
       README.md
 
+Si vous utilisez un logiciel de contrôle de version (comme *git*), vous pouvez d'ores et déjà initialiser votre logiciel avec les fichiers existants. Les utilisateurs de *git* peuvent donc taper la commande `git init` en étant à l'intérieur de la racine du projet, c'est-à-dire à l'intérieur du premier dossier `tartempion`.
+
 ### Lancement du projet
 
 Pour vérifier que cette structure minimale fonctionne correctement, vous pouvez écrire ceci dans le fichier `__init__.py` :
