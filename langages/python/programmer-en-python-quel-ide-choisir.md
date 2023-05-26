@@ -34,7 +34,7 @@ La liste suivante présente une liste non exhaustive :
 * [Emacs](https://www.gnu.org/software/emacs/) (pro: très puissant, con: difficile à prendre en main)
 * [Sublime Text](https://www.sublimetext.com) (pro: léger et rapide, con: pas fort extensible)
 * [VS Code](https://code.visualstudio.com/) (pro: complet et extensible, con: lourd)
-* [Atom](https://atom.io/) (pro: moderne et open-source, con: lent au démarrage)
+* [Pulsar](https://pulsar-edit.dev/) (pro: moderne et open-source, con: lent au démarrage)
 * [Pycharm](https://www.jetbrains.com/pycharm/) (pro: IDE complet, con: très lourd)
 
 ## Qu'est-ce qu'utilise la populace ?
