@@ -359,6 +359,10 @@ authors = [
     { name = "Bob", email = "bob@example.com" },
 ]
 
+classifiers = [
+  "Private :: Do Not Upload",
+]
+
 # Exemple de dépendances
 dependencies = [
     "pygame",
@@ -377,6 +381,8 @@ La première partie du fichier, `[project]`, défini l'ensemble des méta-donné
 **Important**, le champ `name` dans ce fichier n'est pas obligatoirement le même que le nom de votre dossier. Il est d'ailleurs conseillé d'ajouter votre pseudo ou un autre élément unique à la fin pour vous assurer qu'il sera unique sur internet. Dans cet exemple nous avons ajouté `_NaN` pour "Not a Name", ce blog.
 
 Contrairement à une croyance populaire, reprise par beaucoup de tutoriels erronés en ligne, les dépendances sont bien à inscrire dans le champ `dependencies` du `pyproject.toml` et non pas dans un fichier `requirements.txt`. Vous pouvez lire la discussion [install_requires vs requirements files] dans la documentation officielle pour en apprendre plus.
+
+La liste associée au champ `classfiers` permet de catégoriser votre logiciel en fonction de l'audience visée, le sujet générale de votre logiciel et d'autres informations. Ce champ n'est pas essentiel. Si vous comptez héberger votre logiciel sur <pypi.org>, vous devrez retirer la ligne `"Private :: Do Not Upload",`.
 
 La seconde partie du fichier, `[build-system]`, décrit quels outils seront utilisés pour créer les archives pour votre projet. Cette partie est obligatoire mais vous pouvez vous contenter de garder celle de l'exemple.
 
