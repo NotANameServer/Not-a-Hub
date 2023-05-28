@@ -2,6 +2,7 @@
 
 ### 2023
 
+* [Faire des commits au quotidien](/architecture/faire-des-commits-au-quotidien) [<kbd>architecture</kbd>](/architecture)
 * [Programmer en Scala 3 : Mutabilité et boucles](/langages/scala/programmer-en-scala-3-mutabilite-et-boucles) [<kbd>langages</kbd>](/langages) [<kbd>scala</kbd>](/langages/scala)
 * [Comment structurer un projet Python](/langages/python/comment-structurer-un-projet-python) [<kbd>langages</kbd>](/langages) [<kbd>python</kbd>](/langages/python)
 * [Les messages de commit dans git](/architecture/les-messages-de-commit-dans-git) [<kbd>architecture</kbd>](/architecture)
