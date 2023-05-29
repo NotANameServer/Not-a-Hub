@@ -1,3 +1,5 @@
+Auteur : [Julien Castiaux](https://github.com/Julien00859). Date de publication : 29 mai 2023.
+
 Faire des commits au quotidien
 ==============================
 
