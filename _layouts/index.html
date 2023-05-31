@@ -20,7 +20,7 @@ layout: default
     {% assign posts = year.items | sort: "date" | reverse %}
     {% for post in posts %}
       <li>
-        <a href="{{ post.url }}">
+        <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
         </a>
         {% assign tags = post.dir | split: "/" %}
@@ -28,7 +28,7 @@ layout: default
         {% for tag in tags %}
           {% if tag != "" %}
             {% assign idx_path = idx_path | append: tag | append: "/" %}
-            <kbd><a href="{{ idx_path }}">{{ tag }}</a></kbd>
+            <kbd><a href="{{ site.baseurl }}{{ idx_path }}">{{ tag }}</a></kbd>
           {% endif %}
         {% endfor %}
       </li>
