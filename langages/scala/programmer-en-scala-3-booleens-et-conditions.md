@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Raphaël Fromentin et TheElectronWill
-date: 2022-09-16
+date: 2023-03-10
 last_update: 2023-05-21
 title: "Programmer en Scala 3 : Booléens et conditions"
 ---
