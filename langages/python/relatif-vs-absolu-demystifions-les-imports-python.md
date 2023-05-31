@@ -1,5 +1,9 @@
-Relatif vs Absolu, démystifions les imports python
-==================================================
+---
+layout: post
+author: Julien Castiaux
+date: 2022-06-27
+title: "Relatif vs Absolu, démystifions les imports python"
+---
 
 Dans cet article, nous étudierons les modules en python avec un regard poussé sur la notion de package. Nous étudierons aussi la manière de définir des modules et la manière de les importer de sorte à créer des arborescences cohérentes et à prévenir certains problèmes, notamment les problèmes liés aux imports relatifs.
 

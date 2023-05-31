@@ -1,5 +1,9 @@
-Faire des commits au quotidien
-==============================
+---
+layout: post
+author: Julien Castiaux
+date: 2023-05-29
+title: "Faire des commits au quotidien"
+---
 
 Vous savez donc comment faire des beaux [messages de commit dans git] mais au moment de passer à la pratique vous êtes perdus. Vous aviez l'habitude de créer des nouveaux commits à intervalle régulier pour envoyer votre travail sur GitHub et ainsi avoir une copie de secours. Vos commits étaient courts, écrits à coup de `-m`, et décrivaient ce que vous aviez changé ces deux/trois dernières heures.
 

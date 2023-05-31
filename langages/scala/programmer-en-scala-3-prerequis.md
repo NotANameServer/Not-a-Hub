@@ -1,4 +1,10 @@
-# Programmer en Scala 3 : Les prérequis
+---
+layout: post
+author: Raphaël Fromentin
+date: 2022-07-05
+last_update: 2023-05-21
+title: "Programmer en Scala 3 : Les prérequis"
+---
 
 ## Qu'est-ce que Scala ?
 

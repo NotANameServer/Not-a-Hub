@@ -1,4 +1,10 @@
-# Scala comme premier langage de programmation
+---
+layout: post
+author: Raphaël Fromentin et TheElectronWill
+date: 2023-03-04
+last_update: 2023-05-24
+title: "Scala comme premier langage de programmation"
+---
 
 ## Introduction
 

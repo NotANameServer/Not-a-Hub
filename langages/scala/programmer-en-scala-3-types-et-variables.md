@@ -1,4 +1,10 @@
-# Programmer en Scala 3 : Types et Variables
+---
+layout: post
+author: Raphaël Fromentin et TheElectronWill
+date: 2022-08-15
+last_update: 2023-05-21
+title: "Programmer en Scala 3 : Types et Variables"
+---
 
 *Précédemment : [Prérequis](./programmer-en-scala-3-prerequis)*
 

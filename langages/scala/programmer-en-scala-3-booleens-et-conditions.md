@@ -1,4 +1,10 @@
-# Programmer en Scala 3 : Booléens et conditions
+---
+layout: post
+author: Raphaël Fromentin et TheElectronWill
+date: 2022-09-16
+last_update: 2023-05-21
+title: "Programmer en Scala 3 : Booléens et conditions"
+---
 
 *Précédemment : [Types et variables](./programmer-en-scala-3-types-et-variables)*
 

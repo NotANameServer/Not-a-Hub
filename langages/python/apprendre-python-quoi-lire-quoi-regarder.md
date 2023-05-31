@@ -1,4 +1,10 @@
-# Apprendre Python, quoi lire, quoi regarder
+---
+layout: post
+author: Julien Castiaux
+date: 2021-08-30
+last_update: 2021-09-11
+title: "Apprendre Python, quoi lire, quoi regarder"
+---
 
 La documentation officielle, votre principale source de connaissance (aussi disponible en français) : <https://docs.python.org>
 

@@ -1,0 +1,26 @@
+---
+layout: default
+css: blog
+---
+
+<h1> {{ page.title }} </h1>
+
+<b>Par {{ page.author }}</b><br>
+<b>Le {% include date.html the_date=page.date %}</b>
+{% if page.last_update %}
+  (Dernière mise à jour le {% include date.html the_date=page.last_update %})
+{% endif %}
+<br>
+<b>Tags :</b>
+{% assign tags = page.dir | split: "/" %}
+{% assign idx_path = "/" %}
+{% for tag in tags %}
+  {% if tag != "" %}
+    {% assign idx_path = idx_path | append: tag | append: "/" %}
+    <kbd><a href="{{ idx_path }}">{{ tag }}</a></kbd>
+  {% endif %}
+{% endfor %}
+
+<hr>
+
+{{ content }}

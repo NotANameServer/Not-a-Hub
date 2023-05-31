@@ -1,4 +1,11 @@
-# Comment structurer un projet Python
+---
+layout: post
+author: Julien Castiaux
+date: 2023-04-07
+last_update: 2023-05-28
+title: "Comment structurer un projet Python"
+---
+
 
 * [Introduction](#introduction)
 * [Mise en place du squelette du projet](#mise-en-place-du-squelette-du-projet)
