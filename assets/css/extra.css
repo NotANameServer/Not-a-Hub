@@ -33,10 +33,15 @@ body
 .main-content blockquote
 {
 	color: #67787E;
-	border-left: 0.3rem solid #7198BC;
+	border-left-color: #7198BC;
 }
 
 .site-footer-credits
 {
 	color: #67777E;
+}
+
+address
+{
+	font-style: normal;
 }

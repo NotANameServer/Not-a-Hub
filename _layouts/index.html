@@ -15,23 +15,21 @@ layout: default
 %}
 
 {% for year in posts_by_year %}
-  <h3>{{ year.name }}</h3>
-  <ul>
-    {% assign posts = year.items | sort: "date" | reverse %}
-    {% for post in posts %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-        {% assign tags = post.dir | split: "/" %}
-        {% assign idx_path = "/" %}
-        {% for tag in tags %}
-          {% if tag != "" %}
-            {% assign idx_path = idx_path | append: tag | append: "/" %}
-            <a href="{{ site.baseurl }}{{ idx_path }}"><kbd>{{ tag }}</kbd></a>
-          {% endif %}
-        {% endfor %}
-      </li>
-    {% endfor %}
-  </ul>
+	<h3>{{ year.name }}</h3>
+	<ul>
+	{% assign posts = year.items | sort: "date" | reverse %}
+	{% for post in posts %}
+		<li>
+			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			{% assign tags = post.dir | split: "/" %}
+			{% assign idx_path = "/" %}
+			{% for tag in tags %}
+				{% if tag != "" %}
+					{% assign idx_path = idx_path | append: tag | append: "/" %}
+					<a href="{{ site.baseurl }}{{ idx_path }}"><kbd>{{ tag }}</kbd></a>
+				{% endif %}
+			{% endfor %}
+		</li>
+	{% endfor %}
+	</ul>
 {% endfor %}
