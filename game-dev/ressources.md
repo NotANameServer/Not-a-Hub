@@ -2,7 +2,7 @@
 layout: post
 author: Le serveur Not a Name
 date: 2021-09-04
-last_update: 2023-04-12
+last_update: 2023-03-12
 title: "Ressources pour game-dev"
 ---
 
