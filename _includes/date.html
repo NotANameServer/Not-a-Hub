@@ -1,26 +1,26 @@
 {% comment %}
-  We use this file to print out dates because GitHub pages does not support the
-  Jekyll plugin dedicated to locales ...
-  
-  !!BEWARE!!
-  _DO NOT_ introduce an empty line at EOF, it would introduce spurious spaces
-  when displaying dates.
+	We use this file to print out dates because GitHub pages does not support the
+	Jekyll plugin dedicated to locales ...
+
+	!!BEWARE!!
+	_DO NOT_ introduce an empty line at EOF, it would introduce spurious spaces
+	when displaying dates.
 {% endcomment %}
 
 {% assign m = include.the_date | date: "%-m" %}
 {{ include.the_date | date: "%-d" }}
 {% case m %}
-  {% when '1' %}Janvier
-  {% when '2' %}Février
-  {% when '3' %}Mars
-  {% when '4' %}Avril
-  {% when '5' %}Mai
-  {% when '6' %}Juin
-  {% when '7' %}Juillet
-  {% when '8' %}Août
-  {% when '9' %}Septembre
-  {% when '10' %}Octobre
-  {% when '11' %}Novembre
-  {% when '12' %}Decembre
+	{% when '1' %}Janvier
+	{% when '2' %}Février
+	{% when '3' %}Mars
+	{% when '4' %}Avril
+	{% when '5' %}Mai
+	{% when '6' %}Juin
+	{% when '7' %}Juillet
+	{% when '8' %}Août
+	{% when '9' %}Septembre
+	{% when '10' %}Octobre
+	{% when '11' %}Novembre
+	{% when '12' %}Decembre
 {% endcase %}
 {{ include.the_date | date: "%Y" }}
