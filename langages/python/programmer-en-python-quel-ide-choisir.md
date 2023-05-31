@@ -1,4 +1,10 @@
-# Programmer en Python, quel IDE choisir
+---
+layout: post
+author: Julien Castiaux
+date: 2021-08-30
+last_update: 2023-05-28
+title: "Programmer en Python, quel IDE choisir"
+---
 
 Python est un langage suffisamment simple pour qu'un IDE complet ne soit pas *nécessaire* à avoir une bonne vélocité de
 développement. Contrairement aux langages à la syntaxe plus lourde, il n'est pas forcément nécessaire d'avoir toute une

@@ -1,4 +1,10 @@
-# Ressources pour game-dev
+---
+layout: post
+author: Le serveur Not a Name
+date: 2021-09-04
+last_update: 2023-04-12
+title: "Ressources pour game-dev"
+---
 
 Ce document liste differentes ressources utiles au game-dev.
 
@@ -23,7 +29,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Common game localizations ](https://docs.google.com/spreadsheets/d/135HgMYcRDt6vnJN0d-xFMEZUeWjVbc61ETf8uVwHERE/edit?usp=sharing) | ?                       | Gratuit           | [Traduction]
 | [Crateboy                  ](https://crateboy.itch.io/crateboy-2007-2014)        | Creative Commons                                                          | Gratuit           | [Sprite] et [Tileset] divers
 | [Dafont                    ](https://www.dafont.com/)                            | Variées                                                                   | Gratuit ou Payant | [Font]
-| [Dexsoft                   ](https://www.dexsoft-games.com)                      | Commercial                                                                | Payant            | [Animation] / [Modèle] / [Texture] 
+| [Dexsoft                   ](https://www.dexsoft-games.com)                      | Commercial                                                                | Payant            | [Animation] / [Modèle] / [Texture]
 | [Dumbanex.com              ](http://www.dumbmanex.com/bynd_freestuff.html)       | Free avec attribution                                                     | Gratuit           | [Sprite] / [Tileset]
 | [FamFamFam                 ](http://www.famfamfam.com/lab/icons/)                | Free                                                                      | Gratuit           | [UI]
 | [FlatIcons                 ](https://flaticons.net)                              | Royalty free                                                              | Gratuit           | [UI]
@@ -41,8 +47,8 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Hero Patterns             ](http://www.heropatterns.com)                        | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                 | Gratuit           | [Background] / [UI]
 | [HeroIcons                 ](http://www.heroicons.com)                           | MIT                                                                       | Gratuit           | [UI]
 | [IconFinder                ](https://www.iconfinder.com)                         | Variées                                                                   | Gratuit ou Payant | [UI]
-| [Image * After             ](http://www.imageafter.com)                          | [Custom](http://www.imageafter.com/terms.php)                             | Gratuit           | [Texture] 
-| [Incompetech               ](https://incompetech.com/music/royalty-free/)        | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                 | Gratuit           | [Audio] 
+| [Image * After             ](http://www.imageafter.com)                          | [Custom](http://www.imageafter.com/terms.php)                             | Gratuit           | [Texture]
+| [Incompetech               ](https://incompetech.com/music/royalty-free/)        | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)                 | Gratuit           | [Audio]
 | [Itch.io                   ](https://itch.io/game-assets)                        | Variées                                                                   | Gratuit ou Payant | De tout: [Animation], [Audio], [Background], [Decals], [Font], [HDRI], [Landscape], [Modèle], [PBR], [Sprite], [Texture], [Tileset], [UI]
 | [Julio Sillet 3D Art       ](https://juliosillet.gumroad.com)                    | Variées                                                                   | Gratuit ou Payant | [Modèle] / [Texture]
 | [Kenney                    ](https://kenney.nl)                                  | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)   | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset] / [UI]
@@ -58,9 +64,9 @@ Ce document liste differentes ressources utiles au game-dev.
 | [PolyglotGamedev           ](https://docs.google.com/spreadsheets/d/17f0dQawb-s_Fd7DHgmVvJoEGDMH_yoSd8EYigrb0zmM/edit?usp=sharing) | CC0                     | Gratuit           | [Traduction]
 | [Polyhaven                 ](https://polyhaven.com/)                             | [CC0](https://polyhaven.com/license)                                      | Gratuit           | [HDRI] / [Modèle] / [Texture]
 | [Quaternius                ](https://quaternius.com/index.html)                  | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D / [Animation]
-| [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]                 
+| [Reinerstilesets.de        ](https://www.reinerstilesets.de)                     | [Free avec attribution](https://www.reinerstilesets.de/graphics/lizenz/)  | Gratuit           | [Audio] / [Modèle] / [Sprite] / [Tileset]
 | [Renderpeople              ](https://renderpeople.com/free-3d-people/)           | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D de personnées scannées
-| [ScanTheWorld              ](https://www.myminifactory.com/scantheworld/)        | Variées                                                                   | Gratuit           | Scans de [Modèle] 3D 
+| [ScanTheWorld              ](https://www.myminifactory.com/scantheworld/)        | Variées                                                                   | Gratuit           | Scans de [Modèle] 3D
 | [Sketchfab                 ](https://sketchfab.com) 							   | Variées                                                                   | Gratuit ou Payant | [Modèle] 3D
 | [Smithsonian Open Access   ](https://www.si.edu/openaccess)                      | [CCO](https://www.si.edu/openaccess/faq)                                  | Gratuit           | [Modèle] 3D / [Texture]
 | [Sonniss Game Audio GDC    ](https://sonniss.com/gameaudiogdc)                   | Variées                                                                   | Gratuit           | Historique de l'[Audio] de la GDC
@@ -79,23 +85,23 @@ Ce document liste differentes ressources utiles au game-dev.
 
 ## Création d'assets
 
-|                                                                             | Licence          | Prix                    | Meta   
+|                                                                             | Licence          | Prix                    | Meta
 |-----------------------------------------------------------------------------|------------------|-------------------------|---------------------
 | [Asset Forge        ](https://assetforge.io)                                | -                | $19.95 ou $39.95        | Outil de création de [Modèle] très complet
 | [Coolors            ](https://coolors.co)                                   | -                | Gratuit                 | Generateurs de palettes de couleurs
 | [Colormind          ](http://colormind.io)                                  | -                | Gratuit                 | Generateurs de palettes de couleurs
-| [DrPetter’s sfxr    ](http://www.drpetter.se/project_sfxr.html)             | -                | Gratuit                 | Generateur d'effets sonores - [Audio] 
+| [DrPetter’s sfxr    ](http://www.drpetter.se/project_sfxr.html)             | -                | Gratuit                 | Generateur d'effets sonores - [Audio]
 | [InterfaceInGame    ](https://interfaceingame.com)                          | -                | Gratuit                 | Analyse/Inspiration d'[UI] de jeux connus
-| [KenShape           ](https://tools.kenney.nl/kenshape/)                    | -                | $3.99                   | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle] 
+| [KenShape           ](https://tools.kenney.nl/kenshape/)                    | -                | $3.99                   | Createur d'assets 3D lowpoly supportés par la plupart des moteurs graphiques - [Modèle]
 | [MocapX             ](https://www.mocapx.com)                               | -                | $0-299                  | Outil de motion capture utilisable avec Maya et un telephone - [Animation]
 | [Nukeygara          ](https://www.nukeygara.com)                            | -                | Essai gratuit ou Payant | Logiciel d'animation 3D fait spécifiquement pour le jeux vidéo
 | [Paletton           ](https://paletton.com/)                                | -                | Gratuit                 | Generateurs de palettes de couleurs
 | [PicoCAD            ](https://johanpeitz.itch.io/picocad)                   | -                | Gratuit                 | Outil de création de [Modèle] lowpoly
-| [Quixel mixer       ](https://quixel.com/mixer)                             | -                | Gratuit                 | Permet de fusionner des [Texture]  
-| [Spacescape         ](http://alexcpeterson.com/spacescape/)                 | -                | Gratuit                 | Cubemap spatial 
+| [Quixel mixer       ](https://quixel.com/mixer)                             | -                | Gratuit                 | Permet de fusionner des [Texture]
+| [Spacescape         ](http://alexcpeterson.com/spacescape/)                 | -                | Gratuit                 | Cubemap spatial
 | [Unreal MetaHuman   ](https://www.unrealengine.com/en-US/metahuman-creator) | -                | Gratuit                 | Outil de création de visages réalistes - [Animation] / [Modèle]
 | [VideoGameInterfaces](https://videogameinterfaces.com)                      | -                | Gratuit                 | Analyse/Inspiration d'[UI] de jeux connus
-| [World creator      ](https://www.world-creator.com/)                       | -                | Payant (3 tiers)        | [Landscape] 
+| [World creator      ](https://www.world-creator.com/)                       | -                | Payant (3 tiers)        | [Landscape]
 
 
 [Animation]: #ressources-pour-game-dev

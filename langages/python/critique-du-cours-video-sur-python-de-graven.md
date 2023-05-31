@@ -1,4 +1,10 @@
-# Critique du cours vidéo sur Python de Graven
+---
+layout: post
+author: Julien Castiaux
+date: 2021-08-30
+last_update: 2021-09-12
+title: "Critique du cours vidéo sur Python de Graven"
+---
 
 Le cours intitulé "Apprendre le Python" est un cours proposé sur la chaîne YouTube Gravenilvectuto. Le cours se présente
 comme un cours pour apprendre les fondamentaux du langage de programmation Python. Il est constitué de 9 vidéos sur le

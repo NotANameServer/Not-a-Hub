@@ -1,4 +1,9 @@
-# Les idées reçues sur C
+---
+layout: post
+author: Allan Blanchard
+date: 2022-10-30
+title: "Les idées reçues sur C"
+---
 
 Le C est un langage de programmation très répandu. Il a été utilisé, enseigné
 et éprouvé pendant des années. Cependant, rien de tout cela n'est parfait, et

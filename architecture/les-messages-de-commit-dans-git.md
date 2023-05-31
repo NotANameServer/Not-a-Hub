@@ -1,4 +1,9 @@
-# Les messages de commit dans git
+---
+layout: post
+author: Julien Castiaux
+date: 2023-03-12
+title: "Les messages de commit dans git"
+---
 
 Au moment de créer un nouveau commit, git demande à l'utilisateur de décrire les changements effectués via le *message de commit*. La rédaction de ces messages peut sembler fastidieuse voire inutile, aussi bien aux novices qu'aux personnes plus expérimentés, mais est d'une importance capitale pour mener à bien un projet de développement informatique sur le long terme.
 
@@ -35,7 +40,7 @@ Le titre doit être un résumé concis et de préférence sous 50 caractères du
 
 Selon les organisations, les titres des commits peuvent suivre un format précis où le *type* du changement et *l'endroit* du changement doivent être systématiquement écris. Par exemple en suivant la convention de [conventional commits], le précédent titre deviendrait "fix(smtp): bad To header for unicode addresses". En suivant la convention en vigueur à [Odoo], il deviendrait "[FIX] smtp: bad To headers for unicode addresses".
 
-[conventional commits]: https://www.conventionalcommits.org/en/v1.0.0/ 
+[conventional commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Odoo]: https://www.odoo.com/documentation/master/contributing/development/git_guidelines.html
 
 ### Corps

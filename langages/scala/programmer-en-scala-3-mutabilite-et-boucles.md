@@ -1,4 +1,10 @@
-# Programmer en Scala 3 : Mutabilité et boucles
+---
+layout: post
+author: Raphaël Fromentin
+date: 2023-05-14
+last_update: 2023-05-21
+title: "Programmer en Scala 3 : Mutabilité et boucles"
+---
 
 *Précédemment : [Booléens et conditions](./programmer-en-scala-3-booleens-et-conditions)*
 
