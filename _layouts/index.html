@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign tag = page.dir | split: "/" | last %}
+
+<h2>Index{% if tag %} : {{ tag }} {% endif %}</h2>
+
+{% assign posts_by_year = site.html_pages
+          | where_exp: "post", "post.name != 'index.md'"
+          | where_exp: "post", "post.dir contains page.dir"
+          | group_by_exp: "post", "post.date | date: '%Y'"
+          | sort: "name"
+          | reverse
+%}
+
+{% for year in posts_by_year %}
+  <h3>{{ year.name }}</h3>
+  <ul>
+    {% assign posts = year.items | sort: "date" | reverse %}
+    {% for post in posts %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+        {% assign tags = post.dir | split: "/" %}
+        {% assign idx_path = "/" %}
+        {% for tag in tags %}
+          {% if tag != "" %}
+            {% assign idx_path = idx_path | append: tag | append: "/" %}
+            <kbd><a href="{{ idx_path }}">{{ tag }}</a></kbd>
+          {% endif %}
+        {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
