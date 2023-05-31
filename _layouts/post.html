@@ -17,7 +17,7 @@ css: blog
 {% for tag in tags %}
   {% if tag != "" %}
     {% assign idx_path = idx_path | append: tag | append: "/" %}
-    <kbd><a href="{{ site.baseurl }}{{ idx_path }}">{{ tag }}</a></kbd>
+    <a href="{{ site.baseurl }}{{ idx_path }}"><kbd>{{ tag }}</kbd></a>
   {% endif %}
 {% endfor %}
 
