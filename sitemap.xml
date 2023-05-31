@@ -1,0 +1,27 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+{% for page in site.html_pages %}
+{% if page.name != "index.md" %}
+<url>
+  <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+  {% if page.last_update %}
+    <lastmod>{{ page.last_update | date_to_xmlschema }}</lastmod>
+  {% else %}
+  {% if page.date %}
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+  {% else %}
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  {% endif %}
+  {% endif %}
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+{% endif %}
+{% endfor %}
+
+</urlset>
