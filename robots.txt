@@ -1,1 +1,1 @@
-Sitemap: https://hub.notaname.fr/sitemap.txt
+Sitemap: https://hub.notaname.fr/sitemap.xml
