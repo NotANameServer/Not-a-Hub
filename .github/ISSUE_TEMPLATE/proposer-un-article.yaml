@@ -1,7 +1,7 @@
 name: Proposer un article
 description: Proposer un nouvel article pour le blog
-title: '[NOUVEL ARTICLE] '
-labels: ['article']
+title: ''
+labels: ['Nouvel article']
 body:
   - type: textarea
     attributes:
