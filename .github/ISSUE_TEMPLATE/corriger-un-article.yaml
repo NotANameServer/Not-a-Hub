@@ -1,6 +1,6 @@
-name: Commenter un article
-description: Poser une question à propos d'un article
-labels: ['Question']
+name: Corriger un article
+description: Apporter une correction ou une précision à propos d'un article
+labels: ['Amélioration']
 body:
   - type: input
     id: url-article
@@ -11,6 +11,6 @@ body:
   - type: textarea
     attributes:
       label: À propos de cet article
-      description: 'Écrivez votre question ci-dessous'
+      description: 'Écrivez ce que vous souhaiteriez modifier ci-dessous'
     validations:
       required: true
