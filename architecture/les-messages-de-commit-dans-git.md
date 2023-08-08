@@ -53,7 +53,7 @@ Il est inutile de répéter dans le message de commit ce qui peut être appris e
 
 Dans le corps du message, il faut donc se concentrer à apporter les informations qui ne peuvent pas être comprises en lisant seulement la diff. Il faut notamment donner un bref rappel des fonctionnalités en cours de modification pour donner le contexte générale, une vue d'ensemble. Il faut aussi impérativement expliquer *pourquoi* les changements ont été réalisé, paraphraser les spécifications dans le cas d'une nouvelle fonctionnalité ou bien donner les étapes pour reproduire un bug qui a été corrigé.
 
-![Des spécifications très complètes et très précises](https://www.commitstrip.com/fr/2016/08/25/a-very-comprehensive-and-precise-spec/)
+[![Des spécifications très complètes et très précises](/assets/images/strip-Les-specs-cest-du-code.jpg)](https://www.commitstrip.com/fr/2016/08/25/a-very-comprehensive-and-precise-spec/)
 
 ### Pied de page
 
@@ -95,7 +95,7 @@ Lors de la review, les reviewers doivent comprendre l'ensemble des changements e
 
 Pour ouvrir une discussion constructive, il est donc important que les reviewers comprennent l'ensemble des changements apportés au code. Le message de commit doit leur permettre d'avoir une vue d'ensemble de ce qui est modifié de sorte à ce qu'il n'y ait pas de surprises, pas de moments "WTF?!", lorsqu'ils liront le code la première fois.
 
-![code review wtf/minutes](https://commadot.com/wp-content/uploads/2009/02/wtf.png)
+[![code review wtf/minutes](/assets/images/wtf.png)](https://commadot.com/wp-content/uploads/2009/02/wtf.png)
 
 Ceci implique que le code doit être soigné et correctement structuré pour inviter des commentaires plus de fonds que de formes. Ceci implique aussi que les reviewers doivent avoir une vue d'ensemble de ce qui est modifié et comprendre les décisions qui ont été prises au moment du développement. C'est ici qu'intervient le message de commit. En rappelant le contexte générale et en justifiant les choix techniques.
 
