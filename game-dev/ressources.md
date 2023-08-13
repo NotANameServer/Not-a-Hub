@@ -45,6 +45,7 @@ Ce document liste differentes ressources utiles au game-dev.
 | [Glitch                    ](https://www.glitchthegame.com/)                     | Public domain                                                             | Gratuit           | [Background] / [Sprite] / [Tileset]
 | [Glyphicons                ](https://glyphicons.com)                             | Custom payante                                                            | Payant            | Packs d'icones diverses pour [UI]
 | [Hero Patterns             ](http://www.heropatterns.com)                        | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)                 | Gratuit           | [Background] / [UI]
+| [Icônes.js                 ](https://icones.js.org)                              | Variées                                                                   | Gratuit           | [UI]
 | [HeroIcons                 ](http://www.heroicons.com)                           | MIT                                                                       | Gratuit           | [UI]
 | [IconFinder                ](https://www.iconfinder.com)                         | Variées                                                                   | Gratuit ou Payant | [UI]
 | [Image * After             ](http://www.imageafter.com)                          | [Custom](http://www.imageafter.com/terms.php)                             | Gratuit           | [Texture]
