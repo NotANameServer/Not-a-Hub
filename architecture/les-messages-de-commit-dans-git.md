@@ -75,7 +75,7 @@ Notez que pour éviter que le numéro d'un ticket dans un logiciel externe soit 
 
 Dans le cas où notre commit est en relation avec un commit provenant d'une autre branche ou d'un autre projet, on écrira:
 
-	Reference-to: orga/repo:1a2bc3 (fix bad smtp To header for unicode address)
+	Reference-to: orga/repo@1a2bc3 (fix bad smtp To header for unicode address)
 
 Dans le cas où notre collègue John Doe nous a beaucoup aidé dans la conception ou la réalisation du travail et qu'on souhaiter le créditer, on écrira:
 
