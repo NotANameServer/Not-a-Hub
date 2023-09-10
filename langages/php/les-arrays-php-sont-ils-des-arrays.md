@@ -11,7 +11,7 @@ Si vous êtes utilisateur de PHP, cette question vous déroutera peut-être, ou 
 
 ## Que sont les arrays de php ?
 
-Une chose assez commune en programmation c'est que **les noms ne sont pas toujours consistants entre deux langages** : une boucle for en Python s'écrira foreach en PHP; un hashmap en Java sera un map en Javascript, ou un dictionnary en C#. En fait cela vient tout simplement de la diversités des langages et de leur façon de faire : Il n'y a pas une façon parfaite qui domine les autres mais plusieurs approches, souvent complémentaires, pour résoudre des problèmes et le vocabulaire d'un langage va s'adapter à son approche.
+Une chose assez commune en programmation c'est que **les noms ne sont pas toujours consistants entre deux langages** : une boucle for en Python s'écrira foreach en PHP; un hashmap en Java sera un map en Javascript, ou un dictionnary en C#. En fait cela vient tout simplement de la diversités des langages et de leurs façons de faire : Il n'y a pas une façon parfaite qui domine les autres mais plusieurs approches, souvent complémentaires, pour résoudre des problèmes et le vocabulaire d'un langage va s'adapter à son approche.
 
 Qu'en est-il alors des arrays de PHP ? Voyons ce que la [documentation](https://www.php.net/manual/en/language.types.array.php) a à nous apprendre :
 
@@ -36,14 +36,14 @@ Par exemple :
 array = [1, 14, 42]
 ```
 
-Ici on pourra accéder à la valeur `1` via la position `0` (e.g : `array[0]`) et la valeur `42` à la position `2`. Si on venait à supprimer la valeur `14`, on accèderais alors la valeur `42` serait accessible à la position `1`, puisqu'il vient de passer une place en avant.
+Ici on pourra accéder à la valeur `1` via la position `0` (e.g : `array[0]`) et la valeur `42` à la position `2`. Si on venait à supprimer la valeur `14`, alors la valeur `42` serait accessible à la position `1`, puisqu'il vient de passer une place en avant.
 
 Selon l'implémentation, il arrive qu'un array soit de taille fixe. Dans le cas contraire il est alors courant d'ajouter des valeurs au début où à la fin du array, pouvant alors modifier les positions des valeurs à l'intérieur.
 
 
 ### Les hash
 
-Un hash est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par celui de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères ou des symboles. On peut alors associer cette collection au dictionnaire physique, ou chaque définition est accédée via le terme d'elle définit.
+Un hash est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par celui de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères ou des symboles. On peut alors associer cette collection au dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
 
 Par exemple :
 ```
@@ -86,7 +86,7 @@ array(
 )
 ```
 
-On parle bien ici ce paire de clés-valeurs : l'array php est donc bien un dictionnaire ?
+On parle bien ici de paires de clés-valeurs : l'array php est donc bien un dictionnaire ?
 
 
 ### Mais qu'en est-il de la syntaxe sans clés ?
@@ -113,7 +113,7 @@ array(4) {
 }
 ```
 
-De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, *les clés sont seulement définie implicitement par le compilateur*.
+De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **les clés sont seulement définie implicitement par le compilateur**.
 
 À partir de ce constat, la conclusion me semble assez évidente : les arrays de PHP sont en fait indéniablement des dictionnaires.
 
@@ -166,7 +166,7 @@ var_dump("Array filter");
 var_dump($test);
 ```
 
-Avec ce conde on obtiendra le résultat suivant :
+Avec ce code on obtiendra le résultat suivant :
 
 ```php
 string(11) "Array shift"
@@ -184,7 +184,7 @@ array(1) {
 }
 ```
 
-On remarque que pour arrau_shift les clés ont été changées, mais que pour array_filter la clé reste la même pour la valeur restante.
+On remarque que pour array_shift les clés ont été changées, mais que pour array_filter la clé reste la même pour la valeur restante.
 
 
 ### Résultats
@@ -198,7 +198,7 @@ On notera aussi que splice va traiter l'offset de modification d'après ordre da
 
 ## Conclusion
 
-Pour conclure on a vu que par définition les arrays de PHP ne sont pas vraiment des arrays mais des dictionnaires. On remarquera cependant que les fonctions et la syntaxe sont conçu pour les utiliser comme de vrai arrays en camouflant potentiellement les clés tout le long de la manipulation. Il faudra tout de même faire attention car certaines fonctions comme `array_filter` ne font pas le nécessaire et il faudra garder cela en tête afin de ne pas être surpris.
+Pour conclure on a vu que par définition les arrays de PHP ne sont pas vraiment des arrays mais des dictionnaires. On remarquera cependant que les fonctions et la syntaxe sont conçus pour les utiliser comme de vrai arrays en camouflant potentiellement les clés tout le long de la manipulation. Il faudra tout de même faire attention car certaines fonctions comme `array_filter` ne font pas le nécessaire et il faudra garder cela en tête afin de ne pas être surpris.
 
 Je ne les ai pas testé mais il y a aussi les fonction de tris qui peuvent changer l'ordre des valeurs, dans ce cas cependant c'est le choix la fonction et non pas la nature de l'array qui déterminera ou non la réassignation des clés.
 
