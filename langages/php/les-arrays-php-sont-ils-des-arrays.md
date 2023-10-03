@@ -24,7 +24,7 @@ Ici on parle de map, comme je le citais plus haut, mais on mentionne aussi de no
 
 ## Quels types de collections existe-t-il ?
 
-Pour cette partie je vais définir des collections d'un point de vue purement algorithmique, c'est à dire qu'on ne s'attachera ni à un langage ni à une implémentation précise : on visera un contexte plus général et abstrait. En terme de collections on pourra citer trois types de collections principaux :
+Pour cette partie je vais définir des collections d'un point de vue purement algorithmique, c'est à dire qu'on ne s'attachera ni à un langage ni à une implémentation précise : on visera un contexte plus général et abstrait. On pourra citer trois types principaux de collections :
 
 
 ### Les arrays
@@ -38,12 +38,12 @@ array = [1, 14, 42]
 
 Ici on pourra accéder à la valeur `1` via la position `0` (e.g : `array[0]`) et la valeur `42` à la position `2`. Si on venait à supprimer la valeur `14`, alors la valeur `42` serait accessible à la position `1`, puisqu'il vient de passer une place en avant.
 
-Selon l'implémentation, il arrive qu'un array soit de taille fixe. Dans le cas contraire il est alors courant d'ajouter des valeurs au début où à la fin du array, pouvant alors modifier les positions des valeurs à l'intérieur.
+Selon l'implémentation, il arrive qu'un array soit de taille fixe. Quand l'array n'est pas de taille fixe, il est alors courant d'ajouter des valeurs au début où à la fin du array, offrant alors la possibilité de modifier leurs positions.
 
 
-### Les hash
+### Les hashs
 
-Un hash est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par celui de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères ou des symboles. On peut alors associer cette collection au dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
+Un hash est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par celui de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères ou des symboles. On peut alors associer cette collection à un dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
 
 Par exemple :
 ```
@@ -59,8 +59,7 @@ Ici on pourra accéder à la réponse en faisait `hash["la reponse"]`
 ### Les sets
 
 Un set est une collection de valeurs en exemplaires uniques, c'est à dire qu'il n'est pas possible pour cette collection de posséder des duplicatas.
-
-
+ 
 Par exemple :
 ```
 set = {1, 3, 46, 72}
@@ -72,7 +71,7 @@ Dans cet exemple tenter de rajouter les valeurs `3`, ou `72` n'aura aucun effet 
 
 ## Qu'en est-il donc de l'array de php ?
 
-Si on regarde à nouveau la [documentation](https://www.php.net/manual/en/language.types.array.php) de php on observe le texte suivant
+Si on regarde à nouveau la [documentation](https://www.php.net/manual/en/language.types.array.php) de php on peut lire :
 
 ```php
 // An array can be created using the array() language construct. It takes any number of comma-separated key => value pairs as arguments.
@@ -86,7 +85,7 @@ array(
 )
 ```
 
-On parle bien ici de paires de clés-valeurs : l'array php est donc bien un dictionnaire ?
+On parle bien ici de paires de clé-valeur : l'array php est donc bien un hash ?
 
 
 ### Mais qu'en est-il de la syntaxe sans clés ?
@@ -113,9 +112,9 @@ array(4) {
 }
 ```
 
-De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **les clés sont seulement définie implicitement par le compilateur**.
+De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **les clés sont seulement définie implicitement par l'interpréteur'**.
 
-À partir de ce constat, la conclusion me semble assez évidente : les arrays de PHP sont en fait indéniablement des dictionnaires.
+À partir de ce constat, la conclusion me semble assez évidente : les arrays de PHP sont en fait indéniablement des hashs.
 
 
 ## Qu'en est-il à l'usage ?
@@ -124,12 +123,12 @@ Malgré cette conlusion, il me semblait intéressant d'ajouter un dernier point 
 
 En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un array dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standarde de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php). 
 
-Par extension et si on reprend les exemples de syntaxe au dessus, une liste est ce que founit PHP quand on ne mentionne aucune clé dans son array, soit donc le cas le plus éloigné syntaxiquement du dictionnaire.
+Par extension et si on reprend les exemples de syntaxe au dessus, une liste est ce que founit PHP quand on ne mentionne aucune clé dans son array, soit donc le cas le plus éloigné syntaxiquement du hash.
 
 
 ### Tests de l'array PHP
 
-Pour tester comme PHP traite les listes, j'ai testé le comportement de plusieurs fonctions qui insèrent ou enlèvent des valeurs pour voir comment les clés sont traitées. Les fonctions testée sont:
+Pour tester comment PHP traite les listes, j'ai testé le comportement de plusieurs fonctions qui insèrent ou enlèvent des valeurs pour voir comment les clés sont traitées. Les fonctions testées sont:
 
 - array_shift
 - array_filter
@@ -139,7 +138,7 @@ Pour tester comme PHP traite les listes, j'ai testé le comportement de plusieur
 - array_unshift
 - shuffle (car il modifie l'ordre)
 
-Pour être sûr de ne rien louper je fais les tests avec 
+Pour être sûr de ne rien louper je fais les tests avec  
 
 - un array avec clés explicites
 - une liste avec clés explicites
@@ -198,8 +197,8 @@ On notera aussi que splice va traiter l'offset de modification d'après ordre da
 
 ## Conclusion
 
-Pour conclure on a vu que par définition les arrays de PHP ne sont pas vraiment des arrays mais des dictionnaires. On remarquera cependant que les fonctions et la syntaxe sont conçus pour les utiliser comme de vrai arrays en camouflant potentiellement les clés tout le long de la manipulation. Il faudra tout de même faire attention car certaines fonctions comme `array_filter` ne font pas le nécessaire et il faudra garder cela en tête afin de ne pas être surpris.
+Pour conclure on a vu que par définition les arrays de PHP ne sont pas vraiment des arrays mais des hashs. On remarquera cependant que les fonctions et la syntaxe sont conçus pour les utiliser comme de vrai arrays en camouflant potentiellement les clés tout le long de la manipulation. Il faudra tout de même faire attention car certaines fonctions comme `array_filter` ne font pas le nécessaire et il faudra garder cela en tête afin de ne pas être surpris.
 
-Je ne les ai pas testé mais il y a aussi les fonction de tris qui peuvent changer l'ordre des valeurs, dans ce cas cependant c'est le choix la fonction et non pas la nature de l'array qui déterminera ou non la réassignation des clés.
+Je ne les ai pas testé mais il y a aussi les fonctions de tri qui peuvent changer l'ordre des valeurs, dans ce cas cependant c'est le choix de la fonction et non pas la nature de l'array qui déterminera ou non la réassignation des clés.
 
 Donc les arrays php sont-ils des arrays ? Techniquement non, mais on peut faire comme si.
