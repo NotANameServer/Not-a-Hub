@@ -4,9 +4,7 @@ author: Adrien Baudet
 date: 2023-08-21
 title: "Les arrays php sont-ils des arrays ?"
 ---
-
 Si vous êtes utilisateur de PHP, cette question vous déroutera peut-être, ou vous donnera l'impression d'être face à une blague. Au cours de cet article, j'espère néanmoins vous avoir convaincu de sa pertinence.
-
 
 
 ## Que sont les arrays de php ?
@@ -41,25 +39,30 @@ Ici on pourra accéder à la valeur `1` via la position `0` (e.g : `array[0]`) e
 Selon l'implémentation, il arrive qu'un array soit de taille fixe. Quand l'array n'est pas de taille fixe, il est alors courant d'ajouter des valeurs au début où à la fin du array, offrant alors la possibilité de modifier leurs positions.
 
 
-### Les hashs
+### Les listes chainées
 
-Un hash est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par celui de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères ou des symboles. On peut alors associer cette collection à un dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
+Une liste chainée est une collection dynamique constituée d'une paire contenant un élément et un lien vair une paire suivante contenant l'élément suivant et un nouveau lien, et ce autant de fois qu'il y a d'éléments dans la liste.
+
+
+### Les dictionnaires
+
+Un dictionnaire est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par le biais de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères. On peut alors associer cette collection à un dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
 
 Par exemple :
 ```
-hash = [
+dictionnaire = [
   "eau" => "du liquide",
   "la reponse" => "42",
 ]
 ```
 
-Ici on pourra accéder à la réponse en faisait `hash["la reponse"]`
+Ici on pourra accéder à la réponse en faisait `dictionnaire["la reponse"]`
 
 
 ### Les sets
 
 Un set est une collection de valeurs en exemplaires uniques, c'est à dire qu'il n'est pas possible pour cette collection de posséder des duplicatas.
- 
+
 Par exemple :
 ```
 set = {1, 3, 46, 72}
@@ -68,14 +71,18 @@ set = {1, 3, 46, 72}
 Dans cet exemple tenter de rajouter les valeurs `3`, ou `72` n'aura aucun effet car elles sont déjà présentes dans le set.
 
 
+### Ordonnés ou pas ?
 
-## Qu'en est-il donc de l'array de php ?
+Petite subtilité qui nous servira pour après : on a dit plus haut que dans le cas d'un array les valeurs étaient récupérables d'après leur position. Comme ce n'est pas le cas pour le dictionnaire et le set, il est courant de les retrouver sous une forme non ordonnée : c'est à dire qu'en les parcourant on ne retrouvera pas les valeurs dans l'ordre où elle ont été insérées.
+
+
+## Qu'en est-il donc du array de php ?
 
 Si on regarde à nouveau la [documentation](https://www.php.net/manual/en/language.types.array.php) de php on peut lire :
 
 ```php
 // An array can be created using the array() language construct. It takes any number of comma-separated key => value pairs as arguments.
-// A short array syntax exists which replaces array() with []. 
+// A short array syntax exists which replaces array() with [].
 
 array(
     key  => value,
@@ -85,7 +92,7 @@ array(
 )
 ```
 
-On parle bien ici de paires de clé-valeur : l'array php est donc bien un hash ?
+On parle bien ici de paires de clé-valeur : l'array php est donc bien un dictionnaire ?
 
 
 ### Mais qu'en est-il de la syntaxe sans clés ?
@@ -114,19 +121,19 @@ array(4) {
 
 De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **les clés sont seulement définie implicitement par l'interpréteur'**.
 
-À partir de ce constat, la conclusion me semble assez évidente : les arrays de PHP sont en fait indéniablement des hashs.
+À partir de ce constat, les arrays de PHP ont tout pour être des dictionnaires. Néanmoins, la possibilité d'accéder aux valeurs comme dans un array implique une subtilité supplémentaire en terme d'ordonancement. Comme je disais plus haut, les dictionnaires sont généralemrent non ordonnés ce qui implique que l'ordre d'insertion n'est pas conservé, contrairement aux arrays. Il ne s'agit donc pas de simples dictionnaires, mais de `dictionnaires ordonnés`.
 
 
 ## Qu'en est-il à l'usage ?
 
 Malgré cette conlusion, il me semblait intéressant d'ajouter un dernier point sur l'usage que l'on peut avoir des arrays PHP, en dehors se sa pure définition.
 
-En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un array dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standarde de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php). 
+En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un dictionnaire dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standarde de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php).
 
-Par extension et si on reprend les exemples de syntaxe au dessus, une liste est ce que founit PHP quand on ne mentionne aucune clé dans son array, soit donc le cas le plus éloigné syntaxiquement du hash.
+Par extension et si on reprend les exemples de syntaxe au dessus, une liste est ce que founit PHP quand on ne mentionne aucune clé dans son array, soit le cas le plus éloigné syntaxiquement du dictionnaire.
 
 
-### Tests de l'array PHP
+### Tests du array PHP
 
 Pour tester comment PHP traite les listes, j'ai testé le comportement de plusieurs fonctions qui insèrent ou enlèvent des valeurs pour voir comment les clés sont traitées. Les fonctions testées sont:
 
@@ -138,9 +145,9 @@ Pour tester comment PHP traite les listes, j'ai testé le comportement de plusie
 - array_unshift
 - shuffle (car il modifie l'ordre)
 
-Pour être sûr de ne rien louper je fais les tests avec  
+Pour être sûr de ne rien louper je fais les tests avec
 
-- un array avec clés explicites
+- un array (associatif) avec clés explicites
 - une liste avec clés explicites
 - une liste avec clés explicites dans l'ordre inverse
 - une liste avec clés implicites.
@@ -188,7 +195,7 @@ On remarque que pour array_shift les clés ont été changées, mais que pour ar
 
 ### Résultats
 
-Ce que j'ai pu constater d'abord c'est que dans les deux cas de liste, les résultats sont identiques, et ce n'est pas tellement surprenant. On remarque aussi que pour toutes les fonctions hormis `array_filter`, les clés sont modifiées pour que l'array reste une liste.
+Ce que j'ai pu constater d'abord c'est que dans les deux cas de liste, les résultats sont identiques, et ce n'est pas tellement surprenant. On remarque aussi que pour toutes les fonctions hormis `array_filter`, les clés sont modifiées pour qu'un array reste une liste.
 
 Dans le cas d'un array non liste, au contraire, les clés ne sont pas modifiées, hormis la fonction `shuffle`, qui semble transformer l'array en liste.
 
