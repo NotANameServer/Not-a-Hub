@@ -41,7 +41,7 @@ Selon l'implémentation, il arrive qu'un array soit de taille fixe. Quand l'arra
 
 ### Les listes chainées
 
-Une liste chainée est une collection dynamique constituée d'une paire contenant un élément et un lien vair une paire suivante contenant l'élément suivant et un nouveau lien, et ce autant de fois qu'il y a d'éléments dans la liste.
+Une liste chainée est une collection dynamique constituée d'une paire contenant un élément et un lien vers une paire suivante contenant l'élément suivant et un nouveau lien, et ce autant de fois qu'il y a d'éléments dans la liste.
 
 
 ### Les dictionnaires
