@@ -22,7 +22,7 @@ Ici on parle de map, comme je le citais plus haut, mais on mentionne aussi de no
 
 ## Quels types de collections existe-t-il ?
 
-Pour cette partie je vais définir des collections d'un point de vue purement algorithmique, c'est à dire qu'on ne s'attachera ni à un langage ni à une implémentation précise : on visera un contexte plus général et abstrait. On pourra citer trois types principaux de collections :
+Pour cette partie je vais définir des collections d'un point de vue purement algorithmique, c'est à dire qu'on ne s'attachera ni à un langage ni à une implémentation précise : on visera un contexte plus général et abstrait. On pourra citer quatre types principaux de collections :
 
 
 ### Les arrays
