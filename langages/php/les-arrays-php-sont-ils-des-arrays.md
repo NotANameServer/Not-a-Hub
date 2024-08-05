@@ -126,7 +126,7 @@ De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **le
 
 ## Qu'en est-il à l'usage ?
 
-Malgré cette conlusion, il me semblait intéressant d'ajouter un dernier point sur l'usage que l'on peut avoir des arrays PHP, en dehors se sa pure définition.
+Malgré cette conclusion, il me semblait intéressant d'ajouter un dernier point sur l'usage que l'on peut avoir des arrays PHP, en dehors se sa pure définition.
 
 En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un dictionnaire dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standarde de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php).
 
