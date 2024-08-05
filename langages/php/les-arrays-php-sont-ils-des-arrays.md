@@ -9,7 +9,7 @@ Si vous êtes utilisateur de PHP, cette question vous déroutera peut-être, ou 
 
 ## Que sont les arrays de php ?
 
-Une chose assez commune en programmation c'est que **les noms ne sont pas toujours consistants entre deux langages** : une boucle for en Python s'écrira foreach en PHP; un hashmap en Java sera un map en Javascript, ou un dictionnary en C#. En fait cela vient tout simplement de la diversités des langages et de leurs façons de faire : Il n'y a pas une façon parfaite qui domine les autres mais plusieurs approches, souvent complémentaires, pour résoudre des problèmes et le vocabulaire d'un langage va s'adapter à son approche.
+Une chose assez commune en programmation c'est que **les noms ne sont pas toujours consistants entre deux langages** : une boucle for en Python s'écrira foreach en PHP; un hashmap en Java sera un map en Javascript, ou un dictionary en C#. En fait cela vient tout simplement de la diversités des langages et de leurs façons de faire : Il n'y a pas une façon parfaite qui domine les autres mais plusieurs approches, souvent complémentaires, pour résoudre des problèmes et le vocabulaire d'un langage va s'adapter à son approche.
 
 Qu'en est-il alors des arrays de PHP ? Voyons ce que la [documentation](https://www.php.net/manual/en/language.types.array.php) a à nous apprendre :
 
