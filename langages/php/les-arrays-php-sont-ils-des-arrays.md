@@ -46,7 +46,7 @@ Une liste chainée est une collection dynamique constituée d'une paire contenan
 
 ### Les dictionnaires
 
-Un dictionnaire est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par le biais de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type arbitraire, comme des chaines de caractères. On peut alors associer cette collection à un dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
+Un dictionnaire est une collection de paires de clés-valeurs. On n'accède plus à une valeur par le biais de sa position mais par le biais de sa clé correspondante. De plus il n'est pas nécessaire d'utiliser des clés numériques : on peut utiliser potentiellement n'importe quel type scalaire, comme des chaines de caractères. On peut alors associer cette collection à un dictionnaire physique, où chaque définition est accédée via le terme d'elle définit.
 
 Par exemple :
 ```
@@ -128,7 +128,7 @@ De fait, certes on n'a mentionné aucune clé mais elles sont toujours là, **le
 
 Malgré cette conclusion, il me semblait intéressant d'ajouter un dernier point sur l'usage que l'on peut avoir des arrays PHP, en dehors se sa pure définition.
 
-En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un dictionnaire dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standarde de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php).
+En premier lieu et pour simplifier mon propos je vais introduire le terme de liste. Une liste en PHP est un dictionnaire dont les clés sont constituées de nombres consécutifs de 0 à count($array)-1. Cela correspond à la définition fournie par la fonction standard de PHP [array_is_list](https://www.php.net/manual/en/function.array-is-list.php).
 
 Par extension et si on reprend les exemples de syntaxe au dessus, une liste est ce que founit PHP quand on ne mentionne aucune clé dans son array, soit le cas le plus éloigné syntaxiquement du dictionnaire.
 
