@@ -23,10 +23,21 @@ Chaque message doit commencer par un titre séparé du reste du commit par une l
 
 Faites l'effort de rédiger un message de commit, notez à minimal un paragraphe qui explique *pourquoi* ces changements sont bienvenues et référencez aussi la/les issues auxquelles votre commit est lié.
 
-## Mettre à jour l'index du site
+## Indexage des articles
 
-Lorsque vous ajoutez un article ou renommez un article sur disque, pensez à exécuter l'indexeur automatique: `python3 index.py` à la racine du repo.
+Lorsque vous ajoutez ou renommez un article, pensez à ajouter un entête de cette forme au début du fichier markdown:
 
-Si vous avez peur d'oublier, vous pouvez le définir comme pre-commit-hook:
+```
+---
+layout: post
+author: <Le nom sous lequel vous souhaitez publier votre article (attention, il sera public)>
+date: <La date au format ISO-8601>
+title: "Le titre de votre article"
+---
 
-	ln -s ../../index.py .git/hooks/pre-commit
+```
+
+Cela permettra à l'action GitHub Pages d'indexer automatiquement votre article. Lorsque vous mettez à jour un article, vous pouvez aussi ajouter le champ `last_update` dans l'entête pour indiquer la date de dernière mise à jour tout en conservant la date de publication initiale.
+
+Pensez également à placer le fichier markdown dans le bon dossier correspondant au sujet de votre article pour que les tags appropriés soient automatiquement ajoutés.
+Par exemple un article placé dans le dossier `/langages/python/` aura les tags `langages` et `python`.
