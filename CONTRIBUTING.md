@@ -37,7 +37,7 @@ title: "Le titre de votre article"
 
 ```
 
-Cela permettra à l'action GitHub Pages d'indexer automatiquement votre article. Lorsque vous mettez à jour un article, vous pouvez aussi ajouter le champs `last_update` dans l'entête pour indiquer la date de dernière mise à jour tout en conservant la date de publication initiale.
+Cela permettra à l'action GitHub Pages d'indexer automatiquement votre article. Lorsque vous mettez à jour un article, vous pouvez aussi ajouter le champ `last_update` dans l'entête pour indiquer la date de dernière mise à jour tout en conservant la date de publication initiale.
 
 Pensez également à placer le fichier markdown dans le bon dossier correspondant au sujet de votre article pour que les tags appropriés soient automatiquement ajoutés.
 Par exemple un article placé dans le dossier `/langages/python/` aura les tags `langages` et `python`.
