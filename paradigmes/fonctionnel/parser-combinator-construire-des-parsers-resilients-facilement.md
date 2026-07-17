@@ -120,7 +120,7 @@ On voit clairement qu'il est possible ici de renvoyer une valeur indépendamment
 [Chumsky]: https://docs.rs/chumsky/latest/chumsky/
 [Rust]: https://rust-lang.org/fr/
 [PureParser]: https://github.com/Iltotore/pureparser
-[MegaParser]: https://github.com/mrkkrp/megaparsec
+[MegaParsec]: https://github.com/mrkkrp/megaparsec
 [PureLogic]: https://ghostdogpr.github.io/purelogic/
 [capabilities de Scala 3]: https://nrinaudo.github.io/articles/capabilities.html
 
